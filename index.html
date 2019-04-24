@@ -5,87 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <!--<script src="potfolio.js"></script>-->
+    <script src="potfolio.js"></script>
+
   </head>
 
   <body>
-    <div class="wrapper">
+    <main class="wrapper">
 
-       <nav class="flex-nav">
-      <!--  <a href="#" class="toggleNav"><i class="fas fa-ellipsis-h"></i></a>-->
-         <ul>
-           <li class="logo"><a href=""><img src="images/logo.png" alt="Logo"></a></li>
-           <h4>Seira Yasumatsu</h4>
-
-           <li><a class="AboutMe.html" href="#">ABOUT</a></li>
-           <li><a class="Index.html" href="#">WORK</a></li>
-           <li><a class="https://drive.google.com/file/d/1LMqpKNTXcH3hdBbOHT-DieBhHojHwn5G/view?usp=sharing" href="#">RESUME</a></li>
-         </ul>
+       <nav class="nav">
+         <div class="container">
+         <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+         </div>
+          <ul class="menu"><!--flex container-->
+            <li class= "page"><a class="AboutMe.html" href="#">ABOUT</a></li>
+            <li class= "page"><a class="index.html" href="#">CASES</a></li>
+            <li class= "page"><a class="https://drive.google.com/file/d/1LMqpKNTXcH3hdBbOHT-DieBhHojHwn5G/view?usp=sharing" href="#">RESUME</a></li>
+          </ul>
+         </div>
        </nav>
 
-    <header class="hero-container"> <!-- flex-container-->
-       <div class ="hero-image">
-      <!--<img src="images/hero.jpg" alt="hero picture">-->
+
+   <section class = "hero">
+       <article>
+         <div class="text">
+           <h1>Hi, I am Seira Yasumatsu.</h1>
+           <p>I am a <strong> product designer</strong> based in <strong>San Francisco</strong>.</p>
+           <p>I design and develop a product that helps people.</p>
+           <p>Thank you for stopping by.</p>
+         </div>
+       </article>
+         <div class="hero-image"></div>
+    </section>
+
+
+    <section class="flex-container">
+      <article class="case">
+        <h2>CASES</h2>
+      </article>
+
+      <div class="overlay behub">
+          <img src="images/behub.png" alt="behub">
+           <h2>behub</h2>
+           <h3>Family-friendly all in one App</h3>
+         <div class="btn-casestudy"><a href="casestudy_behub.html" class="btn btn-default snapCursor" data-snap-scale="0">View Case Study</a>
+        </div>
+      </div>
+
+      <div class="overlay stema">
+         <img src="images/stema.png" alt="STEMA++">
+         <h2>STEMA++</h2>
+         <h3>STEM Collaboration Platform for educators, parents, and girls</h3>
+         <div class="btn-casestudy"><a href="casestudy_stema.html" class="btn btn-default snapCursor" data-snap-scale="0">View Case Study</a>
+        </div>
+      </div>
+
+      <div class="overlay bus">
+         <img src="images/bus.png" alt="Bus">
+         <h2>BUS</h2>
+         <h3>Simple and intuitve Bus App for everyone.</h3>
+         <div class="btn-casestudy"><a href="casestudy_bus.html" class="btn btn-default snapCursor" data-snap-scale="0">View Case Study</a>
+        </div>
+      </div>
+   </section>
+
+
+    <div class="footer">
+       <div class="footer-container">
+         <div class="question">
+          <h2>How can I help you?</h2>
+         </div>
+        <div class="contact">
+          <div class="block-text-contact">
+           <h4>Contact Seira to find out</h4>
+           <a href="mailto:seiray117@gmail.com"><button type="button" class="btn btn-default">Seira Yasumatsu</button></a>
+
+          </div>
+        </div>
+
+       <div class="links">
+          <h4>Find me Here</h4>
        </div>
-       <div class ="hero-text">
-         <h1>Hi, I am Seira Yasumatsu.</h1>
-         <p>I am a <strong> product designer</strong> based in <strong>San Francisco</strong>. I design and develop a product that helps people.</p>
-         <p>Thank you for stopping by.</p>
+
+       <div class="text-group text-center">
+         <ul class ="social-list"> <!--flex container-->
+          <li><a href="https://www.linkedin.com/in/seira-yasumatsu/"><i class="fab fa-linkedin-in fa-2x" style="color:#262633"></i></a></li>
+          <li><a href="https://github.com/SeiraYasumatsu"><i class="fab fa-github fa-2x" style="color:#262633"></i></a></li>
+        </ul>
        </div>
-     </header>
-
-    <!--<header class="overlapping">
-      <ul class="grid-container">
-        <li><img src="images/hero.jpg" alt="hero picture"></li>
-        <li><h1>Hi, my name is Seira Yasumatsu.</h1></li>
-        <li><p>Thank you for stopping by.</p></li>
-      </ul>
-   </header>-->
-
-
-    <main class="work">
-      <div class = "project">
-          <a href="casestudy_behub.html"><!--<img src="images/behub.png" alt="behub">--></a>
-        <div class="project-number">
-          <h3>PROJECT 1</h3>
-        </div>
+        <article class="copyright"><h4>&copy; 2019 | Designed and Developed by Seira Yasumatsu </h4></article>
       </div>
+    </div>
 
-      <div class = "project">
-          <a href="casestudy_stema.html"><!--<img src="images/stema.png" alt="STEMA++">--></a>
-        <div class="project-number">
-           <h3>PROJECT 2</h3>
-        </div>
-      </div>
-
-      <div class = "project">
-           <a href="casestudy_bus.html"><!--<img src="images/bus.png" alt="Bus">--></a>
-        <div class="project-number">
-           <h3>PROJECT 3</h3>
-        </div>
-      </div>
-    </main>
-
-
-
-    <footer>
-      <ul>
-        <li class ="logo"><img src="images/logo.png" alt="logo">
-        <p> How can I help you today? </p>
-        <p> Contact me <a href="mailto: seiray117@gmail.com"></a></p>
-
-        <li class = "social"> <a href="https://www.linkedin.com/in/seira-yasumatsu/"><i class="fab fa-linkedin fa-2x"></i></a>
-        </li>
-        <li class ="social"> <a href="https://github.com/SeiraYasumatsu"><i class="fab fa-github-square fa-2x"></i></a>
-       </li>
-        <p>&copy; 2019 | Designed and Developed by Seira Yasumatsu </p>
-      </ul>
-    </footer>
-
-   </div>
+   </main>
   </body>
 </html>
