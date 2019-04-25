@@ -94,8 +94,8 @@ body{
 }
 
 .hero article{
-  position: relative;
-  z-index:1;
+  position: absolute;
+  z-index:2;
   align-self: flex-start;
   padding-bottom: 2rem;
 }
@@ -120,19 +120,41 @@ body{
   margin-bottom: 1rem;
 }
 
-.hero-image{
+.hero-image{/*hero image for the homepage*/
   display:flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-position:bottom right;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(../images/hero.png);
+  object-fit:cover;
   height: 40vh;
   width: 30vh;
-  flex: 2;
   opacity: 0.4;
+  z-index:1;
+  position: absolute;
+  margin-top: 16rem;
+  margin-left: 10rem;
 }
 
+.hero-image2{ /*hero images for About page*/
+  background-image: url(../images/hero2.png);
+  display:flex;
+  flex-wrap: nowrap;
+  background-position:bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit:cover;
+  height: 40vh;
+  width: 30vh;
+  opacity: 1;
+  z-index:1;
+  position: absolute;
+  margin-top: 12rem;
+  margin-left: 10rem;
+}
+
+/*--------case study styling*/
 
 .flex-container{/*for cases*/
   display:flex;
@@ -153,15 +175,27 @@ body{
   padding-left:2rem;
 }
 
-.case h2{
+.heading /*.case h1*/{
   color: black;
   font-weight: bold;
   letter-spacing: 0.2rem;
-  font-size: 2rem;
+  font-size: 3rem;
   text-decoration: none;
-  padding: 2rem 1rem;
+  padding-top: 2rem;
+  padding-bottom:2rem;
   text-align: left;
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 100%;
+  }
 }
 
 .overlay {
@@ -226,7 +260,7 @@ letter-spacing: 0.1em;
 
 .btn-casestudy a{
   text-decoration: none;
-  background-color: #EFBB3F;
+  background-color: black;
 }
 
 .overlay:hover :not(img){
@@ -247,6 +281,221 @@ letter-spacing: 0.1em;
   font-family: 'Raleway', sans-serif;
 }
 
+/*--------about page styling*/
+.hero article .text2 h1{
+  color: black;
+  font-family: 'Noto Serif', serif;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+  padding-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.hero article .text2 p{
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  font-size: 1.8rem;
+  line-height: normal;
+  width: 40vh;
+  margin-bottom: 1rem;
+}
+
+.summary-container{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  justify-content:flex-start;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.summary-texts p{
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+}
+
+.btn-resume{
+  color: #ffffff !important;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  padding:4rem;
+  padding-left: 2rem;
+  height: 2px;
+  text-transform: uppercase !important
+}
+
+.btn-resume a{
+  text-decoration: none;
+}
+
+.text-container{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  justify-content:flex-start;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.paragraph{
+ margin-left: 2rem;
+ margin-right:2rem;
+}
+
+.paragraph h1{
+  color: black;
+  font-family: 'Noto Serif', serif;
+  font-weight: 600;
+  line-height: normal;
+  padding-bottom: 1.5rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+.paragraph p{
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.8;
+  /*margin-bottom: 1.5rem;*/
+  padding-bottom: 4rem;
+}
+
+.underline{
+  background-image: linear-gradient(to bottom, yellow 40%, transparent 10%);
+  background-position: 0 1.03em;
+  background-repeat: repeat-x;
+  background-size: 2px 8px;
+}
+
+.awards a{
+  color: black;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.Japan {
+  padding-bottom: 4rem;
+}
+
+.Design{
+  padding-bottom: 4rem;
+}
+
+.Experiences{
+  padding-bottom: 2rem;
+}
+
+.words{
+  margin-left: 2rem;
+  margin-right:2rem;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: medium;
+  border-color: yellow;
+}
+
+.words h3{
+  color: black;
+  font-family: 'Noto Serif', serif;
+  font-weight: 600;
+  line-height: normal;
+  padding-top:2.5rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  font-size: 2rem;
+}
+
+.words p{
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+  padding-bottom: 4rem;
+}
+
+.carousel{
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin: 7rem 2rem;
+  background-color: whitesmoke;
+  height: 45vh;
+}
+
+.carousel__track-container{
+  background: Thistle;
+  height: 100%;
+  position:relative;
+}
+
+.carousel__track{
+  padding:0;
+  margin:0;
+  list-style: none;
+  position:relative;
+  height:100%
+}
+
+.carousel__slide{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel h3{
+  color: black;
+  font-family: 'Noto Serif', serif;
+  line-height: normal;
+  padding-bottom: 2rem;
+  position: relative;
+  font-size: 1.8rem;
+}
+
+.carousel__slide p{
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.reference{
+  font-size: 1.4rem;
+  color: grey;
+  padding-bottom: 2rem;
+}
+
+.carousel__nav{
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.carousel__indicator{
+  border:0;
+  border-radius:50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgba(0,0,0,.3);
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.is-hidden{ display:none;}
+
+
+.carousel__indicator.current-slide{
+  background: rgba(0,0,0,.75)
+}
+
+
+/*--------footer styling*/
 .footer{
   padding-top: 7rem;
   /*overflow:hidden;*/
