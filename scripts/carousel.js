@@ -38,5 +38,4 @@ dotsNav.addEventListener('click', e => {
   moveToSlide(track, currentSlide, targetSlide);
   updateDots(currentDot, targetDot);
 
-
 })

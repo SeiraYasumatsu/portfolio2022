@@ -107,8 +107,10 @@ body{
   line-height: normal;
   position: relative;
   padding-bottom: 3rem;
-  font-size: 2rem;
+  font-size: 3rem;
+  letter-spacing: 0.2;
 }
+
 
 .hero article .text p{
   color: black;
@@ -149,7 +151,6 @@ body{
   width: 30vh;
   opacity: 1;
   z-index:1;
-  position: absolute;
   margin-top: 12rem;
   margin-left: 10rem;
 }
@@ -199,7 +200,7 @@ body{
 }
 
 .overlay {
-   min-width: 0;
+   width: 100%;
    margin: 2rem;
    position: relative;
    transition: .3s;
@@ -207,13 +208,14 @@ body{
 }
 
 .overlay img {
-   width: 60rem;
+   width: 100rem;
    max-width: 100%;
    max-height: 50rem;
    opacity:1;
    display: block;
    height:auto;
    transition: .3s;
+   padding: 2rem;
  }
 
 .overlay:hover img{
@@ -232,14 +234,14 @@ body{
 }
 
 .overlay h2{
-top:15%;
+top:25%;
 font-size: 2.5rem;
 text-align: center;
 letter-spacing: 0.1em;
 }
 
 .overlay h3{
-  top:35%;
+  top:45%;
   font-size: 1.6rem;
   font-weight: lighter;
   font-family: 'Source Sans Pro', sans-serif;
@@ -261,6 +263,10 @@ letter-spacing: 0.1em;
 .btn-casestudy a{
   text-decoration: none;
   background-color: black;
+
+  -webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
 }
 
 .overlay:hover :not(img){
@@ -289,7 +295,8 @@ letter-spacing: 0.1em;
   line-height: normal;
   position: relative;
   padding-bottom: 3rem;
-  font-size: 2rem;
+  font-size: 3rem;
+  letter-spacing: 0.2;
 }
 
 .hero article .text2 p{
@@ -333,6 +340,10 @@ letter-spacing: 0.1em;
 
 .btn-resume a{
   text-decoration: none;
+
+  -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
 }
 
 .text-container{
@@ -395,10 +406,11 @@ letter-spacing: 0.1em;
 .words{
   margin-left: 2rem;
   margin-right:2rem;
+  margin-top: 2rem;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-width: medium;
-  border-color: yellow;
+  border-width: thin;
+  border-color: #C0C0C0;
 }
 
 .words h3{
@@ -406,17 +418,21 @@ letter-spacing: 0.1em;
   font-family: 'Noto Serif', serif;
   font-weight: 600;
   line-height: normal;
-  padding-top:2.5rem;
+  padding-left: 2rem;
+  padding-top:3rem;
   padding-bottom: 1.5rem;
   position: relative;
   font-size: 2rem;
 }
 
 .words p{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
+  padding-top: 2rem;
   padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .carousel{
@@ -424,12 +440,10 @@ letter-spacing: 0.1em;
   width: 80%;
   margin: 0 auto;
   margin: 7rem 2rem;
-  background-color: whitesmoke;
   height: 45vh;
 }
 
 .carousel__track-container{
-  background: Thistle;
   height: 100%;
   position:relative;
 }
