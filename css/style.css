@@ -444,9 +444,13 @@ letter-spacing: 0.1em;
 }
 
 .prototype{
-  background-color: lavender;
+  width: 100%;
   align-items: center;
-  padding-left: 12rem;
+}
+
+.prototype img{
+  width: 100%;
+  position:relative;
 }
 
 .section-title{ /*container for the section title*/
