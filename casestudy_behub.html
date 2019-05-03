@@ -8,29 +8,34 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!--<script src="potfolio.js"></script>-->
   </head>
   <body>
     <main class="wrapper">
+
        <nav class="nav">
          <div class="container">
          <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a>
          </div>
           <ul class="menu"><!--flex container-->
-            <li class= "page"><a class="AboutMe.html" href="#">ABOUT</a></li>
-            <li class= "page"><a class="index.html" href="#">CASES</a></li>
-            <li class= "page"><a class="https://drive.google.com/file/d/1LMqpKNTXcH3hdBbOHT-DieBhHojHwn5G/view?usp=sharing" href="#">RESUME</a></li>
+            <li class= "page"><a href="aboutMe.html">ABOUT</a></li>
+            <li class= "page"><a href="index.html#casestudy_page">CASES</a></li>
+            <li class= "page"><a href="https://drive.google.com/file/d/1LMqpKNTXcH3hdBbOHT-DieBhHojHwn5G/view?usp=sharing">RESUME</a></li>
           </ul>
          </div>
        </nav>
+
+       <button id="btnScrollToTop"><i class="fas fa-chevron-circle-up"></i></button>
 
        <header class="hero-container"> <!-- flex-container-->
          <div class ="behub-image"><img src="images/behub.png" alt="behub App">
          </div>
          <div class ="hero-text">
-           <h1>behub</h1>
+           <h1><a id="top">behub</a></h1>
            <p>content sharing, collaborations, shared schedules: one app to bring families and friends closer. </p>
          </div>
        </header>
@@ -45,14 +50,16 @@
 
          <section class="deli">
            <h2>DELIVERABLES</h2>
-           <h3>User Research</h3>
+           <h3><a href="#behub_casestudy_UserResearch">User Research</a></h3>
            <p>User Surveys, User Personas, Competitive Analysis</p>
-           <h3>Information Architecture</h3>
+           <h3><a href="#behub_casestudy_InformationArchitecture">Information Architecture</a></h3>
            <p>User Stories, User Flows, SiteMap, Wireframes</p>
-           <h3>Visual Design</h3>
+           <h3><a href="#behub_casestudy_VisualDesign">Visual Design</a></h3>
            <p>Branding & Logo, Design Style Guide</p>
-           <h3>Prototype & Testing</h3>
-           <p>High Fidelity Mockup, Prototype, User Testing</p>
+           <h3><a href="#behub_casestudy_Testing">Testing</a></h3>
+           <p>User Testing & High Fidelity Mockup</p>
+           <h3><a href="#behub_casestudy_Prototyping">Prototyping</a></h3>
+           <p>Prototype & Design Brief</p>
         </section>
 
         <section class="deli">
@@ -84,7 +91,7 @@
 
        <section class="process1">
          <section class ="section-title">
-         <h2>User Research</h2>
+         <h2><a id="behub_casestudy_UserResearch">User Research</a></h2>
          </section>
 
          <article class="intro">
@@ -192,29 +199,31 @@
         </section>
 
         <section class="persona-container">
-           <section class="persona-img2">
-           </section>
+            <section class="persona-img2">
+            </section>
 
-           <section class="profile">
-             <h3>James</h3>
-             <h6>Software Engineer</h6>
-             <p><em>“I want to help my wife as much as I can.” </em></p>
-           </section>
+            <section class="profile">
+               <h3>James</h3>
+               <h6>Software Engineer</h6>
+               <p><em>“I want to help my wife as much as I can.” </em></p>
+            </section>
 
-           <section class ="profile-text">
-              <h5>Goals</h5>
-              <p>•	To see my family’s daily schedules</p>
-              <p>•	To communicate, plan, and update the calendar with ONE platform</p>
+            <section class ="profile-text">
+               <h5>Goals</h5>
+               <p>•	To see my family’s daily schedules</p>
+               <p>•	To communicate, plan, and update the calendar with ONE platform</p>
 
-              <h5>Pain Points</h5>
-              <p>•	The overcrowded calendar with my work schedule</p>
-              <p>•	Lack of visual elements on my calendar to identify the schedule instantly</p>
-           </section>
+               <h5>Pain Points</h5>
+               <p>•	The overcrowded calendar with my work schedule</p>
+               <p>•	Lack of visual elements on my calendar to identify the schedule instantly</p>
+            </section>
          </section>
 
-         <article class="summary">
-             <p>Based on a User survey, competitive analysis, user persona, I decided to focus on designing<span class="underline"> a family-friendly application that manages the schedule and content by collaborating among a close group of people.</span> </p>
-         </article>
+         <div class="summary-box">
+             <article class="summary">
+                <p>Based on a User survey, competitive analysis, user persona, I decided to focus on designing<span class="underline"> a family-friendly application that manages the schedule and content by collaborating among a close group of people.</span> </p>
+             </article>
+         </div>
 
          <article class="summary-note">
              <p>The main reason why parents were not satisfied with the current method of managing their family schedule was because they tend to forget to update the calendar when changes occur. Therefore, I decided to incorporate a few different ways to make it easier for them to update their schedules painlessly. Features include the gentle reminder, the update reminder, automatic update reminder after messaging, and reminder stickers to allow users to fit their needs. </p>
@@ -231,6 +240,7 @@
             <li class="item"><img src="images/reminder.png" alt="Gentle Reminders"><p>Gentle Reminders</p></li>
             <li class="item"><img src="images/sticker.png" alt="Temporary Stickers"><p>Temporary Stickers</p></li>
          </ul>
+      </section>
 
       <section class="process2">
          <section class ="section-title">
@@ -291,7 +301,7 @@
 
       <section class="process3">
          <section class ="section-title">
-            <h2>INFORMATION ARCHITECTURE</h2>
+            <h2><a id="behub_casestudy_InformationArchitecture">INFORMATION ARCHITECTURE</a></h2>
          </section>
 
          <article class="intro">
@@ -299,7 +309,7 @@
             <p>With user research in mind, I created user stories to determine the priority of the user stories as a new user, a return user, and an administrator.</p>
          </article>
 
-        <section class ="container">
+
           <section class="user">
            <img src="images/newUser.png" alt="girl">
            <h4>As a New User</h4>
@@ -311,9 +321,8 @@
           <section class="p3-imgcontainer">
            <img src="images/NewUserScreens.png" alt="3screens">
           </section>
-        </section>
 
-        <section class="container">
+
          <section class="user">
            <img src="images/returnUser.png" alt="red hair woman">
            <h4>As a Return User</h4>
@@ -324,252 +333,318 @@
          <section class="p3-imgcontainer">
            <img src="images/ReturnUserScreens.png" alt="2screens">
          </section>
-       </section>
 
-        <section class="intro">
-          <h3>User Flows</h3>
-          <p>I iterated and sketched user flows by pen and paper, then I used draw.io to demonstrate the process of how users would interact with the product and the most efficient way to complete the high priority tasks. </p>
-          <img src="images/FlowChart.png" alt="user-flow">
-        </section>
+         <section class="intro">
+            <h3>User Flows</h3>
+            <p>I iterated and sketched user flows by pen and paper, then I used draw.io to demonstrate the process of how users would interact with the product and the most efficient way to complete the high priority tasks. </p>
+         </section>
 
-        <section class="intro">
-          <h3>Wire Frame Sketches</h3>
-          <p>Based on the user stories, persona, and user flow, I sketched different variations of wireframes. Two key elements while designing wireframes were that all the high priority tasks needed to be visible and accessible in ease and the easy and simple navigation that could be used even for children. </p>
-          <img src="Wireframe Sketches.png" alt="sketches">
-          <img src="images/Figma.png" alt="Figma wireframe">
-        </section>
+         <section class="p3-imgcontainer">
+            <img src="images/FlowChart.png" alt="user-flow">
+         </section>
+
+         <section class="intro">
+            <h3>Wire Frame Sketches</h3>
+            <p>Based on the user stories, persona, and user flow, I sketched different variations of wireframes. Two key elements while designing wireframes were that all the high priority tasks needed to be visible and accessible in ease and the easy and simple navigation that could be used even for children. </p>
+         </section>
+
+         <section class="p3-imgcontainer">
+            <img src="images/Wireframe Sketches.png" alt="sketches">
+            <img src="images/Figma.png" alt="Figma wireframe">
+         </section>
       </section>
 
       <section class="process4">
-        <section class ="title">
-           <h2>USER TESTING</h2>
+          <section class ="section-title">
+              <h2><a id="behub_casestudy_Testing">USER TESTING</a></h2>
+          </section>
+
+         <article class="intro">
+             <h3>Usability Testing on Wire Frame</h3>
+             <p>After creating the high fidelity wireframe, I wanted to test to see how users can navigate through and complete the tasks given.</p>
+          </article>
+
+          <article class="content">
+             <h4>Tasks</h4>
+             <p>•  You found an app that lets you share yours and kids schedule with everyone in the family. How would you sign up for an account? </p>
+             <p>• You are trying to add new schedule in your calendar. How can you do that?</p>
+             <p>• You found a new content in the web, you want to save it to the new group. How can you add a new group in your folder? </p>
+          </article>
+
+          <article class="impro-note">
+              <p>Based on the user feedback, I iterated a few more wireframe designs and here are 3 main improvements I made. </p>
+          </article>
+
+           <section class="container testing">
+              <img src="images/Impro1_wireframe.png" alt="welcome page">
+              <h5>1. Welcome Page</h5>
+              <p><strong>Eliminated unnecessary step </strong>for users to take by creating one welcome page where users can sign up, log in, or take a tour of the main features </p>
+           </section>
+
+          <section class="container testing">
+              <img src="images/Impro2_wireframe.png" alt="Bottom navigation">
+              <h5>2. Bottom Navigation</h5>
+              <p>Kept the same main bottom navigation for all the pages for consistency and smooth transition between different page</p>
+          </section>
+
+          <section class="container testing">
+              <img src="images/Impro3_wireframe.png" alt="no Dead-ends">
+              <h5>3. Remove the Dead-ends</h5>
+              <p>Few screens needed to have a more obvious way for users to move on to the next screen, so I added the exit icon on the top right</p>
+          </section>
+
+
+        <article class="intro">
+           <h3>A/B Testing</h3>
+           <p>After I designed the high fidelity mockups, I performed A/B test for 2 particular designs which included a welcome screen for the app and welcome page instructions with illustrations or photos.</p>
+        </article>
+
+        <section class ="container testing">
+            <img src="images/preTest1.png" alt="Prototype of Welcome page">
+            <h5>1. Welcome Page</h5>
+            <p>75% of users preferred the right design.The image and the feel resonated with testers more for the family-themed app.</p>
         </section>
+
+        <section class="container testing">
+            <img src="images/preTest2.png" alt="Main Feature Visual Design">
+            <h5>2. Main Feature Visual Design</h5>
+            <p><strong>65% </strong> of users preferred the design with the photo image instead of the illustration. They liked the clean and modern look and feel of the design. </p>
+        </section>
+
+        <div class="summary-box">
+           <article class="summary">
+             <p>The preference test overall helped me to see the current design objectively making it easier for me <span class="underline">to step back and understand which design was connecting better for the target users.</span></p>
+           </article>
+        </div>
 
        <article class="intro">
-         <h3>Usability Testing on Wire Frame</h3>
-         <p>After creating the high fidelity wireframe, I wanted to test to see how users can navigate through and complete the tasks given.</p>
+           <h3>Usability Testing on Prototype</h3>
+           <p>I conducted the usability test to examine how my prototype was working for potential users. Overall, all the 4 tasks I instructed performed well. </p>
        </article>
 
-       <article class="tasks">
-         <h4>Tasks</h4>
-         <p>•  You found an app that lets you share yours and kids schedule with everyone in the family. How would you sign up for an account? </p>
-         <p>• You are trying to add new schedule in your calendar. How can you do that?</p>
-         <p>• You found a new content in the web, you want to save it to the new group. How can you add a new group in your folder? </p>
-       </article>
-
-       <article class="impro-note">
-        <p>Based on the user feedback, I iterated a few more wireframe designs and here are 3 main improvements I made. </p>
-       </article>
-
-      <section class="testing-container">
-        <section class="testing">
-         <img src="images/Impro1_wireframe.png" alt="welcome page">
-         <h6>1. Welcome Page</h6>
-         <p><strong>Eliminated unnecessary step </strong>for users to take by creating one welcome page where users can sign up, log in, or take a tour of the main features </p>
-        </section>
-
-        <section class="testing">
-         <img src="images/Impro2_wireframe.png" alt="Bottom navigation">
-         <h6>2. Bottom Navigation</h6>
-         <p>Kept the same main bottom navigation for all the pages for consistency and smooth transition between different page</p>
-        </section>
-
-        <section class="testing">
-         <img src="images/Impro3_wireframe.png" alt="no Dead-ends">
-         <h6>3. Remove the Dead-ends</h6>
-         <p>Few screens needed to have a more obvious way for users to move on to the next screen, so I added the exit icon on the top right</p>
-        </section>
-     </section>
-
-       <article class="intro">
-         <h3>A/B Testing</h3>
-         <p>After I designed the high fidelity mockups, I performed A/B test for 2 particular designs which included a welcome screen for the app and welcome page instructions with illustrations or photos.</p>
-       </article>
-
-     <section class="testing-container">
-       <section class ="testing">
-          <img src="images/preTest1.png" alt="Prototype of Welcome page">
-          <h6>1. Welcome Page</h6>
-          <p>75% of users preferred the right design.The image and the feel resonated with testers more for the family-themed app.</p>
+       <section class ="content">
+           <p>• To sign up</p>
+           <p>• To add a new event on the calendar with a reminder alert</p>
+           <p>• To update the schedule and place a sticker after they are done messaging</p>
+           <p>• To add a collaborator and personalize her profile</p>
        </section>
 
-       <section class="testing">
-         <img src="images/preTest2.png" alt="Main Feature Visual Design">
-         <h6>Main Feature Visual Design</h6>
-         <p><strong>65% </strong> of users preferred the design with the photo image instead of the illustration. They liked the clean and modern look and feel of the design. </p>
-        </section>
-     </section>
-
-       <article class="summary">
-         <p>The preference test overall helped me to see the current design objectively making it easier for me to step back and understand which design was connecting better for the target users.</p>
+        <article class ="impro-note">
+           <p>Based on the user feedback and results, I made 3 main improvements. </p>
        </article>
 
-       <article class="intro">
-         <h3>Usability Testing on Prototype</h3>
-         <p>I conducted the usability test to examine how my prototype was working for potential users. Overall, all the 4 tasks I instructed performed well. </p>
-       </article>
 
-       <section class ="tasks">
-         <p>•  To sign up</p>
-         <p>• To add a new event on the calendar with a reminder alert</p>
-         <p>• To update the schedule and place a sticker after they are done messaging</p>
-         <p>• To add a collaborator and personalize her profile</p>
-       </section>
-
-       <article class ="impro-note">
-         <p>Based on the user feedback and results, I made 3 main improvements. </p>
-       </article>
-
-       <section class ="testing-container">
-         <section class ="testing">
+        <section class ="container testing">
            <img src="images/U1.png" alt="Add Icon">
-           <h6>1. Bolder Add Icon on the calendar main page</h6>
+           <h5>1. Bolder Add Icon on the calendar main page</h5>
            <p> The add icon on the calendar main page was not standing out for some users, so I decided to change it to a bolder add icon.</p>
-         </section>
+        </section>
 
-         <section class ="testing">
+         <section class ="container testing">
            <img src="images/U2.png" alt="Message Feature">
-           <h6>2. Message Feature</h6>
+           <h5>2. Message Feature</h5>
            <p>During the test, 70% of users had gone to the collaborator's page to find the message feature. Therefore, I decided to move it to the collaborator page where they intuitively sought it out.</p>
          </section>
 
-         <section class ="testing">
+         <section class ="container testing">
            <img src="images/U3.png" alt="Logo placement">
-           <h6>3. Logo Placement</h6>
+           <h5>3. Logo Placement</h5>
            <p>I adjusted the background image and the logo placement to create a better visual hierarchy without interfering with each other. </p>
          </section>
-      </section>
 
-         <article class ="summary">
-           <p>The clickable usability Test after creating a prototype allowed me to study the user's real interactions and helped me to pinpoint the problems I could not see before. After I solved those issues, I believed the users can navigate the app easily and achieve what they want to do in a simple and intuitive manner. </p>
+        <div class="summary-box">
+           <article class ="summary">
+             <p>The clickable usability Test after creating a prototype allowed me to study the user's real interactions and helped me <span class="underline"> to pinpoint the problems I could not see before.</span> After I solved those issues, I believed the users can navigate the app easily and achieve what they want to do in a simple and intuitive manner. </p>
+           </article>
+        </div>
+    </section>
+
+
+    <section class="process5">
+         <section class ="section-title">
+              <h2><a id="behub_casestudy_VisualDesign">VISUAL DESIGN</a></h2>
+         </section>
+
+         <article class="intro">
+            <h3>Prototype</h3>
+            <p>Since I wanted to convey the look and feel of warmth and calmness, I used soft colors from the logo and their contrast colors to create the cohesive design throughout the app.</p>
+            <h5><a href="https://invis.io/U4QP8XBSYTF#/348824681_Welcome_Page">View Clickable Prototype</a></h5>
          </article>
+
+
+          <section class="images mock">
+          </section>
+
+          <section class= "vertical"> <!--add background mock here instead of img-->
+             <img src="images/vertical.png" alt="3 perspective screens">
+          </section>
+
+         <section class ="container">
+             <section class="content">
+               <h4>Smart reminders never let you forget</h4>
+               <p>Update reminders and notifications would help users to update their schedule by placing a temporary sticker or setting up the reminder alert even when they are busy. </p>
+             </section>
+
+             <section class="mock two">
+                <img src="images/mockup2.png" alt="3 screens">
+             </section>
+
+             <section class="content">
+                 <h4>Collaboration Feature for everyone</h4>
+                 <p>Users can set the theme, assign the color to their family members & use fun stickers making collaborating fun and easy even for young children! </p>
+             </section>
+
+
+            <section class="mock three">
+               <img src="images/mockup3.png" alt="fill in box page">
+            </section>
+
+            <section class ="content">
+              <h4>Frustration-free typing</h4>
+              <p>Big fill-in space allows users to type information without frustration. </p>
+           </section>
+
+           <section class="mock four">
+              <img src="images/mockup4.png" alt="customization">
+           </section>
+
+           <section class ="content">
+               <h4>Customization is so easy </h4>
+               <p>Users can pick the image and assign the color so they can identify each member across the different page.</p>
+           </section>
+
+           <section class="images mock2">
+           </section>
+
+         <section class="content summarize">
+           <p>Now you can browse calendar, save content, communicate and collaborate instantly, and never forget to update the schedule at your own preferred time.</p>
+         </section>
+      </section>
    </section>
 
-      <section class="process5">
-        <section class ="title">
-           <h2>VISUAL DESIGN</h2>
+   <div class="carousel App">
+            <h3>What people say about the app</h3>
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide current-slide">
+             <p>“I like how simple the app is. I always get overwhelmed with managing both my work and family schedules together, so this definitely helps me just focus on my family & personal life.”</p>
+             <p class ="reference">- Yana M.  Working Mom of 4 boys </p>
+           </li>
+           <li class="carousel__slide">
+               <p>"My 12year old daughter loves the app! She loves cute stickers she can add to the calendar instantly. It helps her to be more responsible and organized with her after-school activities."</p>
+               <p class ="reference">-Mathab R. Working Mom of 12 & 4 years old</p>
+           </li>
+           <li class="carousel__slide">
+              <p>"I felt so calm even when organizing my chaotic life schedules."</p>
+              <p class ="reference">-Leticia V. Working and Studying</p>
+           </li>
+         </ul>
+       </div>
+
+       <div class="carousel__nav">
+         <button class="carousel__indicator current-slide"></button>
+         <button class="carousel__indicator"></button>
+         <button class="carousel__indicator"></button>
+       </div>
+    </div>
+
+
+    <section class="process6">
+        <section class ="section-title">
+             <h2><a id="behub_casestudy_Prototyping">REFLECTION</a></h2>
         </section>
 
-       <article class="intro">
-         <h3>Prototype</h3>
-         <p>Since I wanted to convey the look and feel of warmth and calmness, I used soft colors from the logo and their contrast colors to create the cohesive design throughout the app.</p>
-         <h5><ins><a href="https://invis.io/U4QP8XBSYTF#/348824681_Welcome_Page">View Clickable Prototype</a></ins></h5>
+       <!--interchangeable screens-->
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+             <img src="images/process_Sketch1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+             <img src="images/process_wireframe1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="images/process_MockUp1.png" style="width:100%">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="images/process_Prototype1.png" style="width:100%">
+          </div>
+        </div>
+
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+       <article class="content challenge">
+         <h4>Challenges I encountered</h4>
+         <p><strong>What worked the best </strong>for me for this project was to find the right target market by conducting user research, competitive analysis, and user persona.</p>
+         <p><strong> The challenge I ran into </strong> while working on this project was the user flow of the message feature. Initially, the message feature was placed in the calendar feature. I believed that users would like to contact the collaborators when they would like to update the schedule to arrange their schedules. However, the usability testing proved that users had a difficult time finding the message feature, therefore I decided to move it to the collaborator’s page where many users were intuitively going to find it. I learned that it was crucial to get feedback from users as often as possible. It is so easy to miss something obvious when I am working on the same project for a long period of time.</p>
+         <!--<p>Future note to myself: <span class="bold">Get the user feedback as often as possible to check the work frequently so I can offer a better solution to the real user’s problems.</span> </p>-->
        </article>
 
-       <section class="mock">
-         <img src="images/mockup1.png" alt="phone in the office">
-       </section>
+       <!-- Browse other projects-->
+       <section class="flex-container">
+           <article class="browse">
+           <h1 class="heading"><span class="underline--magical">Browse other projects</span></h1><!--magical underline-->
+           </article>
 
-      <section class ="visual-container">
-        <section class="content">
-          <h5>Smart reminders never let you forget</h5>
-          <p>Update reminders and notifications would help users to update their schedule by placing a temporary sticker or setting up the reminder alert even when they are busy. </p>
-        </section>
+         <div class="overlay stema">
+             <img src="images/stema.png" alt="STEMA++">
+             <h2>STEMA++</h2>
+             <h3>STEM Collaboration Platform</h3>
+          <div class="btn-casestudy"><a href="casestudy_stema.html" class="btn btn-default snapCursor" data-snap-scale="0">View Case Study</a>
+          </div>
+         </div>
 
-        <section class= "vertical"> <!--add background mock here instead of img-->
-          <img src="images/vertical.png" alt="3 perspective screens">
-        </section>
+        <div class="overlay bus">
+            <img src="images/bus.png" alt="Bus">
+            <h2>BUS</h2>
+            <h3>Simple and intuitve Bus App for everyone.</h3>
+          <div class="btn-casestudy"><a href="casestudy_bus.html" class="btn btn-default snapCursor" data-snap-scale="0">View Case Study</a>
+          </div>
+        </div>
       </section>
 
-      <section class="mock2">
-        <img src="images/mockup2.png" alt="3 screens">
-      </section>
-      <section class="content">
-        <h5>Collaboration Feature for everyone</h5>
-        <p>Users can set the theme, assign the color to their family members & use fun stickers making collaborating fun and easy even for young children! </p>
-      </section>
 
-      <section class ="visual-container2">
-        <section class="mockup3">
-          <img src="images/mockup3.png" alt="fill in box page">
-        </section>
 
-        <section class ="content">
-          <h5>Frustration-free typing</h5>
-          <p>Big fill in space allows users to type information without frustration. </p>
-        </section>
-      </section>
-
-      <section class ="visual-container3">
-        <section class ="content">
-          <h5>Customization is so easy </h5>
-          <p>Users can pick the image and assign the color so they can identify each member across the different page.</p>
-        </section>
-
-        <section class="mockup4">
-          <img src="images/mockup4.png" alt="customization">
-        </section>
-      </section>
-
-        <!--add background mock here-->
-        <section class="content">
-          <p>Now you can browse calendar, save content, communicate and collaborate instantly, and never forget to update the schedule at your own preferred time.</p>
-        </section>
-
-        <section class= "review">
-          <h5>What people say about the app</h5>
-          <p>After designing the last prototype, I asked some users what they think of the app, how likely they would try it, and any other suggestions.
-            Here are some real voice of the users. </p>
-        </section>
-
-        <section class="quote">
-           <p>“I like how simple the app is. I always get overwhelmed with managing both my work and family schedules together, so this definitely helps me just focus on my family & personal life.”      - Yana M.  Working Mom of  4 boys. </p>
-          <!--Add background image of quotation marks here-->
-        </section>
-
-        <section class="next">
-            <i class="fas fa-ellipsis-h"></i>
-        </section>
-      </section>
-
-      <section class="process6">
-        <section class ="title">
-           <h2>REFLECTION</h2>
-        </section>
-
-        <!--Interchangeable screens here-->
-
-       <article class="reflection">
-         <h3>Challenges I encountered</h3>
-         <p>What worked the best for me for this project was to find the right target market by conducting user research, competitive analysis, and user persona. The challenge I ran into while working on this project was the user flow of the message feature. Initially, the message feature was placed in the calendar feature. I believed that users would like to contact the collaborators when they would like to update the schedule to arrange their schedules. However, the usability testing proved that users had a difficult time finding the message feature, therefore I decided to move it to the collaborator’s page where many users were intuitively going to find it. I learned that it was crucial to get feedback from users as often as possible. It is so easy to miss something obvious when I am working on the same project for a long period of time.
-         Future note to myself: <mark>Get the user feedback as often as possible to check the work frequently so I can offer a better solution to the real user’s problems.</mark> </p>
-       </article>
-
-       <section class="end-container">
-           <p>Browse other Projects</p>
-         <section class="work-container">
-           <section class="project2">
-            <img src="images/stema.png" alt="STEMA++"> <!--add image-->
-           </section>
-            <h2>PROJECT 2</h2>
-         </section>
-
-         <section class="work-container">
-           <section class="project3">
-            <img src="images/bus.png" alt="BUS"><!--add image-->
-           </section>
-            <h2>PROJECT 3</h2>
-         </section>
-      </section>
-
-      <article class= "question">
-        <p>Thank you for checking out my case study. Do you have any questions?
-            Please get in touch, I would love to answer any of your questions. </p>
+      <article class= "comment">
+        <p class="one">Thank you for checking out my case study. Do you have any questions?</p>
+        <p class="two">Please get in touch, I would love to answer any of your questions. </p>
       </article>
 
-      <footer>
-        <ul>
-          <li class ="logo"><img src="images/logo.png" alt="logo">
-          <p> How can I help you today? </p>
-          <p> Contact me <a href="mailto: seiray117@gmail.com"></a></p>
+      <div class="footer">
+         <div class="footer-container">
+           <div class="question">
+            <h2>How can I help you?</h2>
+           </div>
+          <div class="contact">
+            <div class="block-text-contact">
+             <h4>Contact Seira to find out</h4>
+             <a href="mailto:seiray117@gmail.com"><button type="button" class="btn btn-default">Seira Yasumatsu</button></a>
+            </div>
+          </div>
 
-          <li class = "social"> <a href="https://www.linkedin.com/in/seira-yasumatsu/"><i class="fab fa-linkedin fa-2x"></i></a>
-          </li>
-          <li class ="social"> <a href="https://github.com/SeiraYasumatsu"><i class="fab fa-github-square fa-2 x"></i></a>
-         </li>
-          <p>&copy; 2019 | Designed and Developed by Seira Yasumatsu </p>
-        </ul>
-      </footer>
+         <div class="links">
+            <h4>Find me Here</h4>
+         </div>
 
+         <div class="text-group text-center">
+           <ul class ="social-list"> <!--flex container-->
+            <li><a href="https://www.linkedin.com/in/seira-yasumatsu/"><i class="fab fa-linkedin-in fa-2x" style="color:#262633"></i></a></li>
+            <li><a href="https://github.com/SeiraYasumatsu"><i class="fab fa-github fa-2x" style="color:#262633"></i></a></li>
+          </ul>
+         </div>
+          <article class="copyright"><h4>&copy; 2019 | Designed and Developed by Seira Yasumatsu </h4></article>
+        </div>
+      </div>
+
+     <script src="scripts/top.js"></script>
+     <script src="scripts/carousel.js"></script>
+     <script src="scripts/summary.js"></script>
     </body>
   </html>
