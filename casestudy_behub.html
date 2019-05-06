@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!--<script src="potfolio.js"></script>-->
   </head>
   <body>
@@ -29,7 +30,7 @@
          </div>
        </nav>
 
-       <button id="btnScrollToTop"><i class="fas fa-chevron-circle-up"></i></button>
+       <button id="btnScrollToTop"><i class="fas fa-caret-up fa-2x"></i></button>
 
        <header class="hero-container"> <!-- flex-container-->
          <div class ="behub-image"><img src="images/behub.png" alt="behub App">
@@ -82,17 +83,26 @@
           </article>
           <article class="project">
             <h2>SOLUTION</h2>
-            <p>This collaboration platform provides clean and easy to browse calendar, folders to collect and save interesting contents, message feature to communicate and collaborate instantly, and a gentle reminder to update the schedule at the preferred time: one app to bring families and friends closer.
+            <p class="last">This collaboration platform provides clean and easy to browse calendar, folders to collect and save interesting contents, message feature to communicate and collaborate instantly, and a gentle reminder to update the schedule at the preferred time: one app to bring families and friends closer.
                "<em>Hmm, finally a piece of mind.</em>”</p>
           </article>
-          <section class="prototype"><img src="images/onboarding.gif" alt="onboarding"></a>
-          </section>
+          <!--<section class="prototype"><img src="images/onboarding.gif" alt="onboarding"></a>  </section>-->
+        <div class="smartphone">
+          <div class="prototype-content">
+            <iframe style="width:100%;border:none;height:100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fg8unnpkbpROz15zJy8uHqIR4%2FFinal-Design%3Fnode-id%3D37%253A2%26viewport%3D1290%252C1816%252C0.5%26scaling%3Dscale-down" allowfullscreen></iframe>
+          </div>
+        </div>
+
        </main>
 
-       <section class="process1">
-         <section class ="section-title">
-         <h2><a id="behub_casestudy_UserResearch">User Research</a></h2>
-         </section>
+       <span id ="behub_casestudy_UserResearch">&nbsp;</span>
+        <section class="process1">
+
+
+          <section class ="section-title">
+            <h2>User Research</h2>
+          </section>
+
 
          <article class="intro">
            <h3>User Survey</h3>
@@ -226,7 +236,8 @@
          </div>
 
          <article class="summary-note">
-             <p>The main reason why parents were not satisfied with the current method of managing their family schedule was because they tend to forget to update the calendar when changes occur. Therefore, I decided to incorporate a few different ways to make it easier for them to update their schedules painlessly. Features include the gentle reminder, the update reminder, automatic update reminder after messaging, and reminder stickers to allow users to fit their needs. </p>
+             <p>The main reason why parents were not satisfied with the current method of managing their family schedule was because <span class="underline">they tend to forget to update the calendar when changes occur.</span></p>
+             <p>Therefore, I decided to incorporate a few different ways to make it easier for them to update their schedules painlessly. Features include the gentle reminder, the update reminder, automatic update reminder after messaging, and reminder stickers to allow users to fit their needs. </p>
          </article>
 
          <article class="mainfeatures">
@@ -241,6 +252,7 @@
             <li class="item"><img src="images/sticker.png" alt="Temporary Stickers"><p>Temporary Stickers</p></li>
          </ul>
       </section>
+
 
       <section class="process2">
          <section class ="section-title">
@@ -299,9 +311,10 @@
         </section>
      </section>
 
+      <span id ="behub_casestudy_InformationArchitecture">&nbsp;</span>
       <section class="process3">
          <section class ="section-title">
-            <h2><a id="behub_casestudy_InformationArchitecture">INFORMATION ARCHITECTURE</a></h2>
+            <h2>INFORMATION ARCHITECTURE</h2>
          </section>
 
          <article class="intro">
@@ -354,9 +367,10 @@
          </section>
       </section>
 
+      <span id ="behub_casestudy_Testing">&nbsp;</span>
       <section class="process4">
           <section class ="section-title">
-              <h2><a id="behub_casestudy_Testing">USER TESTING</a></h2>
+              <h2>USER TESTING</h2>
           </section>
 
          <article class="intro">
@@ -459,10 +473,10 @@
         </div>
     </section>
 
-
+    <span id ="behub_casestudy_VisualDesign">&nbsp;</span>
     <section class="process5">
          <section class ="section-title">
-              <h2><a id="behub_casestudy_VisualDesign">VISUAL DESIGN</a></h2>
+              <h2>VISUAL DESIGN</h2>
          </section>
 
          <article class="intro">
@@ -522,36 +536,24 @@
       </section>
    </section>
 
-   <div class="carousel App">
-            <h3>What people say about the app</h3>
-      <div class="carousel__track-container">
-        <ul class="carousel__track">
-          <li class="carousel__slide current-slide">
-             <p>“I like how simple the app is. I always get overwhelmed with managing both my work and family schedules together, so this definitely helps me just focus on my family & personal life.”</p>
-             <p class ="reference">- Yana M.  Working Mom of 4 boys </p>
-           </li>
-           <li class="carousel__slide">
-               <p>"My 12year old daughter loves the app! She loves cute stickers she can add to the calendar instantly. It helps her to be more responsible and organized with her after-school activities."</p>
-               <p class ="reference">-Mathab R. Working Mom of 12 & 4 years old</p>
-           </li>
-           <li class="carousel__slide">
-              <p>"I felt so calm even when organizing my chaotic life schedules."</p>
-              <p class ="reference">-Leticia V. Working and Studying</p>
-           </li>
-         </ul>
-       </div>
+   <div class="carousel app">
+          <h3>What people say about App</h3>
 
-       <div class="carousel__nav">
-         <button class="carousel__indicator current-slide"></button>
-         <button class="carousel__indicator"></button>
-         <button class="carousel__indicator"></button>
-       </div>
-    </div>
+      <div class="main-carousel">
+          <div class="carousel-cell app"><p>“I like how simple the app is. I always get overwhelmed with managing both my work and family schedules together, so this definitely helps me just focus on my family & personal life.”</p>
+          <p class ="reference">- Yana M.  Working Mom of 4 boys </p></div>
+          <div class="carousel-cell app"><p>"My 12year old daughter loves the app! She loves cute stickers she can add to the calendar instantly. It helps her to be more responsible and organized with her after-school activities."</p>
+          <p class ="reference">-Mathab R. Working Mom of 12 & 4 years old</p></div>
+          <div class="carousel-cell app"><p>"I felt calm and peaceful even when organizing my chaotic life schedules."</p>
+          <p class ="reference">-Leticia V, UX Designer</p></div>
+      </div>
+  </div>
 
-
+    <span id ="behub_casestudy_Prototyping">&nbsp;</span>
     <section class="process6">
+
         <section class ="section-title">
-             <h2><a id="behub_casestudy_Prototyping">REFLECTION</a></h2>
+             <h2>REFLECTION</h2>
         </section>
 
        <!--interchangeable screens-->
@@ -617,6 +619,11 @@
         <p class="two">Please get in touch, I would love to answer any of your questions. </p>
       </article>
 
+      <script src="scripts/carousel2.js"></script>
+      <script src="scripts/top.js"></script>
+      <script src="scripts/summary.js"></script>
+ </main>
+
       <div class="footer">
          <div class="footer-container">
            <div class="question">
@@ -643,8 +650,5 @@
         </div>
       </div>
 
-     <script src="scripts/top.js"></script>
-     <script src="scripts/carousel.js"></script>
-     <script src="scripts/summary.js"></script>
     </body>
   </html>

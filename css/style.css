@@ -10,13 +10,12 @@ html{
 }
 
 body{
+  color: #333333;
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 0;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  color: #333333;
-  /*background-image: linear-gradient(280deg, #EFBB3F 10%, #B3CFCD 90%);*/
+  margin: 0;
 }
 
 .wrapper{
@@ -24,17 +23,11 @@ body{
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-/*.block-text-contact:before, .block-text-follow:before{
-  center: "",
-  width: 0.1rem;
-  height: 4rem;
-  display: block;
-  position: absolute;
-  top: -6.5rem;
-  left:50%;
-}*/
+
 .nav { /*container for the top nav*/
     position: sticky;
     top: 0;
@@ -54,7 +47,7 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: grey;
+    background: #A9A9A9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: white;
     outline: none;
@@ -63,7 +56,7 @@ body{
 }
 
 #btnScrollToTop:hover {
-  background-color: black;
+  background-color:black;
 }
 
 
@@ -79,7 +72,6 @@ body{
   padding: 2rem 0.5rem 2rem;
   display: flex;
   justify-content: left;
-  margin-left: 2rem;
   align-items: center;
 }
 
@@ -87,7 +79,6 @@ body{
   display: flex;
   align-items: center;
   margin-left: 3rem;
-  margin-right: 2rem;
   align-items: center;
   list-style:none;
   justify-content: center;
@@ -110,20 +101,13 @@ body{
   font-weight:bold;
 }
 
-.wrapper{
-  margin: 0 auto;
-  width: 100%;
-  /*display: flex;
-  flex-direction: column;*/
-}
 
 .hero{
   display: flex;
   flex-direction:column;
   height: 80vh;
-  padding:4rem 4rem;
+  padding:4rem 2rem;
   flex-wrap: wrap;
-  /*background-color: lavender;*/
 }
 
 .hero article{
@@ -207,7 +191,6 @@ body{
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  padding-left:2rem;
 }
 
 .heading /*.case h1*/{
@@ -255,7 +238,6 @@ body{
    display: block;
    height:auto;
    transition: .3s;
-   padding: 2rem;
  }
 
 .overlay:hover img{
@@ -359,7 +341,6 @@ letter-spacing: 0.1em;
   padding-bottom: 1.8rem;
   font-size: 3rem;
   letter-spacing: 0.2;
-  padding-left: 2rem;
   margin-top: 3rem;
 }
 
@@ -370,7 +351,6 @@ letter-spacing: 0.1em;
   position: relative;
   padding-bottom: 4rem;
   font-size: 1.8rem;
-  padding-left: 2rem;
 }
 
 .specs-container{
@@ -382,7 +362,6 @@ letter-spacing: 0.1em;
 }
 
 .specs-container h2{
-  padding-left: 2rem;
   font-size: 1.8rem;
   font-weight: bold;
   padding-bottom: 1.5rem;
@@ -391,7 +370,6 @@ letter-spacing: 0.1em;
 }
 
 .specs-container p{
-  padding-left: 2rem;
   font-size: 1.6rem;
   font-weight: lighter;
 }
@@ -401,7 +379,6 @@ letter-spacing: 0.1em;
 }
 
 .deli h3{
-  padding-left: 2rem;
   font-size: 1.6rem;
   font-weight: bold;
   color: #333333;
@@ -428,7 +405,6 @@ letter-spacing: 0.1em;
 }
 
 .intro-container h2{
-  padding-left: 2rem;
   font-size: 1.8rem;
   font-weight: bold;
   padding-bottom: 1.5rem;
@@ -437,34 +413,64 @@ letter-spacing: 0.1em;
 }
 
 .intro-container p{
-  padding-left: 2rem;
   font-size: 1.6rem;
-  padding-right: 2rem;
   padding-bottom: 4rem;
 }
 
-.prototype{
-  width: 100%;
-  align-items: center;
+.prject.last p{
+  margin-bottom: 4rem;
+  background: mistyrose;
 }
 
-.prototype img{
-  width: 100%;
-  position:relative;
+.smartphone {
+  position: relative;
+  width: 300;
+  height: 97vh;
+  margin: auto;
+  border: 16px #DCDCDC solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #C0C0C0;
+  border-radius: 10px;
+}
+
+/* The screen (or content) of the device */
+.smartphone .prototype-content{
+  width: 300;
+  height: 80vh;
+  background: white;
+}
+
+.wrapper2{
+  padding-left: 0;
 }
 
 .section-title{ /*container for the section title*/
   background-color: rgba(179, 207, 205, 0.6);
-  margin-right: 18rem;
+  margin-right: 16rem;
   margin-top: 10rem;
   opacity: 0.5;
+  padding-left: -2px !important;
 }
 
 .section-title h2{
   font-weight: bold;
   font-size: 2rem;
   padding-bottom: 1rem;
-  padding-left: 1.8rem;
+
   padding-top: 1rem;
   color: black !important;
   letter-spacing: 0.2rem;
@@ -472,7 +478,7 @@ letter-spacing: 0.1em;
 
 .intro h3{
   padding-top: 5rem;
-  padding-left: 2rem;
+
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.2rem;
@@ -480,20 +486,17 @@ letter-spacing: 0.1em;
 
 .intro p{
   font-size: 1.6rem;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 2rem 0 4rem 0;
 }
 
 .intro .note {
   font-size: 1.4rem;
   color: darkgrey;
-  padding-left: 2rem;
 }
 
 .content h4{
   font-size: 1.8rem;
   padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .content.challenge h4{
@@ -515,7 +518,7 @@ letter-spacing: 0.1em;
 .content p{
   font-size: 1.6rem;
   font-weight: normal;
-  padding: 2rem;
+  padding: 2rem 0 2rem 0;
 }
 
 .image-container{/*flex container*/
@@ -525,7 +528,6 @@ letter-spacing: 0.1em;
 }
 
 .graph-title h4{
-  padding-left: 2rem;
   font-size: 1.6rem;
   padding-top: 3rem;
   color: grey;
@@ -535,7 +537,6 @@ letter-spacing: 0.1em;
 .graph img{
   width:80%;
   height: 45%;
-  padding-left: 2rem;
 }
 
 .exp {
@@ -546,14 +547,12 @@ letter-spacing: 0.1em;
 
 .exp p{
   font-size: 1.6rem;
-  padding-left: 2rem;
   padding-right: 1rem;
   color: grey;
 }
 
 .exp2 p{
   font-size: 1.6rem;
-  padding-right: 2rem;
   margin-top: 2rem;
   color: grey;
 }
@@ -568,11 +567,9 @@ letter-spacing: 0.1em;
  .chart img{
   width: 80%;
   position:relative;
-  padding-left: 2rem;
 }
 
 .chart p{
-  padding-left: 2rem;
   font-size: 1.6rem;
   margin-top: 1.5rem;
   color: grey;
@@ -583,7 +580,6 @@ letter-spacing: 0.1em;
 }
 
 .intro h5 a{
-  padding-left: 2rem;
   padding-bottom: 4rem;
   font-size: 1.6rem;
   font-weight: lighter;
@@ -594,7 +590,7 @@ letter-spacing: 0.1em;
 
 .logo-images{
   width: 100%;
-  padding: 6rem 2rem;
+  padding: 6rem 0 6rem 0;
 }
 
 .logo-images img{
@@ -618,20 +614,17 @@ letter-spacing: 0.1em;
 
 .branding h5{
   padding-top: 2rem;
-  padding-left: 2rem;
   font-size: 1.8rem;
 }
 
 .branding p{
   padding-bottom: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   font-size: 1.6rem;
 }
 
 
 #color{
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
   width: 12rem;
   height: 12rem;
   margin-top: 1rem;
@@ -680,20 +673,17 @@ letter-spacing: 0.1em;
 }
 
 .user img{
-  padding-left: 2rem;
   width: 30%;
 }
 
 .user h4{
-  padding-left: 2rem;
-  padding-right: 2rem;
   padding-top: 1rem;
   font-size: 1.6rem;
 }
 
 .user p{
   font-size: 1.6rem;
-  padding: 1rem 2rem 1.5rem 2rem;
+  padding: 1rem 0 1.5rem 0;
 }
 
 .p3-imgcontainer img{
@@ -709,7 +699,7 @@ letter-spacing: 0.1em;
   color: grey;
   font-size: 1.6rem;
   font-weight: lighter;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 5rem 0 2rem 0;
 }
 
 .testing img{
@@ -722,14 +712,12 @@ letter-spacing: 0.1em;
 
 .testing h5{
   padding: 2rem;
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 3rem 0 2rem 0;
   font-size: 1.6rem;
 }
 
 .testing p{
   padding-bottom: 7rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   font-size: 1.5rem;
 }
 
@@ -807,7 +795,6 @@ letter-spacing: 0.1em;
   width: 50%;
   z-index:1;
   position: absolute;
-  margin-left: 2rem;
   margin-top: 1.5rem;
 }
 
@@ -832,14 +819,12 @@ letter-spacing: 0.1em;
 .profile p{
   font-size: 1.6rem;
   padding-top: 1rem;
-  padding-right: 2rem;
   padding-bottom: 2rem;
 }
 
 .profile-text h5{
   font-size: 1.6rem;
   padding-top: 3rem;
-  padding-left: 2rem;
   padding-bottom: 1rem;
   color: grey;
   letter-spacing: 0.1rem;
@@ -847,8 +832,6 @@ letter-spacing: 0.1em;
 
 .profile-text p{
   font-size: 1.6rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   padding-bottom: 1.5rem;
 }
 
@@ -864,13 +847,8 @@ letter-spacing: 0.1em;
   width: 50%;
   z-index:1;
   position: absolute;
-  margin-left: 2rem;
 }
 
-.summary-box{
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
 
 .summary p{
   padding: 2rem;
@@ -883,7 +861,7 @@ letter-spacing: 0.1em;
 
 .summary-note p{
   font-size: 1.6rem;
-  padding: 4rem 2rem;
+  padding: 3rem 0 3rem 0;
 }
 
 .summary .underline{
@@ -895,7 +873,6 @@ letter-spacing: 0.1em;
 }
 
 .mainfeatures h4{
-  padding-left: 2rem;
   font-size: 1.6rem;
   padding-bottom: 2rem;
   margin-top: 2rem;
@@ -909,8 +886,6 @@ letter-spacing: 0.1em;
 }
 
 .item{
-  padding-left: 2rem;
-  padding-right:2rem;
   width: 15rem;
   height: 30rem;
   margin-top: 1rem;
@@ -921,11 +896,11 @@ letter-spacing: 0.1em;
   width: 100%
 }
 
-
 .item p{
   padding-top:1rem;
   font-size: 1.4rem;
 }
+
 /*--------------about page styling---------------*/
 .hero article .text2 h1{
   color: black;
@@ -960,8 +935,6 @@ letter-spacing: 0.1em;
 .summary-texts p{
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.6rem;
 }
@@ -971,8 +944,7 @@ letter-spacing: 0.1em;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
-  padding:4rem;
-  padding-left: 2rem;
+  padding:4rem 0;
   height: 2px;
   text-transform: uppercase !important
 }
@@ -994,11 +966,6 @@ letter-spacing: 0.1em;
   padding-bottom: 4rem;
 }
 
-.paragraph{
- margin-left: 2rem;
- margin-right:2rem;
-}
-
 .paragraph h1{
   color: black;
   font-family: 'Noto Serif', serif;
@@ -1013,12 +980,11 @@ letter-spacing: 0.1em;
   font-size: 1.6rem;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.8;
-  /*margin-bottom: 1.5rem;*/
   padding-bottom: 4rem;
 }
 
 .underline{
-  background-image: linear-gradient(to bottom, #B3CFCD 40%, transparent 30%);
+  background-image: linear-gradient(to bottom, #EFBB3F 40%, transparent 30%);
   background-position: 0 1.03em;
   background-repeat: repeat-x;
   background-size: 2px 8px;
@@ -1057,7 +1023,6 @@ letter-spacing: 0.1em;
   font-family: 'Noto Serif', serif;
   font-weight: 600;
   line-height: normal;
-  padding-left: 2rem;
   padding-top:3rem;
   padding-bottom: 1.5rem;
   position: relative;
@@ -1070,12 +1035,10 @@ letter-spacing: 0.1em;
   line-height: 1.5;
   padding-top: 3rem;
   padding-bottom: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .comment{
-    margin: 3rem 2rem;
+    margin: 3rem 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-top-style: solid;
@@ -1085,86 +1048,79 @@ letter-spacing: 0.1em;
   }
 
 .comment p{
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 1rem;
   font-size: 2rem;
 }
 
 
 .carousel{
   position: relative;
-  width: 80%;
-  margin: 0 auto;
-  margin: 7rem 2rem;
-  height: 45vh;
-}
-
-.carousel.App{
-  height: 30vh;
-}
-
-.carousel__track-container{
-  height: 100%;
-  position:relative;
-}
-
-.carousel__track{
-  padding:0;
-  margin:0;
-  list-style: none;
-  position:relative;
-  height:100%
-}
-
-.carousel__slide{
-  position: absolute;
-  top: 0;
-  bottom: 0;
   width: 100%;
+  margin: 5rem 0 6rem 0;
+  height: 62vh;
+  text-align: center;
+}
+
+.carousel.app{
+  height: 40vh;
 }
 
 .carousel h3{
   color: black;
   font-family: 'Noto Serif', serif;
   line-height: normal;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   position: relative;
   font-size: 1.8rem;
 }
 
-.carousel__slide p{
+.carousel-cell p{
+  padding-top: 1rem;
+  padding-left: 3rem;
   font-size: 1.6rem;
   font-family: 'Source Sans Pro', sans-serif;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 3rem;
+  text-align: left;
+  margin-right: 2rem;
 }
 
 .reference{
   font-size: 1.4rem;
   color: grey;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
-.carousel__nav{
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
+.carousel-cell{
+  width: 100%;
+  height: 45vh;
+  margin-right: 2rem;
+  margin: 0;
 }
 
-.carousel__indicator{
-  border:0;
-  border-radius:50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: rgba(0,0,0,.3);
-  margin: 0 1rem;
-  cursor: pointer;
+.carousel-cell.app{
+  height: 25vh;
 }
 
-.is-hidden{ display:none;}
+/* position dots in carousel */
+.flickity-page-dots {
+  padding-top: 3rem;
+  bottom: 0;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: lightgrey;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: black;
+}
 
-
-.carousel__indicator.current-slide{
-  background: rgba(0,0,0,.75)
+.flickity-button{
+  display: none;
 }
 
 
@@ -1210,6 +1166,7 @@ letter-spacing: 0.1em;
 /*--------footer styling*/
 .footer{
   padding-top: 7rem;
+
   /*overflow:hidden;*/
 }
 
@@ -1263,6 +1220,9 @@ letter-spacing: 0.1em;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.footer a{
+  display: inline-block;
+}
 
 .social-list{/*.social-list ul*/
   list-style:none;

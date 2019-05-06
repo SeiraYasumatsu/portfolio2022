@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!--<script src="potfolio.js"></script>-->
 
   </head>
@@ -27,6 +28,8 @@
           </ul>
         </div>
       </nav>
+
+      <button id="btnScrollToTop"><i class="fas fa-caret-up fa-2x"></i></button>
 
        <section class = "hero">
            <article>
@@ -99,39 +102,30 @@
 
        <div class="carousel">
               <h3>What people say about me</h3>
-        <div class="carousel__track-container">
-           <ul class="carousel__track">
-             <li class="carousel__slide current-slide">
-               <p>Her manner is meticulous and the quality of work high, producing creative and well thought-out models, renderings, and marketable designs. Her talents coupled with a strong GPA gives her the practical and academic background so vital to succeed in the design profession. She has the creative ability, serious attitude, and professionalism to be a leader and work well with others.</p>
-               <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor </p>
-             </li>
-             <li class="carousel__slide">
-               <p>Her manner is meticulous and the quality of work high, producing creative and well thought-out models, renderings, and marketable designs. Her talents coupled with a strong GPA gives her the practical and academic background so vital to succeed in the design profession. She has the creative ability, serious attitude, and professionalism to be a leader and work well with others.</p>
-               <p class ="reference">-Ricardo Gomes, SFSU professor at the school of Design </p>
-             </li>
-             <li class="carousel__slide">
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus arcu in scelerisque fermentum. Suspendisse cursus vel lectus ut sodales. Integer feugiat nisl sed massa ultricies, non efficitur mauris viverra. Curabitur laoreet massa ac metus euismod efficitur.</p>
-               <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor</p>
-             </li>
-            </ul>
-          </div>
 
-          <div class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+          <div class="main-carousel">
+              <div class="carousel-cell"><p>Her qualities characterize a well-balanced individual with a responsible sense of
+               accountability and practical logic to comprehend and resolve a given task with tangible results.</p>
+              <p class ="reference">-Ricardo Gomes, San Francisco State University Design Professor </p></div>
+              <div class="carousel-cell"><p>Her talents coupled with a strong GPA gives her the practical and academic background so vital to succeed in the design profession. She has the creative ability, serious attitude, and professionalism to be a leader and work well with others.</p>
+              <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor </p></div>
+              <div class="carousel-cell"><p>Her talents coupled with a strong GPA gives her the practical and academic background so vital to succeed in the design profession. She has the creative ability, serious attitude, and professionalism to be a leader and work well with others.</p>
+              <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor </p></div>
           </div>
-       </div>
+      </div>
+      <script src="scripts/top.js"></script>
+      <script src="scripts/carousel2.js"></script>
+   </main>
 
-       <div class="footer">
-          <div class="footer-container">
+
+        <div class="footer footer-container">
             <div class="question">
              <h2>How can I help you?</h2>
             </div>
            <div class="contact">
              <div class="block-text-contact">
               <h4>Contact Seira to find out</h4>
-                <a href="mailto:seiray117@gmail.com"><button type="button" class="btn btn-default">Seira Yasumatsu</button></a>
+              <a href="mailto:seiray117@gmail.com"><button type="button" class="btn btn-default">Seira Yasumatsu</button></a>
              </div>
            </div>
 
@@ -146,10 +140,7 @@
             </ul>
           </div>
            <article class="copyright"><h4>&copy; 2019 | Designed and Developed by Seira Yasumatsu </h4></article>
-         </div>
-       </div>
+        </div>
 
-         <script src="scripts/carousel.js"></script>
-      </main>
      </body>
    </html>
