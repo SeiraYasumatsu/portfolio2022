@@ -317,9 +317,9 @@ letter-spacing: 0.1em;
 }
 
 .behub-image img{
-  width: 100rem;
+  width: 100%;
   max-width: 100%;
-  max-height: 50rem;
+  max-height: 80rem;
   opacity:1;
   display: block;
   height:auto;
@@ -454,16 +454,14 @@ letter-spacing: 0.1em;
   background: white;
 }
 
-.wrapper2{
-  padding-left: 0;
-}
 
 .section-title{ /*container for the section title*/
   background-color: rgba(179, 207, 205, 0.6);
   margin-right: 16rem;
   margin-top: 10rem;
   opacity: 0.5;
-  padding-left: -2px !important;
+  padding-left: 2rem;
+  margin-left: -2rem!important;
 }
 
 .section-title h2{
@@ -1062,7 +1060,7 @@ letter-spacing: 0.1em;
 }
 
 .carousel.app{
-  height: 40vh;
+  height: 45vh;
 }
 
 .carousel h3{
@@ -1099,14 +1097,16 @@ letter-spacing: 0.1em;
 }
 
 .carousel-cell.app{
-  height: 25vh;
+  height: 35vh;
 }
 
 /* position dots in carousel */
 .flickity-page-dots {
-  padding-top: 3rem;
+  margin-top: 2rem;
   bottom: 0;
+  position:relative;
 }
+
 /* white circles */
 .flickity-page-dots .dot {
   width: 12px;
@@ -1124,6 +1124,7 @@ letter-spacing: 0.1em;
 }
 
 
+
 /*--------summary carousel styling------------*/
 
 .slideshow-container {
@@ -1139,17 +1140,17 @@ letter-spacing: 0.1em;
 }
 
 .dot {
-  height: 1.5rem;
-  width: 1.5rem;
-  margin: 4rem 1rem;
+  height: 3px;
+  width: 3px;
+  margin: 2rem 1rem 3rem 1rem;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.5s ease;
 }
 
 .active {
-  background-color: #717171;
+  background-color: black;
 }
 
 /* Fading animation */
