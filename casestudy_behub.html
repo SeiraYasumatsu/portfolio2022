@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.min.css"> <!--stylesheet for summary carousel-->
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -314,7 +317,7 @@
      </section>
 
       <span id ="behub_casestudy_InformationArchitecture">&nbsp;</span>
-      
+
       <section class="process3">
          <section class ="section-title">
             <h2>INFORMATION ARCHITECTURE</h2>
@@ -559,31 +562,18 @@
              <h2>REFLECTION</h2>
         </section>
 
-       <!--interchangeable screens-->
-      <div class="slideshow-container">
-          <div class="mySlides fade">
-             <img src="images/process_Sketch1.png" style="width:100%">
-          </div>
+     <div class="carousel" data-flickity='{ "fade": true, "imagesLoaded": true }'>
+         <div class="gallery-cell">
+           <img class="gallery-cell-image" src="images/process_Sketch1.png" style="width:100%"></div>
+         <div class="gallery-cell">
+           <img class="gallery-cell-image" src="images/process_wireframe1.png" style="width:100%"></div>
+         <div class="gallery-cell">
+           <img class="gallery-cell-image" src="images/process_MockUp1.png" style="width:100%"></div>
+         <div class="gallery-cell">
+           <img class="gallery-cell-image" src="images/process_Prototype1.png" style="width:100%"></div>
+      </div>
 
-          <div class="mySlides fade">
-             <img src="images/process_wireframe1.png" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/process_MockUp1.png" style="width:100%">
-          </div>
-
-          <div class="mySlides fade">
-            <img src="images/process_Prototype1.png" style="width:100%">
-          </div>
-        </div>
-
-        <div style="text-align:center">
-           <span class="dot"></span>
-           <span class="dot"></span>
-           <span class="dot"></span>
-           <span class="dot"></span>
-        </div>
+      <script src="/path/to/flickity.pkgd.min.js"></script>
 
        <article class="content challenge">
            <h4>Challenges I encountered</h4>
@@ -621,7 +611,8 @@
 
       <script src="scripts/carousel2.js"></script>
       <script src="scripts/top.js"></script>
-      <script src="scripts/summary.js"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
  </main>
 
       <div class="footer">
