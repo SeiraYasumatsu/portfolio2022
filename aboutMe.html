@@ -3,22 +3,24 @@
   <head>
     <title>About Me | Seira Yasumatsu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.min.css"> <!--stylesheet for summary carousel-->
     <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <!--<script src="potfolio.js"></script>-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </head>
 
   <body>
     <main class="wrapper">
 
        <nav class="nav">
-         <div class="container">
+         <div class="header">
            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Logo"></a></div>
 
           <ul class="menu"><!--flex container-->
@@ -31,9 +33,9 @@
 
       <button id="btnScrollToTop"><i class="fas fa-caret-up fa-2x"></i></button>
 
-       <section class = "hero">
+       <section class = "hero about">
            <article>
-             <div class="text2">
+             <div class="text">
                <p>Hi again, I am</p>
                <h1>Seira Yasumatsu</h1>
                <p>This is my story.</p>
@@ -59,7 +61,7 @@
 
 
        <article class="case">
-       <h1 class="heading"><span class="underline--magical">more about Seira</span></h1><!--magical underline-->
+       <h1 class="heading about"><span class="underline--magical">more about Seira</span></h1><!--magical underline-->
        </article>
 
   <main class="text-container">
@@ -86,10 +88,26 @@
        <article class = "paragraph Experiences">
          <h1>Experiences I bring</h1>
          <p>After I graduated with an Industrial design degree, I enrolled in Bloc’s UX Design Apprenticeship program where <span class="underline">I learned to push myself as a designer and a front-end developer to offer the best solution for the real users.</span> </p>
-         <p>From years of working with children, I am a great <strong>listener</strong>, <strong>observer</strong>, and <strong>team player with patience</strong>.</p>
-         <p> As an industrial designer, I bring my knowledge of 3D modeling, materials, and <strong>my curiosity for how things are made and operate</strong>. </p>
-         <p>Of course, born and raised in Japan, I also bring my love for food and respect for things and people around me.</p>
-      </article> <!--add image as a background-->
+
+
+       <div class= "square children">
+           <p>From years of working with children, I am a great listener, observer, and team player with patience.</p>
+       </div>
+
+       <div class= "square brave">
+           <p>I am adaptable & I welcome new challenges including front-end development.</p>
+       </div>
+
+       <div class= "square designer">
+           <p>As an industrial designer, I bring my knowledge of 3D modeling, materials, and my curiosity for how things are made and operate.</p>
+       </div>
+
+       <div class= "square Japanese">
+           <p>Of course, born and raised in Japan, I also bring my love for food and respect for things and people around me.</p>
+      </div>
+    </article> <!--add image as a background-->
+
+      <script src="scripts/portfolio.js"></script>
    </main>
 
       <div class="words-container">
@@ -113,6 +131,7 @@
               <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor </p></div>
           </div>
       </div>
+
       <script src="scripts/top.js"></script>
       <script src="scripts/carousel2.js"></script>
    </main>
