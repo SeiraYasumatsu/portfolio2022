@@ -497,6 +497,11 @@ letter-spacing: 0.1em;
   padding-bottom: 1rem;
 }
 
+.mock-txt h4{
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
 .content.challenge h4{
   padding-top: 3rem;
 }
@@ -516,7 +521,13 @@ letter-spacing: 0.1em;
 .content p{
   font-size: 1.6rem;
   font-weight: normal;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
+}
+
+.mock-txt p{
+  font-size: 1.6rem;
+  font-weight: normal;
+  padding: 2rem 0;
 }
 
 .image-container{/*flex container*/
@@ -563,7 +574,7 @@ letter-spacing: 0.1em;
 }
 
  .chart img{
-  width: 80%;
+  width: 100%;
   position:relative;
 }
 
@@ -872,6 +883,7 @@ letter-spacing: 0.1em;
 
 .mainfeatures h4{
   font-size: 1.6rem;
+  color: grey;
   padding-bottom: 2rem;
   margin-top: 2rem;
 }
@@ -1515,11 +1527,342 @@ letter-spacing: 0.1em;
   }
 
   .hero-text p{
+    font-size: 2.6rem;
+    width: 85%;
+  }
+
+  .specs-container{
+    padding-right: 30rem;
+  }
+
+  .specs-container h2{
     font-size: 2rem;
-    width: 75%;
+  }
+
+  .specs-container p{
+    font-size: 1.8rem;
+  }
+
+
+  .deli h3{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .intro-container{
+    width: 70%;
+  }
+
+  .intro-container h2{
+    font-size: 3rem;
+  }
+
+  .intro-container p{
+    font-size: 2.1rem;
+    margin-bottom: 5rem;
+  }
+
+  .section-title{ /*container for the section title*/
+    margin-right: 45rem;
+    padding-left: 5rem;
+    margin-left: -5rem!important;
 
   }
 
+  .section-title h2{
+    font-size: 3rem;
+  }
+
+  .intro h3{
+    font-size: 3rem;
+  }
+
+  .intro p{
+    font-size: 2.1rem;
+  }
+
+  .intro .note {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .content h4{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .finding h4{
+    padding-top: 6rem;
+  }
+
+  .content p{
+    font-size: 1.8rem;
+  }
+
+  .image-container{/*flex container*/
+    height:45vh;
+  }
+
+  .graph-title h4{
+    font-size: 2.1rem;
+  }
+
+  .graph img{
+    width:60%;
+    height: 30%;
+  }
+
+  .exp {
+    margin-top: 2rem;
+    height: 5vh;
+    margin-left: 5rem;
+    font-size: 1.8rem;
+  }
+
+  .exp p{
+  font-size: 1.8rem;
+ }
+
+  .exp2 p{
+    margin-top: 3.5rem;
+    font-size: 1.8rem;
+  }
+
+  .intro h5 a{
+    font-size: 1.8rem;
+  }
+
+.chart{
+  width: 100%;
+  display: flex;
+  margin-bottom: 7rem;
+}
+
+.chart-container{
+  width: 60%;
+}
+
+.chart img{
+ height: 100%;
+ width: 100%;
+}
+
+.des-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.chart p{
+  width: 100%;
+  height: 5rem;
+  padding-left: 2rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+
+.persona-container{
+   margin-left: 6rem;
+  }
+
+  .persona-img1{
+    margin-top: 4rem;
+    height: 25%;
+    width: 30%;
+  }
+
+  .profile{
+    margin-top: 12rem;
+    width: 60%;
+    z-index: 2;
+  }
+
+  .profile h3{
+    font-size: 3rem;
+  }
+
+  .profile h6{
+    font-size: 1.6rem;
+  }
+
+  .profile p{
+    font-size: 2.1rem;
+    padding-bottom: 3rem;
+  }
+
+  .profile-text h5{
+    font-size: 2.5rem;
+  }
+
+  .profile-text p{
+    font-size: 2.1rem;
+  }
+
+  .persona-img2{
+    margin-top: 4rem;
+    height: 25%;
+    width: 30%;
+  }
+
+  .summary p{
+    padding: 0 2rem;
+    font-size: 2.1rem;
+    line-height: 5rem;
+    margin: 7rem;
+  }
+
+  .summary-note p{
+    font-size: 2.1rem;
+    padding: 3rem 0 3rem 0;
+  }
+
+  .mainfeatures h4{
+    color: grey;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
+
+  .item p{
+    font-size: 1.6rem;
+  }
+
+  .feature-container{
+  margin-bottom: 10rem;
+  }
+
+  .branding h5{
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+  .branding p{
+    margin-top:1.5rem;
+    font-size: 2.1rem;
+  }
+
+.feature-container.box{
+  justify-content: flex-start;
+  margin-bottom: -1rem;
+}
+
+  #color{
+    padding: 1rem;
+  }
+
+  .user img{
+    width: 20%;
+  }
+
+  .user h4{
+    font-size: 1.8rem;
+  }
+
+  .user p{
+    font-size: 1.8rem;
+  }
+
+  .p3-imgcontainer img{
+    width: 60%;
+  }
+
+  .impro-note p{
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .container.testing{
+    width:100%;
+  }
+
+  .testing-img{ /*container for images*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .testing img{
+    width: 60%;
+  }
+
+  .testing-txt{/*container for texts*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .testing h5{
+    font-size: 1.8rem;
+    padding-left: 2rem;
+  }
+
+  .testing p{
+    font-size: 1.8rem;
+    padding: 0 2rem 3rem 2rem;
+  }
+
+/*---visual design---*/
+  .images.mock{
+    height: 60vh;
+    z-index: -1;
+  }
+
+  .vertical img{
+    margin-top: -4rem;
+    margin-left: 30rem;
+    width: 50%;
+    z-index: 1;
+  }
+
+ .content.smart{
+   margin-left: 2rem;
+   margin-right: 2rem;
+ }
+
+.mock.two img{
+  width: 100%;
+  display: block;
+  margin: 5rem auto;
+}
+
+ .content.collab {
+   margin-left: 4rem;
+   margin-right: 4rem;
+   margin-top: -2rem;
+ }
+  .mock img{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 5rem auto;
+  }
+
+  .mock.three img{
+    width: 50%;
+  }
+
+  .mock.four img{
+    width: 60%;
+  }
+
+  .images.mock2{
+    background-image: url(../images/mock2.png);
+    display:flex;
+    flex-wrap: nowrap;
+    margin-top: 5rem;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .content.summarize{
+    line-height: 2.5rem;
+    font-size: 2rem;
+    padding:2rem;
+  }
   /*.flex-nav li{
     flex-wrap:wrap;
   }
@@ -1533,6 +1876,45 @@ letter-spacing: 0.1em;
   }
 
 }*/
+
+.mock.three{
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  display: flex;
+  width:100%;
+}
+
+.mock-container { /*container for images*/
+  width: 50%;
+  height: 50%;
+}
+
+.mock-txt{/*container for texts*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 50%;
+  height: 10rem;
+  margin-top: 17rem;
+}
+
+.mock-txt h4{
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.mock-txt p{
+  font-size: 1.8rem;
+}
+
+
+.mock.three img{
+  width: 60%;
+}
+
+.content.typ{
+  margin: 0 4rem;
+}
 
 @media screen and (min-width: 991px){/*----Desktop---*/
   .flex-nav li{
