@@ -7,13 +7,11 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.min.css"> <!--stylesheet for summary carousel-->
-    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </head>
 
   <body>
@@ -121,19 +119,22 @@
        <div class="carousel">
               <h3>What people say about me</h3>
 
-          <div class="main-carousel">
+          <div class="main-carousel" data-flickity='{ "imagesLoaded": true }'>
+              <div class="carousel-cell"><p>Seira's abilities to match her highly-creative mind with a thoughtful and perseverant approach to face challenges make her the perfect fit to lead or collaborate on existing UX and Product Design teams. I rarely come across mentees with such a positive attitude and willingness to do their best and learn from others like Seira.</p>
+              <p class ="reference">-Juan Martin Garcia, Bloc Mentor</p></div>
+
+              <div class="carousel-cell"><p>Her talents coupled with a strong GPA gives her the practical and academic background so vital to succeed in the design profession. She has the creative ability, serious attitude, and professionalism to be a leader and work well with others.</p>
+              <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor </p></div>
+
               <div class="carousel-cell"><p>Her qualities characterize a well-balanced individual with a responsible sense of
                accountability and practical logic to comprehend and resolve a given task with tangible results.</p>
               <p class ="reference">-Ricardo Gomes, San Francisco State University Design Professor </p></div>
-              <div class="carousel-cell"><p>Her talents coupled with a strong GPA gives her the practical and academic background so vital to succeed in the design profession. She has the creative ability, serious attitude, and professionalism to be a leader and work well with others.</p>
-              <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor </p></div>
-              <div class="carousel-cell"><p>Her talents coupled with a strong GPA gives her the practical and academic background so vital to succeed in the design profession. She has the creative ability, serious attitude, and professionalism to be a leader and work well with others.</p>
-              <p class ="reference">-Paul Nowicki, UC Berkeley Design Professor </p></div>
+
           </div>
       </div>
 
       <script src="scripts/top.js"></script>
-      <script src="scripts/carousel2.js"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
    </main>
 
 

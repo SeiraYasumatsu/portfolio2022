@@ -23,8 +23,8 @@ body{
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /*padding-left: 2rem;
+  padding-right: 2rem;*/
 }
 
 
@@ -70,13 +70,16 @@ body{
     width: 100%;
     flex-wrap: wrap;
     background-color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .logo{
-  padding: 2rem 0.5rem 2rem;
+  padding: 2rem 0.5rem 2rem 2rem;
   display: flex;
   justify-content: left;
   align-items: center;
+  flex:1
 }
 
 .header .menu{/*flex container*/
@@ -92,7 +95,7 @@ body{
   font-weight: bold;
   letter-spacing: 0.2rem;
   text-decoration: none;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 2rem 1rem 1rem;
   text-align: center;
   align-items: center;
   transition: all 0.5s;
@@ -117,6 +120,12 @@ body{
   z-index:2;
   align-self: flex-start;
   padding-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.hero-text{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .hero article .text h1{
@@ -183,9 +192,8 @@ body{
   width:100%;
   align-items: center;
   justify-content:center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
   font-size: 1.8rem;
+  padding: 2rem 2rem;
 }
 
 
@@ -194,6 +202,7 @@ body{
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
+  padding: 2rem 2rem 0 2rem;
 }
 
 .heading /*.case h1*/{
@@ -356,9 +365,12 @@ letter-spacing: 0.1em;
 .specs-container{
   display: flex;
   align-items: baseline;
+  flex-direction: column;
   min-width: 100%;
   flex-wrap: wrap;
   margin-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .specs-container h2{
@@ -384,6 +396,16 @@ letter-spacing: 0.1em;
   color: #333333;
 }
 
+.dur h2{
+  margin-top: 4.5rem;
+}
+
+.dur h3{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333333;
+}
+
 .deli p{
   font-weight: normal;
   padding-bottom: 1rem;
@@ -395,6 +417,7 @@ letter-spacing: 0.1em;
   text-decoration-color: #EFBB3F;
 }
 
+
 .intro-container{
   display: flex;
   align-items: baseline;
@@ -402,6 +425,8 @@ letter-spacing: 0.1em;
   flex-wrap: wrap;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .intro-container h2{
@@ -417,9 +442,8 @@ letter-spacing: 0.1em;
   padding-bottom: 4rem;
 }
 
-.prject.last p{
-  margin-bottom: 4rem;
-  background: mistyrose;
+p.last{
+  margin-bottom: 10rem;
 }
 
 .smartphone {
@@ -460,8 +484,8 @@ letter-spacing: 0.1em;
   margin-right: 16rem;
   margin-top: 10rem;
   opacity: 0.5;
+
   padding-left: 2rem;
-  margin-left: -2rem!important;
 }
 
 .section-title h2{
@@ -472,6 +496,11 @@ letter-spacing: 0.1em;
   padding-top: 1rem;
   color: black !important;
   letter-spacing: 0.2rem;
+}
+
+.intro{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .intro h3{
@@ -490,6 +519,11 @@ letter-spacing: 0.1em;
 .intro .note {
   font-size: 1.4rem;
   color: darkgrey;
+}
+
+.content{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .content h4{
@@ -530,47 +564,63 @@ letter-spacing: 0.1em;
   padding: 2rem 0;
 }
 
-.image-container{/*flex container*/
+.image-container{/*flex container for collaboration features*/
   display: flex;
-  height:40vh;
-  padding-top: 3rem;
+  height:50vh;
+  padding: 3rem 2rem 0 2rem;
+}
+
+.image-container1{ /*container for the image and text*/
+  width: 50%;
+  padding: 1rem;
 }
 
 .graph-title h4{
   font-size: 1.6rem;
-  padding-top: 3rem;
+  padding: 3rem 2rem 0 2rem;
   color: grey;
   letter-spacing: 0.1rem;
 }
 
 .graph img{
-  width:80%;
-  height: 45%;
+  width:100%;
+  height: 100%;
 }
 
 .exp {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   height: 14vh;
 }
 
-
 .exp p{
   font-size: 1.6rem;
-  padding-right: 1rem;
   color: grey;
 }
 
-.exp2 p{
-  font-size: 1.6rem;
-  margin-top: 2rem;
-  color: grey;
+.images{
+ display: flex;
+ width: 100%;
+ flex-direction: column;
+ justify-content: center;
+ padding-left: 2rem;
+ padding-right: 2rem;
 }
 
 .images img{
   width: 100%;
+  height: 100%;
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+.phone-hand.in{
+  height: 100%;
+}
+
+.chart{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
  .chart img{
@@ -599,7 +649,7 @@ letter-spacing: 0.1em;
 
 .logo-images{
   width: 100%;
-  padding: 6rem 0 6rem 0;
+  padding: 6rem 2rem;
 }
 
 .logo-images img{
@@ -708,7 +758,7 @@ letter-spacing: 0.1em;
   color: grey;
   font-size: 1.6rem;
   font-weight: lighter;
-  padding: 5rem 0 2rem 0;
+  padding: 5rem 2rem 2rem 2rem;
 }
 
 .testing img{
@@ -764,7 +814,7 @@ letter-spacing: 0.1em;
   width: 60%;
 }
 
-.images.mock2{
+.prototype.mock2{
   background-image: url(../images/mock2.png);
   display:flex;
   flex-wrap: nowrap;
@@ -777,23 +827,44 @@ letter-spacing: 0.1em;
   width: 100%;
 }
 
-.content.summarize{
+.mock-txt p{
+  padding-bottom: 3rem;
+}
+
+.custom-txt h4{
+  font-size:1.8rem;
+  padding-bottom: 1.5rem;
+
+}
+
+.custom-txt p{
+  font-size: 1.6rem;
+}
+
+.summarize{
   line-height: 2.5rem;
-  font-size: 2rem;
-  padding:2rem;
+  font-size: 1.8rem;
+  margin-top: 8rem;
+  margin-left: 17rem;
+  width: 55%;
 }
 
 
 /*-----------User Persona-------------*/
 
 .persona-container{
-  display:flex;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: 5rem;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
+
 .persona-img1{
-  display:flex;
+  display: flex;
   flex-wrap: nowrap;
   background-size: cover;
   background-repeat: no-repeat;
@@ -810,7 +881,7 @@ letter-spacing: 0.1em;
 .profile{
   width: 70%;
   z-index: 2;
-  margin-left: 14rem;
+  margin-left: 10rem;
   margin-top: 4rem;
 }
 
@@ -858,6 +929,10 @@ letter-spacing: 0.1em;
   position: absolute;
 }
 
+.summary-box{
+  padding-left:2rem;
+  padding-right: 2rem;
+}
 
 .summary p{
   padding: 2rem;
@@ -866,6 +941,15 @@ letter-spacing: 0.1em;
   font-size: 1.8rem;
   line-height: 3rem;
   border-left: 6px solid rgba(179, 207, 205, 0.6);
+}
+
+.last-mock-container{
+width: 100%;
+}
+
+.summary-note{
+  padding-left:2rem;
+  padding-right: 2rem;
 }
 
 .summary-note p{
@@ -879,6 +963,8 @@ letter-spacing: 0.1em;
 
 .mainfeatures{
   width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .mainfeatures h4{
@@ -893,11 +979,13 @@ letter-spacing: 0.1em;
   display: flex;
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .item{
   width: 15rem;
-  height: 30rem;
+  height: 35rem;
   margin-top: 1rem;
   text-align: center;
 }
@@ -919,8 +1007,7 @@ letter-spacing: 0.1em;
   flex-direction:column;
   width:100%;
   justify-content:flex-start;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding: 2rem 2rem 4rem 2rem;
 }
 
 .summary-texts p{
@@ -951,10 +1038,9 @@ letter-spacing: 0.1em;
 .text-container{
   display:flex;
   flex-direction:column;
-  width:100%;
   justify-content:flex-start;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding: 2rem 2rem 4rem 2rem;
+  width:100%;
 }
 
 .square{
@@ -1128,6 +1214,11 @@ letter-spacing: 0.1em;
   padding-bottom: 4rem;
 }
 
+.words-container{
+ padding: 2rem 2rem 4rem 2rem;
+ text-align: center;
+}
+
 .comment{
     margin: 3rem 1rem;
     padding-top: 2rem;
@@ -1136,6 +1227,7 @@ letter-spacing: 0.1em;
     border-bottom-style: solid;
     border-width: thin;
     border-color: #C0C0C0;
+    text-align: center;
   }
 
 .comment p{
@@ -1347,14 +1439,6 @@ letter-spacing: 0.1em;
   padding-right: 5rem;
  }
 
-  .nav{
-    flex-basis:100%;
-  }
-
-  .header .menu{/*flex container*/
-    margin-left: 24rem;
-    justify-content: right;
-  }
 
   .page a{ /*flex item*/
     padding: 2rem 2rem;
@@ -1363,7 +1447,7 @@ letter-spacing: 0.1em;
 
   .hero{
     height: 100vh;
-    padding:10rem 2rem;
+    padding:5rem 2rem;
     margin-bottom: 15rem;
   }
 
@@ -1372,7 +1456,8 @@ letter-spacing: 0.1em;
     z-index:2;
     align-self: flex-start;
     padding-bottom: 2rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
+
   }
 
   .hero article .text h1{
@@ -1391,15 +1476,15 @@ letter-spacing: 0.1em;
   }
 
   .first p{
-    padding-top: 20rem;
+    padding-top: 10rem;
     border: 2px solid pink;
   }
 
   .hero-image{/*hero image for the homepage*/
     height: 80vh;
     width: 50vh;
-    margin-top: 10rem;
-    margin-left: 30rem;
+    margin-top: 22rem;
+    margin-left: 34rem;
   }
 
   .hero-image2{ /*hero images for About page*/
@@ -1459,18 +1544,18 @@ letter-spacing: 0.1em;
   }
 
   .heading.about /*.case h1*/{
-   padding: 8rem 4rem 4rem 4rem;
+    padding: 8rem 4rem 4rem 4rem;
   }
 
-.square p{
-  font-size: 2rem;
-  padding: 2rem;
-}
+ .square p{
+   font-size: 2rem;
+   padding: 2rem;
+ }
 
-.words-container{
-  padding: 2rem 2rem 4rem 2rem;
-  text-align: center;
-}
+  .words-container{
+   padding: 2rem 2rem 4rem 2rem;
+   text-align: center;
+  }
 
 
   .words h3{
@@ -1486,7 +1571,7 @@ letter-spacing: 0.1em;
   .carousel{
     width: 100%;
     margin: 5rem 0;
-    height: 70vh;
+    height: 80vh;
     padding: 0 5rem;
   }
 
@@ -1509,7 +1594,7 @@ letter-spacing: 0.1em;
 
   .carousel-cell{
     width: 100%;
-    height: 35vh;
+    height: 55vh;
   }
 
   .flickity-page-dots {
@@ -1532,8 +1617,30 @@ letter-spacing: 0.1em;
   }
 
   .specs-container{
-    padding-right: 30rem;
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    min-width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
   }
+
+  .role{
+     flex:2;
+  }
+
+  .deli{
+    flex:3;
+  }
+
+  .dur{
+    flex:2;
+  }
+
+
+  /*.specs-container{
+    padding-right: 30rem;
+  }*/
 
   .specs-container h2{
     font-size: 2rem;
@@ -1563,7 +1670,7 @@ letter-spacing: 0.1em;
   }
 
   .section-title{ /*container for the section title*/
-    margin-right: 45rem;
+    margin-right: 40rem;
     padding-left: 5rem;
     margin-left: -5rem!important;
 
@@ -1600,7 +1707,33 @@ letter-spacing: 0.1em;
   }
 
   .image-container{/*flex container*/
-    height:45vh;
+    height:50vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .images{
+   flex-direction: row;
+  }
+
+  .phone-hand{
+    width: 50%;
+    height: 50%;
+  }
+
+  .images img{
+    margin-top: 1rem;
+    width: 100%;
+    height: 50%;
+  }
+
+  .phone-hand.in img{
+    margin-top: -1.2rem;
+  }
+
+  .phone-hand.out img{
+    margin-top: 0rem;
+    margin-bottom: 2rem;
   }
 
   .graph-title h4{
@@ -1608,14 +1741,13 @@ letter-spacing: 0.1em;
   }
 
   .graph img{
-    width:60%;
-    height: 30%;
+    width:40%;
+    height: 20%;
   }
 
   .exp {
     margin-top: 2rem;
     height: 5vh;
-    margin-left: 5rem;
     font-size: 1.8rem;
   }
 
@@ -1623,10 +1755,6 @@ letter-spacing: 0.1em;
   font-size: 1.8rem;
  }
 
-  .exp2 p{
-    margin-top: 3.5rem;
-    font-size: 1.8rem;
-  }
 
   .intro h5 a{
     font-size: 1.8rem;
@@ -1663,17 +1791,19 @@ letter-spacing: 0.1em;
 
 
 .persona-container{
+   width: 70%;
    margin-left: 6rem;
   }
 
   .persona-img1{
     margin-top: 4rem;
-    height: 25%;
+    height: 30%;
     width: 30%;
   }
 
   .profile{
     margin-top: 12rem;
+    margin-left: 20rem;
     width: 60%;
     z-index: 2;
   }
@@ -1701,7 +1831,7 @@ letter-spacing: 0.1em;
 
   .persona-img2{
     margin-top: 4rem;
-    height: 25%;
+    height: 30%;
     width: 30%;
   }
 
@@ -1845,7 +1975,7 @@ letter-spacing: 0.1em;
     width: 60%;
   }
 
-  .images.mock2{
+  .prototype.mock2{
     background-image: url(../images/mock2.png);
     display:flex;
     flex-wrap: nowrap;
@@ -1858,24 +1988,11 @@ letter-spacing: 0.1em;
     width: 100%;
   }
 
-  .content.summarize{
+.summarize{
     line-height: 2.5rem;
     font-size: 2rem;
     padding:2rem;
   }
-  /*.flex-nav li{
-    flex-wrap:wrap;
-  }
-
-  .flex-nav li{
-    flex:1 1 50%
-  }
-
-  .flex-nav .logo{
-    flex:1 1 25%;
-  }
-
-}*/
 
 .mock.three{
   margin-top: 5rem;
@@ -1889,6 +2006,33 @@ letter-spacing: 0.1em;
   height: 50%;
 }
 
+.mock.four{/*container for the both*/
+  display:flex;
+  width: 100%;
+}
+
+.custom-container{/*img box*/
+  height: 50%;
+  width:50%;
+}
+
+.custom-txt{ /*textbox*/
+  margin-top: 17rem;
+  width: 50%;
+}
+
+.custom-txt h4{
+  font-size:1.8rem;
+  padding-bottom: 1rem;
+  margin-left: 4rem;
+}
+
+.custom-txt p{
+  font-size: 1.8rem;
+  padding:0rem;
+  margin-left: 4rem;
+}
+
 .mock-txt{/*container for texts*/
   display: flex;
   flex-wrap: wrap;
@@ -1898,23 +2042,72 @@ letter-spacing: 0.1em;
   margin-top: 17rem;
 }
 
-.mock-txt h4{
+.mock-txt h4{ /*text for frustration typing*/
   font-size: 1.8rem;
   padding-bottom: 1rem;
 }
 
 .mock-txt p{
   font-size: 1.8rem;
+  padding:0rem;
 }
+
 
 
 .mock.three img{
   width: 60%;
 }
 
+.mock.four img{
+  width: 70%;
+}
 .content.typ{
   margin: 0 4rem;
 }
+
+.last-mock-container{
+  margin-bottom: 7rem;
+}
+
+.prototype.mock2{/*crop the image!1*/
+  flex-wrap: wrap;/*changed*/
+  height: 70vh;/*changed*/
+  width: 100%;
+}
+
+.summarize{
+  background: rgba(255,255,255, 0.3);
+  font-size: 2.5rem;
+  line-height: 4rem;
+  padding: 2rem;
+  margin: 10rem 0 10rem 35rem;
+  width: 50%;
+}
+
+.gallery-cell {
+  height: 500px;
+}
+
+.content.challenge h4{
+  margin-top: 20rem;
+  font-size: 3rem;
+}
+
+.comment p{
+  font-size: 2.3rem;
+}
+
+p.one{
+  margin-top: 2rem;
+
+}
+
+p.two{
+  margin-bottom: 2rem;
+}
+
+}
+
 
 @media screen and (min-width: 991px){/*----Desktop---*/
   .flex-nav li{
@@ -1933,46 +2126,3 @@ letter-spacing: 0.1em;
   background-position:
 }
 }
-
-/*@media screen and (min-width: 575px){
-  .flex-nav li{
-    flex-basis:100%;
-  }
-
-  .wrapper{
-  display: flex;
-  flex-direction: column;
- }
-
- .project{
-  width: 100%;
-  max-width: 40rem;
-  height: auto;
-}
-/*.social li{
- flex: 1 1 25%;
-}*/
-
-/*Flex Item*/
-/*.wrapper> * {
-  order: 9999;
-}
-
-.flex-nav{
-  order:1;
-}
-
-.toggle-nav{
-  display: block;
-}
-
-.flex-nav ul{
-  display:none;
-}
-
-.flex-nav ul.open{
-  display: flex;
-}
-
-}
-*/
