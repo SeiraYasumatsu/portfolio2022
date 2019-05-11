@@ -446,7 +446,22 @@ p.last{
   margin-bottom: 10rem;
 }
 
-.smartphone {
+.iframe-container{
+  overflow: hidden;
+  padding-left: 2rem;
+  padding-right:2rem;
+  width: 80rem;
+  height: 45rem;
+}
+
+.iframe-container iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/*.smartphone {
   position: relative;
   width: 300;
   height: 97vh;
@@ -455,10 +470,10 @@ p.last{
   border-top-width: 60px;
   border-bottom-width: 60px;
   border-radius: 36px;
-}
+}*/
 
 /* The horizontal line on the top of the device */
-.smartphone:before {
+/*.smartphone:before {
   content: '';
   display: block;
   width: 60px;
@@ -469,14 +484,14 @@ p.last{
   transform: translate(-50%, -50%);
   background: #C0C0C0;
   border-radius: 10px;
-}
+}*/
 
 /* The screen (or content) of the device */
-.smartphone .prototype-content{
+/*.smartphone .iframe-container{
   width: 300;
-  height: 80vh;
+  height: 450;
   background: white;
-}
+}*/
 
 
 .section-title{ /*container for the section title*/
@@ -484,7 +499,6 @@ p.last{
   margin-right: 16rem;
   margin-top: 10rem;
   opacity: 0.5;
-
   padding-left: 2rem;
 }
 
@@ -566,7 +580,7 @@ p.last{
 
 .image-container{/*flex container for collaboration features*/
   display: flex;
-  height:50vh;
+  height:40vh;
   padding: 3rem 2rem 0 2rem;
 }
 
@@ -583,8 +597,8 @@ p.last{
 }
 
 .graph img{
-  width:100%;
-  height: 100%;
+  width:60%;
+  height: 60%;
 }
 
 .exp {
@@ -1239,14 +1253,11 @@ width: 100%;
 .carousel{
   position: relative;
   width: 100%;
-  margin: 5rem 0 6rem 0;
-  height: 62vh;
+  margin-top: 7rem;
+  height: 58vh;
   text-align: center;
 }
 
-.carousel.app{
-  height: 45vh;
-}
 
 .carousel h3{
   color: black;
@@ -1276,15 +1287,10 @@ width: 100%;
 
 .carousel-cell{
   width: 100%;
-  height: 45vh;
+  height: 35vh;
   margin-right: 2rem;
   margin: 0;
 }
-
-.carousel-cell.app{
-  height: 35vh;
-}
-
 
 .gallery-cell {
   width: 100%;
@@ -1435,14 +1441,19 @@ width: 100%;
   margin: 0 auto;
   width: 100%;
   display: flex;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  /*padding-left: 5rem;
+  padding-right: 5rem;*/
  }
 
 
   .page a{ /*flex item*/
     padding: 2rem 2rem;
     font-size: 1.8rem;
+  }
+
+  .hero-text{
+    padding-left: 5rem;
+    padding-right: 5rem
   }
 
   .hero{
@@ -1518,13 +1529,31 @@ width: 100%;
     font-size: 1.8rem;
   }
 
+  .summary-note{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .summary-container{
-    padding: 0 4rem 2rem 4rem;
+    padding: 0 5rem 2rem 5rem;
   }
 
   .summary-texts p{
     font-size: 2rem;
     padding-bottom: 1rem;
+  }
+
+  .iframe-container{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 40%;
+    height: 45rem;
+  }
+
+
+  .mainfeatures{
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .btn-resume{
@@ -1543,8 +1572,12 @@ width: 100%;
     padding: 2rem 4rem 4rem 4rem;
   }
 
+  .logo-images{
+    padding: 6rem 5rem;
+  }
+
   .heading.about /*.case h1*/{
-    padding: 8rem 4rem 4rem 4rem;
+    padding: 8rem 4rem 4rem 2rem;
   }
 
  .square p{
@@ -1571,10 +1604,14 @@ width: 100%;
   .carousel{
     width: 100%;
     margin: 5rem 0;
-    height: 80vh;
+    height: 65vh;
     padding: 0 5rem;
   }
 
+  .carousel-cell{
+    width: 100%;
+    height: 55vh;
+  }
 
   .carousel h3{
     padding-top: 3rem;
@@ -1590,11 +1627,6 @@ width: 100%;
 
   .reference{
     font-size: 1.6rem;
-  }
-
-  .carousel-cell{
-    width: 100%;
-    height: 55vh;
   }
 
   .flickity-page-dots {
@@ -1623,6 +1655,8 @@ width: 100%;
     min-width: 100%;
     flex-wrap: wrap;
     margin-bottom: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem
   }
 
   .role{
@@ -1636,11 +1670,6 @@ width: 100%;
   .dur{
     flex:2;
   }
-
-
-  /*.specs-container{
-    padding-right: 30rem;
-  }*/
 
   .specs-container h2{
     font-size: 2rem;
@@ -1658,6 +1687,13 @@ width: 100%;
 
   .intro-container{
     width: 70%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .intro{
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .intro-container h2{
@@ -1672,8 +1708,6 @@ width: 100%;
   .section-title{ /*container for the section title*/
     margin-right: 40rem;
     padding-left: 5rem;
-    margin-left: -5rem!important;
-
   }
 
   .section-title h2{
@@ -1708,12 +1742,14 @@ width: 100%;
 
   .image-container{/*flex container*/
     height:50vh;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 
   .images{
    flex-direction: row;
+   padding-left: 5rem;
+   padding-right: 5rem;
   }
 
   .phone-hand{
@@ -1738,6 +1774,8 @@ width: 100%;
 
   .graph-title h4{
     font-size: 2.1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .graph img{
@@ -1755,19 +1793,20 @@ width: 100%;
   font-size: 1.8rem;
  }
 
-
   .intro h5 a{
     font-size: 1.8rem;
   }
 
-.chart{
-  width: 100%;
-  display: flex;
-  margin-bottom: 7rem;
+ .chart{
+   width: 100%;
+   display: flex;
+   margin-bottom: 7rem;
+   padding-left: 5rem;
+   padding-right: 5rem;
 }
 
 .chart-container{
-  width: 60%;
+  width: 70%;
 }
 
 .chart img{
@@ -1791,11 +1830,11 @@ width: 100%;
 
 
 .persona-container{
-   width: 70%;
-   margin-left: 6rem;
+   width: 80%;
+   margin-left: 5rem;
   }
 
-  .persona-img1{
+.persona-img1{
     margin-top: 4rem;
     height: 30%;
     width: 30%;
@@ -1858,8 +1897,14 @@ width: 100%;
   }
 
   .feature-container{
-  margin-bottom: 10rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   }
+
+.flex-container{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 
   .branding h5{
     margin-top: 2rem;
@@ -1874,6 +1919,7 @@ width: 100%;
 .feature-container.box{
   justify-content: flex-start;
   margin-bottom: -1rem;
+  margin-left: -5rem;
 }
 
   #color{
@@ -1899,6 +1945,8 @@ width: 100%;
   .impro-note p{
     font-size: 1.8rem;
     margin-bottom: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .container.testing{
@@ -1943,6 +1991,16 @@ width: 100%;
     width: 50%;
     z-index: 1;
   }
+
+.content{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.container{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 
  .content.smart{
    margin-left: 2rem;
@@ -2079,8 +2137,8 @@ width: 100%;
   background: rgba(255,255,255, 0.3);
   font-size: 2.5rem;
   line-height: 4rem;
-  padding: 2rem;
-  margin: 10rem 0 10rem 35rem;
+  padding: 1rem;
+  margin: 10rem 0 16rem 36rem;
   width: 50%;
 }
 
@@ -2097,9 +2155,13 @@ width: 100%;
   font-size: 2.3rem;
 }
 
+.comment{
+  margin-left:5rem;
+  margin-right: 5rem;
+}
+
 p.one{
   margin-top: 2rem;
-
 }
 
 p.two{
@@ -2110,19 +2172,242 @@ p.two{
 
 
 @media screen and (min-width: 991px){/*----Desktop---*/
-  .flex-nav li{
-    flex-basis:100%;
+
+.logo{
+  padding-left: 5rem;
+}
+
+.page a{
+  padding-right: 5rem;
+}
+
+.hero-text{
+  margin-bottom: 5rem;
+}
+
+.hero-text h1{
+  padding-left: 5rem;
+}
+
+.hero-text p{
+  padding-left: 5rem;
+  width: 60%;
+}
+
+.specs-container{
+  margin-bottom: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.intro-container{
+  width: 80%;
+  padding-left: 5rem;
+  padding-right: 10rem;
+  border: 2px solid purple;
+}
+
+.intro{
+  padding-left:20rem;
+  padding-right:20rem;
+}
+
+.iframe-container{
+  height: 50rem;
+}
+
+.section-title{ /*container for the section title*/
+  margin-right: 80rem;
+  padding-left: 20rem;
+  margin-bottom: 3rem;
+}
+
+.content{
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.graph-title h4{
+  font-size: 2.1rem;
+  margin-top: 2rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.image-container{/*flex container*/
+  height:50vh;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+.images{
+ flex-direction: row;
+ padding-left: 20rem;
+ padding-right: 20rem;
+}
+
+.phone-hand.in img{
+  margin-top: -1.4rem;
+}
+
+.chart{
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.chart-container{
+ width: 50%;
+}
+
+.persona-container{
+   width: 40%;
+   margin: 0 auto;
   }
 
-  .wrapper{
-  display: flex;
-  flex-direction: column;
+.persona-img1{
+    height: 25%;
+    width: 20%;
+  }
+
+  .persona-img2{
+      height: 25%;
+      width: 20%;
+    }
+
+  .profile__container{
+      display: flex;
+      width: 100%;
+    }
+
+  .profile{
+    margin-top: 12rem;
+    margin-left: 20rem;
+    width: 60%;
+    z-index: 2;
+  }
+
+
+
+ .hero-image{/*hero image for the homepage*/
+   margin-top: 28rem;
+   margin-left: 60rem;
  }
 
- .project{
+ .hero-image2{ /*hero images for About page*/
+   margin-top: 8rem;
+   margin-left: 56rem;
+ }
+
+ .case{
+   padding-left: 20rem;
+   padding-right: 20rem;
+   font-size: 4rem;
+ }
+
+ .heading.about /*.case h1*/{
+   padding-left:0;
+ }
+
+ .flex-container{/*for cases*/
+   padding: 2rem 20rem;
+ }
+
+ .summary-container{
+   padding: 0 20rem 2rem 20rem;
+ }
+
+ .text-container{
+   padding: 2rem 20rem 4rem 20rem;
+ }
+
+ .square{
+   width: 50%;
+   height: 50vh;
+   margin: 10rem auto;
+ }
+
+ .square.brave{
+   width: 50%;
+   height: 50vh;
+   background-position: bottom right;
+   margin: 10rem auto;
+ }
+
+ .square.designer{
+   width: 50%;
+   height: 50vh;
+   margin: 10rem auto;
+ }
+
+ .square.Japanese{
+   height: 50vh;
+   width: 50%;
+   background-position: center;
+   margin: 10rem auto;
+ }
+
+ .square p {
+  bottom: 6rem;
+   left: 15rem;
+   width: 80%;
+   background: rgba(0,0,0,0.7);
+ }
+
+ .words-container{
+  padding: 2rem 15rem 4rem 15rem;
+
+ }
+
+ .carousel{
+   width: 80%;
+   margin: 5rem 15rem;
+   height: 70vh;
+ }
+
+ .carousel-cell{
+   width: 100%;
+   height: 40vh;
+ }
+
+ .project{ /*desktop*/
   width: 100%;
-  max-width: 40rem;
-  height: auto;
-  background-position:
+  max-width: 60rem;
+  border: 1px solid lavender;
+ }
+
+ .summary-box{
+   padding-left:20rem;
+   padding-right: 20rem;
+   margin-top: 12rem;
+ }
+
+ .summary-note{
+   padding-left: 20rem;
+   padding-right: 20rem;
+ }
+
+ .mainfeatures{
+   padding-left: 20rem;
+ }
+
+ .feature-container{
+   padding-left: 20rem;
+   padding-right: 20rem;
+ }
+
+ .logo-images{
+   padding: 6rem 20rem;
+ }
+
+ .container{
+   border: 2px solid orange;
+ }
+
+
+.project p{
+  line-height: 4rem;
 }
+
+
+
 }

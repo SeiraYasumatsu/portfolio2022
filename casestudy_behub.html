@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+  <!--  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">-->
+  <!--  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.min.css"> <!--stylesheet for summary carousel-->
+
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/flickity.css">
+    <link rel="stylesheet" href="css/flickity-fade.css">
     <link rel="stylesheet" href="css/style.css">
 
   </head>
@@ -89,11 +92,11 @@
                "<em>Hmm, finally a piece of mind.</em>”</p>
           </article>
           <!--<section class="prototype"><img src="images/onboarding.gif" alt="onboarding"></a>  </section>-->
-        <div class="smartphone">
-          <div class="prototype-content">
-          <iframe style="width:100%;border:none;height:100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fg8unnpkbpROz15zJy8uHqIR4%2FFinal-Design%3Fnode-id%3D37%253A2%26viewport%3D1290%252C1816%252C0.5%26scaling%3Dscale-down" allowfullscreen></iframe>
-        </div>
-        </div>
+       <!--<div class="smartphone">-->
+          <div class="iframe-container">
+            <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fg8unnpkbpROz15zJy8uHqIR4%2FFinal-Design%3Fnode-id%3D0%253A1%26viewport%3D1096%252C1959%252C0.5%26scaling%3Dscale-down" allowfullscreen></iframe>
+          </div>
+      <!--</div>-->
 
        </main>
 
@@ -196,28 +199,28 @@
             <p>After the user survey and the competitive analysis, I found out that people use collaboration features for their work and there is a niche market for parents/family who can benefit from collaboration features for better communication and schedule and content management. </p>
           </article>
 
+          <section class= "profile__container">
+             <section class="persona-container">
+                <div class="persona-img1">
+                </div>
 
-          <section class="persona-container">
-             <section class="persona-img1">
+             <section class="profile">
+                <h3>Emily</h3>
+                <h6>Program Manager</h6>
+                <p><em>“I often forget to update the calendar when things change.”</em></p>
+              </section>
+
+             <section class ="profile-text">
+                 <h5>Goals</h5>
+                 <p>•   To receive an update notification in my preferred time</p>
+                 <p>•   To be able to place a temporary reminder when I do not have time</p>
+                 <p>•   To have an easy and fast fill in options for an update </p>
+
+                 <h5>Pain Points</h5>
+                 <p>•	The constant notifications when I am busy</p>
+                 <p>•	There is no temporary placeholder to remind myself about the updates on the specific date</p>
              </section>
-
-            <section class="profile">
-               <h3>Emily</h3>
-               <h6>Program Manager</h6>
-               <p><em>“I often forget to update the calendar when things change.”</em></p>
-            </section>
-
-            <section class ="profile-text">
-               <h5>Goals</h5>
-               <p>•   To receive an update notification in my preferred time</p>
-               <p>•   To be able to place a temporary reminder when I do not have time</p>
-               <p>•   To have an easy and fast fill in options for an update </p>
-
-               <h5>Pain Points</h5>
-               <p>•	The constant notifications when I am busy</p>
-               <p>•	There is no temporary placeholder to remind myself about the updates on the specific date</p>
-            </section>
-        </section>
+           </section>
 
            <section class="persona-container">
               <section class="persona-img2">
@@ -239,6 +242,7 @@
                <p>•	Lack of visual elements on my calendar to identify the schedule instantly</p>
             </section>
          </section>
+     </section>
 
          <div class="summary-box">
              <article class="summary">
@@ -652,9 +656,11 @@
           </div>
         </div>
       </section>
-    
+
 
       <script src="scripts/top.js"></script>
+    <!--  <script src="scripts/flickity-fade"></script>-->
+    <!--  <script src="scripts/flicity.pkgd.min.js"></script>-->
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
  </main>
