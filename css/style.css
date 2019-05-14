@@ -107,13 +107,13 @@ body{
 }
 
 
-.hero{
+.hero{ /*phone styling*/
   display: flex;
   flex-direction:column;
   height: 80vh;
   width: 100%;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 4rem;
   flex-wrap: wrap;
 }
 
@@ -1503,9 +1503,9 @@ p.last{
     padding-right: 5rem;
   }
 
-  .hero{
+  .hero{ /*Tablet styling*/
     height: 100vh;
-    padding:5rem 2rem;
+    padding: 5rem 10rem;
     margin-bottom: 15rem;
   }
 
@@ -1584,7 +1584,7 @@ p.last{
   }
 
   .overlay img{ /*for tablet*/
-    height: 45vh;
+    max-height: 45vh;
   }
 
   .summary-note{
@@ -2422,7 +2422,7 @@ p.two{
 
  .cases__index{ /*desktop__heading for index.html__CASES*/
    font-size: 4rem;
-   margin-left: 40rem;
+   margin-left: 45rem;
  }
 
  .heading.about /*.case h1*/{
@@ -2430,33 +2430,45 @@ p.two{
  }
 
  .flex-container{/*DESKTOP__for cases*/
+   padding: 2rem 45rem;
+ }
+
+ .flex-container.casestudy{
    padding: 2rem 20rem;
  }
 
-
- .overlay{ /*casestudy images*/
-   display: flex;
-   align-items: center;
-   justify-content:center;
+ .overlay { /*Desktop overlay*/
+    width: 100%;
  }
 
-.overlay img{ /*for Desktop*/
-  width: 55%;
-  height: 45vh;
-}
+ .overlay img {
+    width: 60rem; /*change here*/
+    max-height: 45vh;
+  }
+
+ .overlay :not(img) { /*desktop*/
+   top: 25%;
+ }
+
+ .overlay h2{
+ font-size: 3rem;
+ }
+
+ .overlay h3{
+   top:45%;
+   font-size: 1.8rem;
+ }
+
+ .overlay .btn-casestudy {
+   align-items: center;
+   height: 3px;
+   font-size: 1.6rem;
+ }
+
 
 .btn-default {
   font-size: 1.4rem;
   text-align: center;
-}
-
-
-.overlay :not(img) { /*Desktop*/
-  position: absolute;
-  width: 50%;
-  margin-left: 0 !important;
-  margin: 0 auto;
-  justify-content: center;
 }
 
 .heading.about /*.case h1* more about Seira_desktop*/{
@@ -2513,7 +2525,6 @@ p.two{
 
  .words-container{
   padding: 2rem 15rem 4rem 15rem;
-
  }
 
  .carousel{
