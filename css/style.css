@@ -102,7 +102,7 @@ body{
 }
 
 .page a:hover{
-  color: #B3CFCD;
+  color: #EFBB3F;
   font-weight:bold;
 }
 
@@ -111,7 +111,9 @@ body{
   display: flex;
   flex-direction:column;
   height: 80vh;
-  padding:4rem 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
   flex-wrap: wrap;
 }
 
@@ -164,7 +166,7 @@ body{
   opacity: 0.4;
   z-index:1;
   position: absolute;
-  margin-top: 18rem;
+  margin-top: 20rem;
   margin-left: 12rem;
 }
 
@@ -180,8 +182,8 @@ body{
   width: 30vh;
   opacity: 1;
   z-index:1;
-  margin-top: 12rem;
-  margin-left: 10rem;
+  margin-top: 16rem;
+  margin-left: 12rem;
 }
 
 /*--------case study styling in homepage*/
@@ -196,13 +198,16 @@ body{
   padding: 2rem 2rem;
 }
 
+.cases__index{ /*case title for the phone*/
+ margin-left: 2rem;
+}
 
 .case{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  padding: 2rem 2rem 0 2rem;
+  padding: 2rem 2rem 0 0;
 }
 
 .heading /*.case h1*/{
@@ -277,7 +282,7 @@ letter-spacing: 0.1em;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.overlay .btn-casestudy {
+.overlay .btn-casestudy { /*phone*/
   top:65%;
   align-self: center;
   width:50%;
@@ -406,6 +411,10 @@ letter-spacing: 0.1em;
   color: #333333;
 }
 
+.dur p{
+  padding-bottom: 2rem;
+}
+
 .deli p{
   font-weight: normal;
   padding-bottom: 1rem;
@@ -419,7 +428,6 @@ letter-spacing: 0.1em;
 
 .intro-container{
   display: flex;
-  align-items: baseline;
   min-width: 100%;
   flex-wrap: wrap;
   margin-top: 5rem;
@@ -446,7 +454,7 @@ p.last{
 }
 
 .iframe-container{
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding-left: 2rem;
   padding-right:2rem;
   width: 80rem;
@@ -557,6 +565,7 @@ p.last{
 
 .content h4{
   font-size: 1.8rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -677,12 +686,17 @@ p.last{
 
 
 .logo-images{
-  width: 100%;
+  width: 50%;
   padding: 6rem 2rem;
 }
 
 .logo-images img{
   width:100%
+}
+
+.designstyle{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .branding{
@@ -811,6 +825,11 @@ p.last{
   padding-right: 2rem;
 }
 
+.officemock{
+  width: 100%;
+  height: 35vh;
+}
+
 .images.mock{
   background-image: url(../images/mockup1.png);
   display:flex;
@@ -820,7 +839,7 @@ p.last{
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 40vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -845,6 +864,11 @@ p.last{
   width: 60%;
 }
 
+.last-mock-container{
+  width: 100%;
+  height: 80%;
+}
+
 .prototype.mock2{
   background-image: url(../images/mock2.png);
   display:flex;
@@ -855,7 +879,6 @@ p.last{
   background-repeat: no-repeat;
   position: relative;
   height: 40vh;
-  width: 100%;
 }
 
 .mock-txt p{
@@ -894,7 +917,7 @@ p.last{
 }
 
 
-.persona-img1{
+.persona-img1{ /*phone styling*/
   display: flex;
   flex-wrap: nowrap;
   background-size: cover;
@@ -974,9 +997,6 @@ p.last{
   border-left: 6px solid rgba(179, 207, 205, 0.6);
 }
 
-.last-mock-container{
-width: 100%;
-}
 
 .summary-note{
   padding-left:2rem;
@@ -1031,6 +1051,11 @@ width: 100%;
 }
 
 /*--------------about page styling---------------*/
+
+.heading.about /*.case h1* more about Seira_phone*/{
+  padding: 5rem 4rem 4rem 0;
+  margin-left: 2rem;
+}
 
 
 .summary-container{
@@ -1466,10 +1491,7 @@ width: 100%;
   margin: 0 auto;
   width: 100%;
   display: flex;
-  /*padding-left: 5rem;
-  padding-right: 5rem;*/
  }
-
 
   .page a{ /*flex item*/
     padding: 2rem 2rem;
@@ -1478,7 +1500,7 @@ width: 100%;
 
   .hero-text{
     padding-left: 5rem;
-    padding-right: 5rem
+    padding-right: 5rem;
   }
 
   .hero{
@@ -1493,7 +1515,6 @@ width: 100%;
     align-self: flex-start;
     padding-bottom: 2rem;
     margin-top: 5rem;
-
   }
 
   .hero article .text h1{
@@ -1502,7 +1523,6 @@ width: 100%;
     letter-spacing: 0.2;
     padding-left: 3rem;
   }
-
 
   .hero article .text p{
     width: 60vh;
@@ -1513,33 +1533,42 @@ width: 100%;
 
   .first p{
     padding-top: 10rem;
-    border: 2px solid pink;
   }
 
-  .hero-image{/*hero image for the homepage*/
-    height: 80vh;
-    width: 50vh;
-    margin-top: 22rem;
-    margin-left: 34rem;
+  .hero{ /*tablet hero container*/
+    padding: 4rem;
+    margin-bottom:-4rem;
   }
 
-  .hero-image2{ /*hero images for About page*/
-    height: 80vh;
-    width: 50vh;
-    margin-top: 5rem;
-    margin-left: 28rem;
+  .hero-image{/*Tablet_hero image for the homepage*/
+    height: 45vh;
+    width: 35vh;
+    margin-top: 32rem;
+    margin-left: 29rem;
+  }
+
+  .hero-image2{ /*Tablet_hero images for About page*/
+    height: 45vh;
+    width: 35vh;
+    margin-top: 20rem;
+    margin-left: 29rem;
   }
 
   .hero.about{
-    height: 120vh;
-    padding:10rem 2rem;
+    height: 90vh;
+    padding:10rem 5rem;
     margin-bottom: 7rem;
   }
 
-  .heading /*.case h1*/{
+  .heading /*.case h1_tablet*/{
     font-size: 4rem;
     padding-top: 7rem;
     padding-bottom:2rem;
+    margin-left: 0;
+  }
+
+  .cases__index{ /*case title for the phone*/
+   margin-left: 5rem;
   }
 
   .overlay h2{
@@ -1554,13 +1583,17 @@ width: 100%;
     font-size: 1.8rem;
   }
 
+  .overlay img{ /*for tablet*/
+    height: 45vh;
+  }
+
   .summary-note{
     padding-left: 5rem;
     padding-right: 5rem;
   }
 
   .summary-container{
-    padding: 0 5rem 2rem 5rem;
+    padding: 0 5rem 2rem 10rem;
   }
 
   .summary-texts p{
@@ -1569,12 +1602,11 @@ width: 100%;
   }
 
   .iframe-container{
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 0 auto;
     width: 40%;
     height: 45rem;
   }
-
 
   .mainfeatures{
     padding-left: 5rem;
@@ -1584,25 +1616,27 @@ width: 100%;
   .btn-resume{
     font-size: 1.8rem;
   }
-
   .paragraph h1{
     font-size: 2.5rem;
   }
 
   .paragraph p{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    padding-bottom: 5rem;
   }
 
   .text-container{
-    padding: 2rem 4rem 4rem 4rem;
+    padding: 2rem 10rem 4rem 10rem;
   }
 
   .logo-images{
     padding: 6rem 5rem;
   }
 
-  .heading.about /*.case h1*/{
-    padding: 8rem 4rem 4rem 2rem;
+  .heading.about /*.case h1* more about Seira_tablet*/{
+    padding: 8rem 4rem 4rem 0;
+    margin-left: 10rem;
   }
 
  .square p{
@@ -1615,7 +1649,6 @@ width: 100%;
    text-align: center;
   }
 
-
   .words h3{
     font-size: 2.5rem;
   }
@@ -1626,16 +1659,17 @@ width: 100%;
     margin-bottom: 1.5rem;
   }
 
+
   .carousel{
     width: 100%;
     margin: 5rem 0;
-    height: 65vh;
+    height: 55vh;
     padding: 0 5rem;
   }
 
-  .carousel-cell{
+  .carousel-cell{ /*Tablet*/
     width: 100%;
-    height: 55vh;
+    height: 30vh;
   }
 
   .carousel h3{
@@ -1669,7 +1703,7 @@ width: 100%;
   }
 
   .hero-text p{
-    font-size: 2.6rem;
+    font-size: 2rem;
     width: 85%;
   }
 
@@ -1721,11 +1755,11 @@ width: 100%;
   }
 
   .intro-container h2{
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .intro-container p{
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     margin-bottom: 5rem;
   }
 
@@ -1742,8 +1776,10 @@ width: 100%;
     font-size: 3rem;
   }
 
-  .intro p{
-    font-size: 2.1rem;
+  .intro p{ /*tablet&desktop font size*/
+    font-size: 1.8rem;
+    line-height: 4rem;
+    width: 75%;
   }
 
   .intro .note {
@@ -1760,7 +1796,7 @@ width: 100%;
     padding-top: 6rem;
   }
 
-  .content p{
+  .content p{ /*tablet styling*/
     font-size: 1.8rem;
   }
 
@@ -1780,8 +1816,8 @@ width: 100%;
   width: 80%;
  }
 
-  .image-container{/*flex container*/
-    height:50vh;
+  .image-container{/*flex container for tablet*/
+    height:45vh;
     margin-left: 5rem;
     margin-right: 5rem;
   }
@@ -1868,21 +1904,20 @@ width: 100%;
   margin-top: 2rem;
 }
 
-
 .persona-container{
    width: 80%;
    margin-left: 5rem;
   }
 
-.persona-img1{
+.persona-img1{ /*tablet styling*/
     margin-top: 4rem;
-    height: 30%;
-    width: 30%;
+    height: 15%;
+    width: 20%;
   }
 
   .profile{
-    margin-top: 12rem;
-    margin-left: 20rem;
+    margin-top: 10rem;
+    margin-left: 12rem;
     width: 60%;
     z-index: 2;
   }
@@ -1896,22 +1931,22 @@ width: 100%;
   }
 
   .profile p{
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     padding-bottom: 3rem;
   }
 
   .profile-text h5{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 
   .profile-text p{
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 
-  .persona-img2{
+  .persona-img2{/*tablet styling*/
     margin-top: 4rem;
-    height: 30%;
-    width: 30%;
+    height: 15%;
+    width: 20%;
   }
 
   .summary p{
@@ -1941,7 +1976,12 @@ width: 100%;
   padding-right: 5rem;
   }
 
-.flex-container{
+ .flex-container{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+  .designstyle{
   padding-left: 5rem;
   padding-right: 5rem;
 }
@@ -1955,6 +1995,7 @@ width: 100%;
     margin-top:1.5rem;
     font-size: 2.1rem;
   }
+
 
 .feature-container.box{
   justify-content: flex-start;
@@ -2009,25 +2050,30 @@ width: 100%;
     flex-direction: column;
   }
 
-  .testing-txt h5{
+  .testing-txt h5{ /*for tablet*/
     font-size: 1.8rem;
-    padding-left: 2rem;
+    padding-left: 5rem;
   }
 
   .testing-txt p{
     font-size: 1.8rem;
-    padding: 0 2rem 3rem 2rem;
+    padding: 0 5rem 3rem 5rem;
   }
 
 /*---visual design---*/
   .images.mock{
-    height: 60vh;
+    height: 100%;
     z-index: -1;
+  }
+
+  .officemock{
+    width: 100%;
+    height: 60vh;
   }
 
   .vertical img{
     margin-top: -4rem;
-    margin-left: 30rem;
+    margin-left: 15rem;
     width: 50%;
     z-index: 1;
   }
@@ -2049,6 +2095,7 @@ width: 100%;
 
 .mock.two img{
   width: 100%;
+  height: 100%;
   display: block;
   margin: 5rem auto;
 }
@@ -2074,24 +2121,6 @@ width: 100%;
     width: 60%;
   }
 
-  .prototype.mock2{
-    background-image: url(../images/mock2.png);
-    display:flex;
-    flex-wrap: nowrap;
-    margin-top: 5rem;
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 40vh;
-    width: 100%;
-  }
-
-.summarize{
-    line-height: 2.5rem;
-    font-size: 2rem;
-    padding:2rem;
-  }
 
 .mock.three{
   margin-top: 5rem;
@@ -2167,18 +2196,18 @@ width: 100%;
   margin-bottom: 7rem;
 }
 
-.prototype.mock2{/*crop the image!1*/
+.prototype.mock2{
   flex-wrap: wrap;/*changed*/
   height: 70vh;/*changed*/
-  width: 100%;
 }
 
-.summarize{
+
+.summarize{ /*transparent box text for tablet!--*/
   background: rgba(255,255,255, 0.3);
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 4rem;
-  padding: 1rem;
-  margin: 10rem 0 16rem 36rem;
+  padding: 2rem;
+  margin: 12rem 0 35rem 35rem;
   width: 50%;
 }
 
@@ -2186,9 +2215,9 @@ width: 100%;
   height: 500px;
 }
 
-.content.challenge h4{
-  margin-top: 20rem;
+.content.challenge h4{ /*for tablet*/
   font-size: 3rem;
+  margin-top: 5rem;
 }
 
 .comment p{
@@ -2221,7 +2250,26 @@ p.two{
   padding-right: 5rem;
 }
 
-.hero-text{
+.hero{ /*Desktop*/
+  height: 120vh;
+  padding:5rem;
+}
+
+.hero article{
+  margin-left: 40rem;
+  padding-bottom: 2rem;
+}
+
+.hero article .text p{ /*desktop*/
+  width: 80vh;
+}
+
+.hero.about{ /*desktop hero container for the about page*/
+  height: 120vh;
+}
+
+
+/*.hero-text{
   margin-bottom: 5rem;
 }
 
@@ -2232,7 +2280,7 @@ p.two{
 .hero-text p{
   padding-left: 5rem;
   width: 60%;
-}
+}*/
 
 .specs-container{
   margin-bottom: 5rem;
@@ -2240,11 +2288,11 @@ p.two{
   padding-right: 10rem;
 }
 
+
 .intro-container{
-  width: 80%;
+  width: 100%;
   padding-left: 5rem;
   padding-right: 10rem;
-  border: 2px solid purple;
 }
 
 .intro{
@@ -2253,18 +2301,26 @@ p.two{
 }
 
 .iframe-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40rem;
   height: 50rem;
 }
 
-.section-title{ /*container for the section title*/
+.section-title{ /*container for the section title_Desktop*/
   margin-right: 80rem;
   padding-left: 20rem;
   margin-bottom: 3rem;
+  margin-top: 10rem;
 }
 
 .content{
   padding-left: 20rem;
   padding-right: 20rem;
+}
+
+.content p{ /*tablet styling*/
+  width: 90%;
 }
 
 .graph-title h4{
@@ -2350,67 +2406,108 @@ p.two{
 
 
  .hero-image{/*hero image for the homepage*/
+   height: 65vh;
+   width: 45vh;
    margin-top: 28rem;
-   margin-left: 60rem;
+   margin-left: 70rem;
  }
 
  .hero-image2{ /*hero images for About page*/
-   margin-top: 8rem;
-   margin-left: 56rem;
+   margin-top: 20rem;
+   margin-left: 65rem;
+   height: 60vh;
+   width: 45vh;
  }
 
- .case{
-   padding-left: 20rem;
-   padding-right: 20rem;
+
+ .cases__index{ /*desktop__heading for index.html__CASES*/
    font-size: 4rem;
+   margin-left: 40rem;
  }
 
  .heading.about /*.case h1*/{
    padding-left:0;
  }
 
- .flex-container{/*for cases*/
+ .flex-container{/*DESKTOP__for cases*/
    padding: 2rem 20rem;
  }
 
- .summary-container{
-   padding: 0 20rem 2rem 20rem;
+
+ .overlay{ /*casestudy images*/
+   display: flex;
+   align-items: center;
+   justify-content:center;
  }
 
- .text-container{
-   padding: 2rem 20rem 4rem 20rem;
+.overlay img{ /*for Desktop*/
+  width: 55%;
+  height: 45vh;
+}
+
+.btn-default {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+
+.overlay :not(img) { /*Desktop*/
+  position: absolute;
+  width: 50%;
+  margin-left: 0 !important;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.heading.about /*.case h1* more about Seira_desktop*/{
+  padding: 8rem 4rem 4rem 0;
+  margin-left: 30rem;
+}
+
+ .summary-container{ /*desktop summary container*/
+   padding: 0 5rem 2rem 0;
+   margin: 0 30rem;
  }
+
+ .text-container{ /*desktop_text container*/
+   padding: 2rem 20rem 4rem 30rem;
+ }
+
+.paragraph{
+  width: 70%;
+}
 
  .square{
    width: 50%;
    height: 50vh;
-   margin: 10rem auto;
+   margin: 15rem auto;
  }
 
  .square.brave{
    width: 50%;
    height: 50vh;
-   background-position: bottom right;
-   margin: 10rem auto;
+   background-position: center;
+   margin: 15rem auto;
  }
 
  .square.designer{
    width: 50%;
    height: 50vh;
-   margin: 10rem auto;
+   background-position: right;
+   margin: 15rem auto;
  }
 
  .square.Japanese{
    height: 50vh;
    width: 50%;
    background-position: center;
-   margin: 10rem auto;
+   margin: 15rem auto;
  }
 
  .square p {
   bottom: 6rem;
-   left: 15rem;
-   width: 80%;
+   left: 20rem;
+   width: 85%;
    background: rgba(0,0,0,0.7);
  }
 
@@ -2430,7 +2527,7 @@ p.two{
 }
 
 .carousel-cell.app{
-  height: 20vh;
+  height: 30vh;
 }
 
  .carousel-cell{
@@ -2438,17 +2535,21 @@ p.two{
    height: 40vh;
  }
 
-
  .project{ /*desktop*/
-  width: 100%;
-  max-width: 60rem;
-  border: 1px solid lavender;
+  display:flex;
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 2rem;
+ }
+
+
+ .project p{
+   font-size: 1.8rem;
  }
 
  .summary-box{
    padding-left:20rem;
    padding-right: 20rem;
-   margin-top: 12rem;
  }
 
  .summary-note{
@@ -2461,19 +2562,18 @@ p.two{
  }
 
 /*---Branding styling--*/
+
 .branding {
   display: flex;
   flex-direction: column;
   width: 35rem;
   height: 65rem;
-  margin: 0 auto;
-  border: 2px solid orange;
+  margin: 0 5rem;
 }
 
 .branding-image{
  width: 100%;
  height: 40rem;
-
 }
 
 .branding-txt{
@@ -2492,15 +2592,13 @@ margin-bottom: 10rem;
 
 .branding-font{ /*typography font image*/
   height: 66vh;
-  padding-top: 16rem;
-  border: 2px solid purple;
+  padding-top: 12rem;
+  padding-bottom: 11rem;
 }
 
 .branding-font2{ /*color boxes container*/
   flex-direction: column;
   height: 60vh;
-
-   border: 2px solid pink;
 }
 
 
@@ -2514,8 +2612,8 @@ margin-bottom: 10rem;
 .fonts-txt{
   width: 100%;
   justify-content: baseline;
+  height: 30vh;
   margin-bottom: 10rem;
-  border: 2px solid green;
 }
 
 .user{ /*container for the user image and texts*/
@@ -2550,6 +2648,7 @@ margin-bottom: 10rem;
 .impro-note p{
   padding-left: 20rem;
   padding-right: 20rem;
+  width: 75%;
 }
 
 
@@ -2563,17 +2662,18 @@ margin-bottom: 10rem;
 
 .improv{ /*improvement image and txt*/
   width:30%;
+  margin-right: 3rem;
 }
 
 .testing-img{ /*container for images*/
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 37vh;
+  height: 50vh;
 }
 
 .testing-img img{
-  width: 85%;
+  width: 70%;
 }
 
  .feature-container{
@@ -2587,35 +2687,39 @@ margin-bottom: 10rem;
    padding-right: 1rem;
  }
 
- .logo-images{
+ .logo-images{ /*for desktop*/
    padding: 6rem 20rem;
- }
-
- .logo-images img{
-   width:50%
+   width: 70%;
  }
 
  .container{
-   border: 2px solid orange;
    align-items: normal;
  }
 
- .container.designstyle{ /*container for logo iterations and logo/typography and color*/
-   padding-left: 15rem;
+ .designstyle{ /*container for logo iterations and logo/typography and color*/
+   display: flex;
+   width:100%;
+   padding-left: 20rem;
    padding-right: 15rem;
  }
 
 /*---visual design styling for desktop---*/
+
+/*--heromock vertical and text portion for desktop---*/
+.officemock {
+  height: 70vh;
+}
+
  .images.mock{
-     height: 70vh;
+  height: 100%;
    }
 
  .vertical{
   width: 40%;
-}
+ }
 
  .vertical img{
-   margin-left: 20rem;
+   margin-left: 7rem;
    width: 100%;
  }
 
@@ -2630,9 +2734,9 @@ margin-bottom: 10rem;
 }
 
  .smart{
-   padding-top: 25rem;
-   padding-left: 27rem;
-   width: 60%;
+   padding-top: 19rem;
+   padding-left: 17rem;
+   width:50%;
  }
 
  .smart h4{
@@ -2640,13 +2744,35 @@ margin-bottom: 10rem;
    padding-bottom: 1rem;
  }
 
-.smart p{
+ .smart p{
   font-size: 1.8rem;
-  width: 75%;
+  width: 90%;
+}
+
+.mock.two img{
+  width: 80%;
+  height: 100vh;
+}
+
+.mock img{
+  width: 20%;
+  height: 90vh;
+}
+
+.mock.three img{
+  width: 50%;
+}
+
+.mock.four img{
+  width: 65%;
+}
+
+.prototype.mock2{
+  height: 100vh;/*changed*/
 }
 
  .content.challenge h4{
-   margin-top: 10rem;
+   margin-top: 15rem;
  }
 
  .comment{
@@ -2654,10 +2780,15 @@ margin-bottom: 10rem;
    margin-right: 20rem;
  }
 
- .summarize{ /*transparent box content*/
+ .summarize{ /*transparent box content__Desktop*/
    padding: 3rem;
-   margin: 10rem 0 40rem 65rem;
+   margin: 15rem 0 40rem 65rem;
    width: 45%;
+ }
+
+ .gallery-cell { /*desktop*/
+   width: 70%;
+   margin-top: -5rem;
  }
 
 .project p{
