@@ -148,7 +148,7 @@ body{
   position: relative;
   font-size: 1.8rem;
   line-height: normal;
-  width: 35vh;
+  width: 60%;
   margin-bottom: 1rem;
 }
 
@@ -512,7 +512,6 @@ p.last{
   font-weight: bold;
   font-size: 2rem;
   padding-bottom: 1rem;
-
   padding-top: 1rem;
   color: black !important;
   letter-spacing: 0.2rem;
@@ -1763,8 +1762,8 @@ p.last{
     margin-bottom: 5rem;
   }
 
-  .section-title{ /*container for the section title*/
-    margin-right: 40rem;
+  .section-title{ /*Tablet_container for the section title*/
+    margin-right: 45rem;
     padding-left: 5rem;
   }
 
@@ -1886,7 +1885,7 @@ p.last{
 }
 
 .chart img{
- height: 100%;
+ height: auto;
  width: 100%;
 }
 
@@ -2199,8 +2198,8 @@ p.last{
 .prototype.mock2{
   flex-wrap: wrap;/*changed*/
   height: 70vh;/*changed*/
-}
 
+}
 
 .summarize{ /*transparent box text for tablet!--*/
   background: rgba(255,255,255, 0.3);
@@ -2268,7 +2267,6 @@ p.two{
   height: 120vh;
 }
 
-
 .hero-text{
   margin-left: 5rem;
 }
@@ -2303,10 +2301,9 @@ p.two{
 }
 
 .section-title{ /*container for the section title_Desktop*/
-  margin-right: 75rem;
+  margin-right: 75rem; /*when I change the value, it vhanges the value of tablet section tile*/
   padding-left: 20rem;
   margin-bottom: 3rem;
-  margin-top: 10rem;
 }
 
 .content{
@@ -2757,12 +2754,12 @@ margin-bottom: 10rem;
 
 .mock.two img{
   width: 80%;
-  height: 100vh;
+  height: auto;
 }
 
 .mock img{
   width: 20%;
-  height: 90vh;
+  height:auto;
 }
 
 .mock.three img{
@@ -2775,6 +2772,7 @@ margin-bottom: 10rem;
 
 .prototype.mock2{
   height: 100vh;/*changed*/
+  /*height: auto;*/
 }
 
  .content.challenge h4{
