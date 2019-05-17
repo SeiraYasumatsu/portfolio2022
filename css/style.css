@@ -1140,7 +1140,7 @@ p.last{
       rgba(229, 229, 229, 0.3),
       rgba(229, 229, 229, 0.1)
     ),
-    url(../images/presen.jpg);
+    url(../images/presen.JPG);
 
   width: 60%;
   height: 30vh;
@@ -1158,7 +1158,7 @@ p.last{
       rgba(229, 229, 229, 0.3),
       rgba(229, 229, 229, 0.1)
     ),
-    url(../images/quality3.jpg);
+    url(../images/quality3.JPG);
 
   width: 60%;
   height: 30vh;
@@ -2344,6 +2344,9 @@ a:hover {
   background-size: 2px 50px;
 }
 
+.dur h3{
+  font-size: 1.8rem;
+}
 
 .content{
   padding-left: 20rem;
