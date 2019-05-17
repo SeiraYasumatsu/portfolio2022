@@ -240,7 +240,7 @@ body{
   margin-left: 2rem;
 }
 
-.overlay {
+.overlay { /*phone*/
    width: 100%;
    margin: 2rem;
    position: relative;
@@ -251,7 +251,7 @@ body{
 .overlay img {
    width: 100%;
    max-width: 100%;
-   max-height: auto; /*before change 50rem*/
+   max-height: 35rem; /*before change was auto*/
    opacity:1;
    display: block;
    transition: .3s;
@@ -625,7 +625,7 @@ p.last{
 
 .graph img{
   width:60%;
-  height: 60%;
+  height: auto;
 }
 
 .exp {
@@ -649,14 +649,10 @@ p.last{
 
 .images img{
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.phone-hand.in{
-  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .chart{
@@ -1822,35 +1818,27 @@ p.last{
  }
 
   .image-container{/*flex container for tablet*/
-    height:45vh;
+    height:30vh;
     margin-left: 5rem;
     margin-right: 5rem;
   }
 
   .images{
    flex-direction: row;
-   padding-left: 5rem;
-   padding-right: 5rem;
+   flex-wrap: wrap;
+   width: 100%;
   }
 
   .phone-hand{
-    width: 50%;
-    height: 50%;
+    width: 40%;
   }
 
   .images img{
-    margin-top: 1rem;
     width: 100%;
-    height: 50%;
   }
 
   .phone-hand.in img{
-    margin-top: -1.2rem;
-  }
-
-  .phone-hand.out img{
-    margin-top: 0rem;
-    margin-bottom: 2rem;
+    margin-top: -1rem;
   }
 
   .graph-title h4{
@@ -1861,13 +1849,13 @@ p.last{
 
   .graph img{
     width:40%;
-    height: 20%;
+    height: auto;
   }
 
-  .exp {
+  .exp { /*tablet styling*/
     margin-top: 2rem;
-    height: 5vh;
-    font-size: 1.8rem;
+    height: 8rem;
+    font-size: 1.6rem;
   }
 
   .exp p{
@@ -2325,7 +2313,7 @@ p.two{
   padding-right: 20rem;
 }
 
-.content p{ /*tablet styling*/
+.content p{ /*desktop styling*/
   width: 90%;
 }
 
@@ -2342,10 +2330,9 @@ p.two{
   margin-right: 20rem;
 }
 
-.images{
- flex-direction: row;
- padding-left: 20rem;
- padding-right: 20rem;
+.images{ /*desktop styling*/
+ padding-left: 10rem;
+ padding-right: 10rem;
 }
 
 .phone-hand.in img{
@@ -2456,9 +2443,9 @@ p.two{
  }
 
  .overlay img {
-    width: 100%; /*change here*/
-    max-width: 100%;
-    height: auto;
+    width:100%; /*change here*/
+    max-width:100%;
+    max-height: auto;
   }
 
  .overlay :not(img) { /*desktop*/
@@ -2544,20 +2531,33 @@ p.two{
   padding: 2rem 15rem 4rem 15rem;
  }
 
- .carousel{
+ .carousel{ /*for fading carousel*/
    width: 80%;
-   margin: 5rem 15rem;
-   height: 70vh;
+   margin: 2rem 15rem;
+   height: 75vh;
  }
+
+.carousel.app{ /*Desktop Styling for What people say about the app*/
+  height: 70vh;
+}
 
 .carousel-cell.app{ /*desktop*/
   width: 65%;
+  height: 40vh;
   margin-right: 20rem;
 }
 
- .carousel-cell{
-   width: 100%;
+ .carousel-cell{ /*About me Endorsement styling_Desktop*/
+   width: 65%;
    height: 40vh;
+   margin-right: 20rem;
+ }
+
+ .gallery-cell { /*desktop styling for fading carousel*/
+   width: 70%;
+   height: auto;
+   padding-top: 7rem;
+   padding-bottom: 2rem;
  }
 
  .project{ /*desktop*/
@@ -2808,20 +2808,15 @@ margin-bottom: 10rem;
 
  .summarize{ /*transparent box content__Desktop*/
    padding: 3rem;
-   margin: 15rem 0 40rem 65rem;
+   margin: 17rem 10rem 30rem 65rem;
    width: 45%;
  }
 
- .gallery-cell { /*desktop*/
-   width: 70%;
-   margin-bottom: 2rem;
- }
+
 
 .project p{
   line-height: 4rem;
 }
-
-
 
 
 }
