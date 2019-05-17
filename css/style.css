@@ -607,7 +607,7 @@ p.last{
 
 .image-container{/*flex container for collaboration features*/
   display: flex;
-  height:40vh;
+  height: 40vh;
   padding: 3rem 2rem 0 2rem;
 }
 
@@ -2277,6 +2277,10 @@ p.two{
   width: 65%;
 }
 
+.behub-image img{
+  height: auto;
+}
+
 .specs-container{
   margin-bottom: 5rem;
   padding-left: 10rem;
@@ -2330,13 +2334,17 @@ p.two{
   margin-right: 20rem;
 }
 
+.image-container1{ /*container for the image and text*/
+  width: 30%;
+}
+
 .images{ /*desktop styling*/
  padding-left: 10rem;
  padding-right: 10rem;
 }
 
 .phone-hand.in img{
-  margin-top: -1.4rem;
+  margin-top: -1.8rem;
 }
 
 .chart{
