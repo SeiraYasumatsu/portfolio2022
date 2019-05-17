@@ -886,7 +886,6 @@ p.last{
 .custom-txt h4{
   font-size:1.8rem;
   padding-bottom: 1.5rem;
-
 }
 
 .custom-txt p{
@@ -2142,7 +2141,7 @@ p.last{
   width:50%;
 }
 
-.custom-txt{ /*textbox*/
+.custom-txt{ /*textbox_Tablet*/
   margin-top: 17rem;
   width: 50%;
 }
@@ -2819,6 +2818,10 @@ margin-bottom: 10rem;
 
 .custom-txt h4{
   font-size: 3rem;
+}
+
+.custom-txt{ /*desktop*/
+  margin-left: 10rem;
 }
 
  .smart p{
