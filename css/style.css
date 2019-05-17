@@ -113,7 +113,7 @@ body{
   height: 80vh;
   width: 100%;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 4rem 2rem;
   flex-wrap: wrap;
 }
 
@@ -148,7 +148,7 @@ body{
   position: relative;
   font-size: 1.8rem;
   line-height: normal;
-  width: 60%;
+  width: 70%;
   margin-bottom: 1rem;
 }
 
@@ -198,6 +198,10 @@ body{
   padding: 2rem 2rem;
 }
 
+.flex-container.casestudy{/*Phone_casestudyimages*/
+  padding: 2rem 1rem;
+}
+
 .cases__index{ /*case title for the phone*/
  margin-left: 2rem;
 }
@@ -233,6 +237,7 @@ body{
   display:flex;
   flex-direction: row;
   text-align: center;
+  margin-left: 2rem;
 }
 
 .overlay {
@@ -244,9 +249,9 @@ body{
 }
 
 .overlay img {
-   width: 100rem;
+   width: 100%;
    max-width: 100%;
-   max-height: 50rem;
+   max-height: auto; /*before change 50rem*/
    opacity:1;
    display: block;
    transition: .3s;
@@ -285,7 +290,7 @@ letter-spacing: 0.1em;
   top:65%;
   align-self: center;
   width:50%;
-  height: 2px;
+  height: 1px;
   text-transform: uppercase !important;
   color: #ffffff !important;
   letter-spacing: 0.2rem;
@@ -1570,6 +1575,7 @@ p.last{
    margin-left: 5rem;
   }
 
+
   .overlay h2{
   font-size: 3.5rem;
   }
@@ -1583,7 +1589,7 @@ p.last{
   }
 
   .overlay img{ /*for tablet*/
-    max-height: 45vh;
+    height: auto;
   }
 
   .summary-note{
@@ -1980,14 +1986,22 @@ p.last{
   padding-right: 5rem;
 }
 
-  .designstyle{
+.browse { /*Tablet_browse otherproject*/
+  margin-left: 5rem;
+}
+
+.flex-container.casestudy{/*Tablet_casestudyimages*/
+  padding: 2rem 5rem;
+}
+
+.designstyle{
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
-  .branding h5{
-    margin-top: 2rem;
-    font-size: 3rem;
+.branding h5{
+  margin-top: 2rem;
+  font-size: 3rem;
   }
 
   .branding p{
@@ -2426,19 +2440,30 @@ p.two{
  }
 
  .flex-container.casestudy{/*desktop*/
-   padding: 2rem 20rem;
+   flex-direction: row;
+   align-items: center;
+   justify-content:center;
+   padding: 2rem 5rem;
+ }
+
+ .browse {
+   padding-left: 2rem;
  }
 
  .overlay { /*Desktop overlay*/
     width: 100%;
+    height: auto;
  }
 
  .overlay img {
-    width: 60rem; /*change here*/
-    max-height: 45vh;
+    width: 100%; /*change here*/
+    max-width: 100%;
+    height: auto;
   }
 
  .overlay :not(img) { /*desktop*/
+   width: 100%;
+   max-width: 100%;
    top: 25%;
  }
 
@@ -2451,7 +2476,7 @@ p.two{
    font-size: 1.8rem;
  }
 
- .overlay .btn-casestudy {
+ .overlay.btn-casestudy {
    align-items: center;
    height: 3px;
    font-size: 1.6rem;
@@ -2525,12 +2550,9 @@ p.two{
    height: 70vh;
  }
 
-.carousel.app{
-  height: 40vh;
-}
-
 .carousel-cell.app{ /*desktop*/
-  height: 30vh;
+  width: 65%;
+  margin-right: 20rem;
 }
 
  .carousel-cell{
@@ -2792,12 +2814,13 @@ margin-bottom: 10rem;
 
  .gallery-cell { /*desktop*/
    width: 70%;
-   margin-top: -5rem;
+   margin-bottom: 2rem;
  }
 
 .project p{
   line-height: 4rem;
 }
+
 
 
 
