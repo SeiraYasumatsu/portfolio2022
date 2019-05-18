@@ -81,6 +81,10 @@ body{
   flex:1
 }
 
+.logo img{
+width: 60%;
+}
+
 .header .menu{/*flex container*/
   display: flex;
   align-items: center;
@@ -1491,6 +1495,10 @@ p.last{
   display: flex;
  }
 
+ .logo img{ /*tablet logo size*/
+  width: 80%;
+ }
+
   .page a{ /*flex item*/
     padding: 2rem 2rem;
     font-size: 1.8rem;
@@ -2241,6 +2249,10 @@ p.two{
 
 .logo{
   padding-left: 5rem;
+}
+
+.logo img{ /*desktop logo size*/
+ width: 100%;
 }
 
 .page a{
