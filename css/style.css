@@ -475,45 +475,12 @@ p.last{
 }
 
 
-/*.smartphone {
-  position: relative;
-  width: 300;
-  height: 97vh;
-  margin: auto;
-  border: 16px #DCDCDC solid;
-  border-top-width: 60px;
-  border-bottom-width: 60px;
-  border-radius: 36px;
-}*/
-
-/* The horizontal line on the top of the device */
-/*.smartphone:before {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #C0C0C0;
-  border-radius: 10px;
-}*/
-
-/* The screen (or content) of the device */
-/*.smartphone .iframe-container{
-  width: 300;
-  height: 450;
-  background: white;
-}*/
-
-
-.section-title{ /*container for the section title*/
+.section-title{ /*Phone_container for the section title*/
   background-color: rgba(179, 207, 205, 0.6);
-  margin-right: 16rem;
   margin-top: 10rem;
   opacity: 0.5;
   padding-left: 2rem;
+  width: 50%;
 }
 
 .section-title h2{
@@ -1771,7 +1738,6 @@ p.last{
   }
 
   .section-title{ /*Tablet_container for the section title*/
-    margin-right: 45rem;
     padding-left: 5rem;
   }
 
@@ -2244,7 +2210,6 @@ p.two{
 
 }
 
-
 @media screen and (min-width: 991px){/*----Desktop---*/
 
 .logo{
@@ -2315,9 +2280,9 @@ p.two{
 }
 
 .section-title{ /*container for the section title_Desktop*/
-  margin-right: 75rem; /*when I change the value, it vhanges the value of tablet section tile*/
   padding-left: 20rem;
   margin-bottom: 3rem;
+  width: 40%;
 }
 
 :root {
