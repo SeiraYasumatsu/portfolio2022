@@ -62,6 +62,17 @@ body{
   background-color:black;
 }
 
+.resume{ /*phone*/
+  width: 80%;
+  margin: auto;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+}
+
+.resume img{
+  width: 100%;
+  height: auto;
+}
 
 .container {
     display: flex;
@@ -95,7 +106,7 @@ width: 60%;
 
 .page a{ /*flex item*/
   color: black;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 0.2rem;
   text-decoration: none;
   padding: 2rem 2rem 1rem 1rem;
@@ -137,7 +148,6 @@ width: 60%;
   color: black;
   font-family: 'Noto Serif', serif;
   font-weight: 600;
-  line-height: normal;
   position: relative;
   padding-bottom: 3rem;
   font-size: 3rem;
@@ -183,7 +193,7 @@ width: 60%;
   object-fit:cover;
   height: 40vh;
   width: 30vh;
-  opacity: 1;
+  opacity: 0.8;
   z-index:1;
   margin-top: 16rem;
   margin-left: 12rem;
@@ -191,11 +201,11 @@ width: 60%;
 
 /*--------case study styling in homepage*/
 
-.flex-container{/*for cases*/
+.flex-container{/*for cases_phone*/
   display:flex;
   flex-direction:column;
   width:100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content:center;
   font-size: 1.8rem;
   padding: 2rem 2rem;
@@ -205,9 +215,9 @@ width: 60%;
   padding: 2rem 1rem;
 }
 
-.cases__index{ /*case title for the phone*/
+/*.cases__index{ /*case title for the phone*
  margin-left: 2rem;
-}
+}*/
 
 .case{
   display: flex;
@@ -219,7 +229,7 @@ width: 60%;
 
 .heading /*.case h1*/{
   color: black;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.2rem;
   font-size: 3rem;
   text-decoration: none;
@@ -245,10 +255,10 @@ width: 60%;
 
 .overlay { /*phone*/
    width: 100%;
-   margin: 2rem;
    position: relative;
    transition: .3s;
    font-family: 'Source Sans Pro', sans-serif;
+   margin-bottom: 5rem;
 }
 
 .overlay img {
@@ -499,9 +509,8 @@ p.last{
 
 .intro h3{
   padding-top: 5rem;
-
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.2rem;
 }
 
@@ -513,6 +522,7 @@ p.last{
 .intro .note {
   font-size: 1.4rem;
   color: darkgrey;
+  text-indent: -1rem;
 }
 
 .content{
@@ -540,6 +550,7 @@ p.last{
   font-size: 1.8rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-weight: 600;
 }
 
 .mock-txt h4{
@@ -566,7 +577,20 @@ p.last{
 .content p{
   font-size: 1.6rem;
   font-weight: normal;
-  padding: 2rem 0;
+  padding: 1rem 0;
+  text-indent: -1rem;
+}
+
+.content.noIndent p{
+  text-indent: 0rem;
+}
+
+.content.collab p{
+  text-indent: 0rem;
+}
+
+.content.challenge p{
+  text-indent: 0rem;
 }
 
 .mock-txt p{
@@ -755,6 +779,7 @@ p.last{
 .user p{
   font-size: 1.6rem;
   padding: 1rem 0 1.5rem 0;
+  text-indent: -1rem;
 }
 
 .p3-imgcontainer img{
@@ -839,7 +864,7 @@ p.last{
 }
 
 .prototype.mock2{
-  background-image: url(../images/mock2.png);
+  background-image: url(../images/mock2.jpg);
   display:flex;
   flex-wrap: nowrap;
   margin-top: 5rem;
@@ -935,6 +960,7 @@ p.last{
 .profile-text p{
   font-size: 1.6rem;
   padding-bottom: 1.5rem;
+  text-indent: -1rem;
 }
 
 .persona-img2{
@@ -1021,8 +1047,7 @@ p.last{
 /*--------------about page styling---------------*/
 
 .heading.about /*.case h1* more about Seira_phone*/{
-  padding: 5rem 4rem 4rem 0;
-  margin-left: 2rem;
+  padding: 5rem 4rem 0 0;
 }
 
 
@@ -1059,12 +1084,16 @@ p.last{
           box-shadow: 0 8px 6px -6px black;
 }
 
+.btn-resume a:hover{
+  background-color: #EFBB3F !important;
+  font-weight: bold;
+}
+
 .text-container{
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
-  padding: 2rem 2rem 4rem 2rem;
-  width:100%;
+  padding:2rem 2rem 4rem 2rem;
 }
 
 .square{
@@ -1077,7 +1106,7 @@ p.last{
   width: 60%;
   height: 30vh;
   background-size: cover;
-/*  background-image: url(../images/quality4.jpg);*/
+  background-position: center;
   object-fit:cover;
   margin-top: 1.5rem;
   position: relative;
@@ -1463,12 +1492,16 @@ p.last{
  }
 
  .logo img{ /*tablet logo size*/
-  width: 80%;
+  width: 40%;
  }
 
   .page a{ /*flex item*/
     padding: 2rem 2rem;
     font-size: 1.8rem;
+  }
+
+  .resume{ /*phone*/
+    width: 80%;
   }
 
   .hero-text{
@@ -1541,7 +1574,8 @@ p.last{
   }
 
   .cases__index{ /*case title for the phone*/
-   margin-left: 5rem;
+   /*margin-left: 5rem;*/
+
   }
 
 
@@ -1610,7 +1644,6 @@ p.last{
 
   .heading.about /*.case h1* more about Seira_tablet*/{
     padding: 8rem 4rem 4rem 0;
-    margin-left: 10rem;
   }
 
  .square p{
@@ -1632,7 +1665,6 @@ p.last{
     padding: 1.5rem 6rem;
     margin-bottom: 1.5rem;
   }
-
 
   .carousel{
     width: 100%;
@@ -1751,18 +1783,18 @@ p.last{
 
   .intro p{ /*tablet&desktop font size*/
     font-size: 1.8rem;
-    line-height: 4rem;
+    line-height: 1.6;
     width: 75%;
   }
 
   .intro .note {
     font-size: 1.6rem;
     margin-bottom: 2rem;
+    text-indent: -1rem;
   }
 
   .content h4{
     font-size: 2rem;
-    padding-bottom: 1rem;
   }
 
   .finding h4{
@@ -1807,10 +1839,6 @@ p.last{
 
   .images img{
     width: 100%;
-  }
-
-  .phone-hand.in img{
-    margin-top: -1rem;
   }
 
   .graph-title h4{
@@ -2169,7 +2197,7 @@ p.last{
 
 .prototype.mock2{
   flex-wrap: wrap;/*changed*/
-  height: 70vh;/*changed*/
+  height: auto;/*changed*/
 
 }
 
@@ -2217,11 +2245,17 @@ p.two{
 }
 
 .logo img{ /*desktop logo size*/
- width: 100%;
+ width: 50%;
 }
 
 .page a{
   padding-right: 5rem;
+}
+
+.resume{ /*phone*/
+  width: 60%;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
 }
 
 .hero{ /*Desktop*/
@@ -2356,9 +2390,6 @@ a:hover {
  padding-right: 10rem;
 }
 
-.phone-hand.in img{
-  margin-top: -1.8rem;
-}
 
 .chart{
   padding-left: 20rem;
@@ -2385,9 +2416,12 @@ a:hover {
 
   .profile__container{
       display: flex;
-      width: 100%;
+      /*width: 100%;
       margin-left: 20rem;
-      margin-right: 20rem;
+      margin-right: 20rem;*/
+      margin: auto;
+      width: 80%;
+      justify-content: center;
     }
 
   .profile{
@@ -2436,15 +2470,27 @@ a:hover {
 
  .cases__index{ /*desktop__heading for index.html__CASES*/
    font-size: 4rem;
-   margin-left: 45rem;
+   flex-direction: row;
+   /*margin-left: 45rem;*/
  }
 
+.heading.case{
+  margin-bottom: 3rem;
+}
+
  .heading.about /*.case h1*/{
-   padding-left:0;
+   /*padding-left:0;
+   margin: auto;
+   max-width: 80rem;
+   width: calc(100%-2rem);*/
+   margin-left: -10rem;
  }
 
  .flex-container{/*DESKTOP__for cases*/
-   padding: 2rem 45rem;
+   align-items: center;
+   justify-content:center;
+   padding: 10rem 0;
+   margin: auto;
  }
 
  .flex-container.casestudy{/*desktop*/
@@ -2459,8 +2505,10 @@ a:hover {
  }
 
  .overlay { /*Desktop overlay*/
-    width: 100%;
+    width: 50%;
     height: auto;
+    align-items: center;
+    justify-content: center;
  }
 
  .overlay img {
@@ -2498,21 +2546,19 @@ a:hover {
 
 .heading.about /*.case h1* more about Seira_desktop*/{
   padding: 8rem 4rem 4rem 0;
-  margin-left: 30rem;
+  margin-left: 0;
 }
 
  .summary-container{ /*desktop summary container*/
-   padding: 0 5rem 2rem 0;
-   margin: 0 30rem;
+   max-width: 80rem;
+   margin: auto;
  }
 
  .text-container{ /*desktop_text container*/
-   padding: 2rem 20rem 4rem 30rem;
+   margin: auto;
+   max-width: 80rem;
+   width: calc(100%-2rem);
  }
-
-.paragraph{
-  width: 70%;
-}
 
  .square{
    width: 50%;
@@ -2629,7 +2675,7 @@ margin-bottom: 10rem;
 }
 
 .branding h5{
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 
 .branding p{
@@ -2735,7 +2781,7 @@ margin-bottom: 10rem;
 
  .logo-images{ /*for desktop*/
    padding: 6rem 20rem;
-   width: 70%;
+   width: 60%;
  }
 
  .container{
@@ -2790,14 +2836,17 @@ margin-bottom: 10rem;
  .smart h4{ /*desktop*/
    font-size: 3rem;
    padding-bottom: 1rem;
+   font-weight: 600;
  }
 
 .mock-txt h4{
   font-size: 3rem;
+  font-weight: 600;
 }
 
 .custom-txt h4{
   font-size: 3rem;
+  font-weight: 600;
 }
 
 .custom-txt{ /*desktop*/

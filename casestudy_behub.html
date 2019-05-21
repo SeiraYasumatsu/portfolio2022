@@ -3,7 +3,7 @@
   <head>
     <title>behub | CaseStudy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -13,6 +13,7 @@
   <!--  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">-->
   <!--  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.min.css"> <!--stylesheet for summary carousel-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> <!--Fancybox-->
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/flickity.css">
@@ -30,7 +31,7 @@
           <ul class="menu"><!--flex container-->
             <li class= "page"><a href="aboutMe.html">ABOUT</a></li>
             <li class= "page"><a href="index.html#casestudy_page">CASES</a></li>
-            <li class= "page"><a href="https://drive.google.com/file/d/1LMqpKNTXcH3hdBbOHT-DieBhHojHwn5G/view?usp=sharing">RESUME</a></li>
+            <li class= "page"><a href="resume.html">RESUME</a></li>
           </ul>
          </div>
        </nav>
@@ -60,10 +61,12 @@
            <p>User Surveys, User Personas, Competitive Analysis</p>
            <h3><a href="#behub_casestudy_InformationArchitecture">Information Architecture</a></h3>
            <p>User Stories, User Flows, SiteMap, Wireframes</p>
+           <h3><a href="#behub_casestudy_UserTesting1">User Testing 1</a></h3>
+           <p>Wireframe Testing</p>
            <h3><a href="#behub_casestudy_Branding & Identity">Branding & Identity</a></h3>
            <p>Branding & Logo, Design Style Guide</p>
-           <h3><a href="#behub_casestudy_Testing">Testing</a></h3>
-           <p>User Testing & High Fidelity Mockup</p>
+           <h3><a href="#behub_casestudy_UserTesting2">User Testing 2</a></h3>
+           <p>A/B Testing & Prototype Testing</p>
            <h3><a href="#behub_casestudy_Prototyping">Prototyping</a></h3>
            <p>Prototype & Design Brief</p>
         </section>
@@ -125,7 +128,7 @@
          <article class="content finding">
            <h4>Key Findings</h4>
            <p>•   People who currently do not use cloud storage/organizational app  would like to share pictures and contents they find on the website.</p>
-           <p>•   <strong>60% </strong> of parents are not satisfied with the current method of managing their family’s schedule. </p>
+           <p>•   <strong> 60% </strong> of parents are not satisfied with the current method of managing their family’s schedule. </p>
          </article>
 
          <article class="graph-title">
@@ -155,15 +158,15 @@
 
          <section class="images">
            <div class="phone-hand out">
-              <img src="images/phone_out.png" alt="phone-outside">
+              <img src="images/phone_out.jpg" alt="phone-outside">
            </div>
            <div class="phone-hand in">
-              <img src="images/phone_office.png" alt="phone-office">
+              <img src="images/phone_In.jpg" alt="phone-office">
            </div>
          </section>
 
 
-         <article class="content">
+         <article class="content noIndent">
            <h4>What the users are looking for</h4>
            <p>The user survey revealed that most of the respondents use cloud storage/ organizational applications for work. This led me to explore a market for parents/families who need to manage their schedules, share content, and collaborate with each other more efficiently. </p>
          </article>
@@ -266,9 +269,136 @@
          </ul>
       </section>
 
-      <span id ="behub_casestudy_Branding & Identity">&nbsp;</span>
+      <span id ="behub_casestudy_InformationArchitecture">&nbsp;</span>
 
       <section class="process2">
+         <section class ="section-title">
+            <h2>INFORMATION ARCHITECTURE</h2>
+         </section>
+
+         <article class="intro">
+            <h3>User Stories</h3>
+            <p>With user research in mind, I created user stories to determine the priority of the user stories as a new user, a return user, and an administrator.</p>
+         </article>
+
+        <section class ="container">
+          <section class="user">
+              <div class="user__content">
+                  <img src="images/newUser.png" alt="girl">
+                  <h4>As a New User</h4>
+                  <p>• I want to be able to sign up so that I do not have to retype everything. </p>
+                  <p>• I want to be able to choose who I collaborate with so that I do not share the private information with anybody else. </p>
+                  <p>• I want to be able to send messages in real-time so that I can coordinate the plan and add it to the calendar right away.</p>
+              </div>
+
+              <section class="p3-imgcontainer">
+                  <img src="images/NewUserScreens.png" alt="3screens">
+              </section>
+         </section>
+
+         <section class="user">
+           <div class="user__content">
+              <img src="images/returnUser.png" alt="red hair woman">
+              <h4>As a Return User</h4>
+              <p>• I want to receive a reminder to add any change in schedule so that I do not forget to update them.</p>
+              <p>• I want to see the calendar so that I can add/edit my family's schedules.</p>
+           </div>
+
+           <section class="p3-imgcontainer">
+               <img src="images/ReturnUserScreens.png" alt="2screens">
+           </section>
+        </section>
+      </section>
+
+         <section class="intro">
+            <h3>User Flows</h3>
+            <p>I iterated and sketched user flows by pen and paper, then I used draw.io to demonstrate the process of how users would interact with the product and the most efficient way to complete the high priority tasks. </p>
+         </section>
+
+         <section class="p3-imgcontainer flow">
+            <img src="images/FlowChart.png" alt="user-flow">
+         </section>
+
+         <section class="intro">
+            <h3>Wire Frame Sketches</h3>
+            <p>Based on the user stories, persona, and user flow, I sketched different variations of wireframes. Two key elements while designing wireframes were that all the high priority tasks needed to be visible and accessible in ease and the easy and simple navigation that could be used even for children. </p>
+         </section>
+
+         <section class="p3-imgcontainer flow">
+            <img src="images/Wireframe Sketches.png" alt="sketches">
+            <img src="images/Figma.png" alt="Figma wireframe">
+         </section>
+
+         <span id ="behub_casestudy_UserTesting1">&nbsp;</span>
+
+         <section class="process2_Testing">
+             <section class ="section-title">
+                 <h2>USER TESTING 1</h2>
+             </section>
+
+            <article class="intro">
+                <h3>Usability Testing on Wire Frame</h3>
+                <p>After creating the high fidelity wireframe, I wanted to test to see how users can navigate through and complete the tasks given.</p>
+             </article>
+
+             <article class="content">
+                <h4>Tasks</h4>
+                <p>•  You found an app that lets you share yours and kids schedule with everyone in the family. How would you sign up for an account? </p>
+                <p>• You are trying to add new schedule in your calendar. How can you do that?</p>
+                <p>• You found a new content in the web, you want to save it to the new group. How can you add a new group in your folder? </p>
+             </article>
+
+             <article class="impro-note">
+                 <p>Based on the user feedback, I iterated a few more wireframe designs and here are 3 main improvements I made. </p>
+             </article>
+
+            <section class="testing-container">
+              <section class="improv">
+
+                <div class="testing-img">
+                   <a class="fancybox" rel="template Gallery" href="images/Impro1_wireframe.png" data-fancybox="gallery" data-caption="Welcome Page">
+	                 <img src="images/Impro1_wireframe.png" alt="Welcome Page" />
+                   </a>
+                   <!--<img src="images/Impro1_wireframe.png" alt="welcome page">-->
+                </div>
+
+                <div class="testing-txt">
+                   <h5>1. Welcome Page</h5>
+                   <p><strong>Eliminated unnecessary step </strong>for users to take by creating one welcome page where users can sign up, log in, or take a tour of the main features </p>
+                </div>
+              </section>
+
+              <section class="improv">
+                <div class="testing-img">
+                  <a class="fancybox" rel="template Gallery" href="images/Impro2_wireframe.png" data-fancybox="gallery" data-caption="Bottom Navigation">
+                  <img src="images/Impro2_wireframe.png" alt="Bottom Navigation" />
+                  </a>
+                  <!-- <img src="images/Impro2_wireframe.png" alt="Bottom navigation">-->
+                </div>
+                <div class="testing-txt">
+                  <h5>2. Bottom Navigation</h5>
+                  <p>Kept the same main bottom navigation for all the pages for consistency and smooth transition between different page</p>
+                </div>
+             </section>
+
+             <section class="improv">
+                <div class="testing-img">
+                  <a class="fancybox" rel="template Gallery" href="images/Impro3_wireframe.png" data-fancybox="gallery" data-caption="No Dead-ends">
+                  <img src="images/Impro3_wireframe.png" alt="No Dead-ends" />
+                  </a>
+                   <!--<img src="images/Impro3_wireframe.png" alt="no Dead-ends">-->
+                </div>
+                <div class="testing-txt">
+                   <h5>3. Remove the Dead-ends</h5>
+                   <p>Few screens needed to have a more obvious way for users to move on to the next screen, so I added the exit icon on the top right</p>
+                </div>
+             </section>
+          </section>
+
+
+      <span id ="behub_casestudy_Branding & Identity">&nbsp;</span>
+
+      <section class="process3">
          <section class ="section-title">
            <h2>BRANDING AND IDENTITY</h2>
          </section>
@@ -339,120 +469,12 @@
       </section>
     </section> <!--process2 closing-->
 
-      <span id ="behub_casestudy_InformationArchitecture">&nbsp;</span>
 
-      <section class="process3">
-         <section class ="section-title">
-            <h2>INFORMATION ARCHITECTURE</h2>
-         </section>
-
-         <article class="intro">
-            <h3>User Stories</h3>
-            <p>With user research in mind, I created user stories to determine the priority of the user stories as a new user, a return user, and an administrator.</p>
-         </article>
-
-        <section class ="container">
-          <section class="user">
-              <div class="user__content">
-                  <img src="images/newUser.png" alt="girl">
-                  <h4>As a New User</h4>
-                  <p>• I want to be able to sign up so that I do not have to retype everything. </p>
-                  <p>• I want to be able to choose who I collaborate with so that I do not share the private information with anybody else. </p>
-                  <p>• I want to be able to send messages in real-time so that I can coordinate the plan and add it to the calendar right away.</p>
-              </div>
-
-              <section class="p3-imgcontainer">
-                  <img src="images/NewUserScreens.png" alt="3screens">
-              </section>
-         </section>
-
-         <section class="user">
-           <div class="user__content">
-              <img src="images/returnUser.png" alt="red hair woman">
-              <h4>As a Return User</h4>
-              <p>• I want to receive a reminder to add any change in schedule so that I do not forget to update them.</p>
-              <p>• I want to see the calendar so that I can add/edit my family's schedules.</p>
-           </div>
-
-           <section class="p3-imgcontainer">
-               <img src="images/ReturnUserScreens.png" alt="2screens">
-           </section>
-        </section>
-      </section>
-
-         <section class="intro">
-            <h3>User Flows</h3>
-            <p>I iterated and sketched user flows by pen and paper, then I used draw.io to demonstrate the process of how users would interact with the product and the most efficient way to complete the high priority tasks. </p>
-         </section>
-
-         <section class="p3-imgcontainer flow">
-            <img src="images/FlowChart.png" alt="user-flow">
-         </section>
-
-         <section class="intro">
-            <h3>Wire Frame Sketches</h3>
-            <p>Based on the user stories, persona, and user flow, I sketched different variations of wireframes. Two key elements while designing wireframes were that all the high priority tasks needed to be visible and accessible in ease and the easy and simple navigation that could be used even for children. </p>
-         </section>
-
-         <section class="p3-imgcontainer flow">
-            <img src="images/Wireframe Sketches.png" alt="sketches">
-            <img src="images/Figma.png" alt="Figma wireframe">
-         </section>
-
-
-      <span id ="behub_casestudy_Testing">&nbsp;</span>
-      <section class="process4">
+      <span id ="behub_casestudy_UserTesting">&nbsp;</span>
+      <section class="process3_Testing">
           <section class ="section-title">
-              <h2>USER TESTING</h2>
+              <h2>USER TESTING 2</h2>
           </section>
-
-         <article class="intro">
-             <h3>Usability Testing on Wire Frame</h3>
-             <p>After creating the high fidelity wireframe, I wanted to test to see how users can navigate through and complete the tasks given.</p>
-          </article>
-
-          <article class="content">
-             <h4>Tasks</h4>
-             <p>•  You found an app that lets you share yours and kids schedule with everyone in the family. How would you sign up for an account? </p>
-             <p>• You are trying to add new schedule in your calendar. How can you do that?</p>
-             <p>• You found a new content in the web, you want to save it to the new group. How can you add a new group in your folder? </p>
-          </article>
-
-          <article class="impro-note">
-              <p>Based on the user feedback, I iterated a few more wireframe designs and here are 3 main improvements I made. </p>
-          </article>
-
-         <section class="testing-container">
-           <section class="improv">
-             <div class="testing-img">
-                <img src="images/Impro1_wireframe.png" alt="welcome page">
-             </div>
-             <div class="testing-txt">
-                <h5>1. Welcome Page</h5>
-                <p><strong>Eliminated unnecessary step </strong>for users to take by creating one welcome page where users can sign up, log in, or take a tour of the main features </p>
-             </div>
-           </section>
-
-           <section class="improv">
-             <div class="testing-img">
-               <img src="images/Impro2_wireframe.png" alt="Bottom navigation">
-             </div>
-             <div class="testing-txt">
-               <h5>2. Bottom Navigation</h5>
-               <p>Kept the same main bottom navigation for all the pages for consistency and smooth transition between different page</p>
-             </div>
-          </section>
-
-          <section class="improv">
-             <div class="testing-img">
-                <img src="images/Impro3_wireframe.png" alt="no Dead-ends">
-             </div>
-             <div class="testing-txt">
-                <h5>3. Remove the Dead-ends</h5>
-                <p>Few screens needed to have a more obvious way for users to move on to the next screen, so I added the exit icon on the top right</p>
-             </div>
-          </section>
-       </section>
 
         <article class="intro">
            <h3>A/B Testing</h3>
@@ -462,7 +484,10 @@
       <section class="testing-container">
          <section class ="improv">
            <div class="testing-img">
-              <img src="images/preTest1.png" alt="Prototype of Welcome page">
+             <a class="fancybox" rel="template Gallery" href="images/preTest1.png" data-fancybox="gallery" data-caption="Welcome Page">
+             <img src="images/preTest1.png" alt="Welcome Page" />
+             </a>
+              <!--<img src="images/preTest1.png" alt="Prototype of Welcome page">-->
            </div>
            <div class="testing-txt">
               <h5>1. Welcome Page</h5>
@@ -471,11 +496,14 @@
         </section>
         <section class ="improv">
            <div class="testing-img">
-              <img src="images/preTest2.png" alt="Main Feature Visual Design">
+             <a class="fancybox" rel="template Gallery" href="images/preTest2.png" data-fancybox="gallery" data-caption="Main Feature Visual Design">
+             <img src="images/preTest2.png" alt="Main Feature Visual Design" />
+             </a>
+              <!--<img src="images/preTest2.png" alt="Main Feature Visual Design">-->
            </div>
            <div class="testing-txt">
               <h5>2. Main Feature Visual Design</h5>
-              <p><strong>65% </strong> of users preferred the design with the photo image instead of the illustration. They liked the clean and modern look and feel of the design. </p>
+              <p><strong> 65% </strong> of users preferred the design with the photo image instead of the illustration. They liked the clean and modern look and feel of the design. </p>
           </div>
         </section>
       </section>
@@ -505,7 +533,10 @@
        <section class="testing-container">
           <section class ="improv">
             <div class="testing-img">
-                <img src="images/U1.png" alt="Add Icon">
+              <a class="fancybox" rel="template Gallery" href="images/U1.png" data-fancybox="gallery" data-caption="Add Icon">
+              <img src="images/U1.png" alt="Add Icon" />
+              </a>
+              <!--  <img src="images/U1.png" alt="Add Icon">-->
             </div>
             <div class="testing-txt">
                 <h5>1. Bolder Add Icon on the calendar main page</h5>
@@ -515,7 +546,10 @@
 
          <section class ="improv">
              <div class="testing-img">
-                <img src="images/U2.png" alt="Message Feature">
+               <a class="fancybox" rel="template Gallery" href="images/U2.png" data-fancybox="gallery" data-caption="Message Feature">
+               <img src="images/U2.png" alt="Message Feature" />
+               </a>
+                <!--<img src="images/U2.png" alt="Message Feature">-->
              </div>
              <div class="testing-txt">
                 <h5>2. Message Feature</h5>
@@ -525,7 +559,10 @@
 
          <section class ="improv">
             <div class="testing-img">
-               <img src="images/U3.png" alt="Logo placement">
+              <a class="fancybox" rel="template Gallery" href="images/U3.png" data-fancybox="gallery" data-caption="Logo Placement">
+              <img src="images/U3.png" alt="Logo Placement" />
+              </a>
+               <!--<img src="images/U3.png" alt="Logo placement">-->
             </div>
             <div class="testing-txt">
                <h5>3. Logo Placement</h5>
@@ -633,13 +670,13 @@
     <section class="container">
       <div class="carousel" data-flickity='{ "fade": true, "imagesLoaded": true }'>
          <div class="gallery-cell">
-           <img class="gallery-cell-image" src="images/process_Sketch1.png" style="width:100%"></div>
+           <img class="gallery-cell-image" src="images/process_Sketch1.png" style="width:100%" alt="sketch"></div>
          <div class="gallery-cell">
-           <img class="gallery-cell-image" src="images/process_wireframe1.png" style="width:100%"></div>
+           <img class="gallery-cell-image" src="images/process_wireframe1.png" style="width:100%" alt="wireframe"></div>
          <div class="gallery-cell">
-           <img class="gallery-cell-image" src="images/process_MockUp1.png" style="width:100%"></div>
+           <img class="gallery-cell-image" src="images/process_MockUp1.png" style="width:100%" alt="mockup"></div>
          <div class="gallery-cell">
-           <img class="gallery-cell-image" src="images/process_Prototype1.png" style="width:100%"></div>
+           <img class="gallery-cell-image" src="images/process_Prototype1.png" style="width:100%" alt="prototype"></div>
        </div>
     </section>
 
@@ -682,6 +719,11 @@
       <script src="scripts/top.js"></script>
     <!--  <script src="scripts/flickity-fade.js"></script>-->
     <!--  <script src="scripts/flicity.pkgd.min.js"></script>-->
+      <!--Fancybox-->
+      <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+      <!--Flicity-->
       <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
       <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
  </main>
