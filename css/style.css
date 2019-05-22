@@ -62,17 +62,6 @@ body{
   background-color:black;
 }
 
-.resume{ /*phone*/
-  width: 80%;
-  margin: auto;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
-}
-
-.resume img{
-  width: 100%;
-  height: auto;
-}
 
 .container {
     display: flex;
@@ -106,7 +95,7 @@ width: 60%;
 
 .page a{ /*flex item*/
   color: black;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2rem;
   text-decoration: none;
   padding: 2rem 2rem 1rem 1rem;
@@ -319,6 +308,11 @@ letter-spacing: 0.1em;
   -webkit-box-shadow: 0 8px 6px -6px black;
 	   -moz-box-shadow: 0 8px 6px -6px black;
 	        box-shadow: 0 8px 6px -6px black;
+}
+
+.btn-casestudy a:hover{
+  background-color: #EFBB3F !important;
+  font-weight: 600;
 }
 
 .overlay:hover :not(img){
@@ -1500,9 +1494,6 @@ p.last{
     font-size: 1.8rem;
   }
 
-  .resume{ /*phone*/
-    width: 80%;
-  }
 
   .hero-text{
     padding-left: 5rem;
@@ -1944,8 +1935,8 @@ p.last{
 
   .summary p{
     padding: 0 2rem;
-    font-size: 2.1rem;
-    line-height: 5rem;
+    font-size: 2.5rem;
+    line-height: 1.7;
     margin: 7rem;
   }
 
@@ -2252,12 +2243,6 @@ p.two{
   padding-right: 5rem;
 }
 
-.resume{ /*phone*/
-  width: 60%;
-  padding-top: 10rem;
-  padding-bottom: 20rem;
-}
-
 .hero{ /*Desktop*/
   height: 120vh;
   padding:5rem;
@@ -2470,8 +2455,10 @@ a:hover {
 
  .cases__index{ /*desktop__heading for index.html__CASES*/
    font-size: 4rem;
+   display: flex;
    flex-direction: row;
-   /*margin-left: 45rem;*/
+   align-items: flex-start;
+   width: 50%;
  }
 
 .heading.case{
