@@ -920,9 +920,8 @@ p.last{
 }
 
 .profile{
-  width: 60%;
   z-index: 2;
-  margin-left: 15rem;
+  margin-left: 13rem;
   margin-top: 6rem;
 }
 
@@ -1786,6 +1785,7 @@ p.last{
 
   .content h4{
     font-size: 2rem;
+    font-weight: 700;
   }
 
   .finding h4{
@@ -2140,7 +2140,8 @@ p.last{
 }
 
 .custom-txt h4{
-  font-size:1.8rem;
+  font-size:2rem;
+  font-weight: 700;
   padding-bottom: 1rem;
   margin-left: 4rem;
 }
@@ -2161,7 +2162,8 @@ p.last{
 }
 
 .mock-txt h4{ /*text for frustration typing*/
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
   padding-bottom: 1rem;
 }
 
@@ -2195,10 +2197,11 @@ p.last{
 .summarize{ /*transparent box text for tablet!--*/
   background: rgba(255,255,255, 0.3);
   font-size: 2rem;
-  line-height: 4rem;
+  font-weight: 600;
+  line-height: 1.7;
   padding: 2rem;
   margin: 12rem 0 35rem 35rem;
-  width: 50%;
+  width: 60%;
 }
 
 .gallery-cell {
