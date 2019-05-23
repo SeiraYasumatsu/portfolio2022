@@ -800,6 +800,10 @@ p.last{
   margin-right: auto;
 }
 
+.testing-img a:hover{
+  opacity: 0.3;
+}
+
 .testing-txt h5{
   padding: 2rem;
   padding: 3rem 2rem 2rem 2rem;
