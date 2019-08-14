@@ -987,7 +987,7 @@ p.last{
   flex-wrap: nowrap;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../images/abe.png);
+  background-image: url(../images/tone/abe.png);
   object-fit:cover;
   opacity: 0.8;
   height: 25%;
@@ -1053,7 +1053,7 @@ p.last{
   flex-wrap: nowrap;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../images/nina.png);
+  background-image: url(../images/tone/nina.png);
   object-fit:cover;
   opacity: 0.8;
   height: 25%;
