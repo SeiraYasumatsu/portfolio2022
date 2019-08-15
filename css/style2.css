@@ -2814,7 +2814,7 @@ a:hover {
   flex-direction: column;
   flex-grow: 3;
   width: 35rem;
-  height: 65rem;
+  height: auto; /*previous was 65rem;*/
   margin: 0 5rem;
 }
 
@@ -2838,7 +2838,7 @@ margin-bottom: 10rem;
 }
 
 .branding-font{ /*typography font image*/
-  height: 66vh;
+  height: 61vh;
   padding-top: 12rem;
   padding-bottom: 11rem;
 }
