@@ -524,7 +524,7 @@ p.last{
 .intro h3{
   padding-top: 5rem;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.2rem;
 }
 
@@ -1905,7 +1905,7 @@ p.last{
 
   .content h4{
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .finding h4{
@@ -2820,7 +2820,7 @@ a:hover {
 
 .branding-image{
  width: 100%;
- height: 40rem;
+ height: 30rem;
 }
 
 .branding-txt{
