@@ -2100,8 +2100,8 @@ p.last{
   padding-right: 5rem;
 }
 
-.branding h5{
-  margin-top: 2rem;
+.branding h5{/*Tablet spacing*/
+  margin-top: 5rem;
   font-size: 3rem;
   }
 
@@ -2820,17 +2820,19 @@ a:hover {
 
 .branding-image{
  width: 100%;
- height: 30rem;
+ height: auto; /*previous setting 30rem;*/
 }
 
 .branding-txt{
 width: 100%;
-justify-content: baseline;
+/*justify-content: baseline;*/
 margin-bottom: 10rem;
+margin-top: 2rem;
 }
 
 .branding h5{
   font-size: 2.5rem;
+  margin-top: 0;
 }
 
 .branding p{
