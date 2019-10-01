@@ -467,7 +467,7 @@ letter-spacing: 0.1em;
 }
 
 p.last{
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .iframe-container{
@@ -667,17 +667,18 @@ p.last{
   padding-bottom: 3rem;
 }
 
-/*.prototype-container {
-    height: auto;
-    padding: 3rem 2rem 0 2rem;
-    border: 2px solid blue;
-  }
-    /*display: flex;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    padding-left: 2rem;
-    padding-right: 2rem0;*/
+/*.VisualSummary{
+  align-items: center;
+}*/
+
+.VisualSummary img{
+  display:block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .prototype-container{
   display: flex;
@@ -1129,6 +1130,10 @@ p.last{
 
 .summary .underline{
   background-image: linear-gradient(to bottom, #EFBB3F 30%, transparent 10%); /*go back to adjust the color*/
+}
+
+.intro .underline{
+  background-image: linear-gradient(to bottom, #EFBB3F 30%, transparent 10%);
 }
 
 .mainfeatures{
