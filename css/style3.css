@@ -581,6 +581,7 @@ p.last{
   text-indent: -1rem;
 }
 
+
 .content.noIndent p{
   text-indent: 0rem;
 }
@@ -1934,6 +1935,11 @@ p.last{
     width: 80%;
   }
 
+  .content.tasks p{
+    text-indent: 0rem;
+    padding-bottom: 3rem;
+  }
+
  .smart{
    padding-left: 10rem;
    padding-right: 10rem;
@@ -1962,7 +1968,7 @@ p.last{
  }
 
  .experience img{
-   width: 50%;
+   width: 40%;
    height:auto;
  }
 
@@ -1973,6 +1979,7 @@ p.last{
  .title p{
    font-size: 2rem;
    width: 100%;
+   padding-top: 1.5rem;
  }
 
  .location{
@@ -1989,7 +1996,8 @@ p.last{
 }
 
 .finding p{
-  width: 90%;
+  font-size:1.8rem;
+  padding-bottom: 5rem;
 }
 
 .key-container{
@@ -2074,6 +2082,7 @@ p.last{
    width: 100%;
    display: flex;
    margin-bottom: 7rem;
+   padding:0 5rem;
 }
 
 .chart-container{
@@ -2150,7 +2159,7 @@ p.last{
   }
 
   .summary-box{
-    margin-bottom:7rem;
+    padding: 5rem;
   }
 
   .summary p{ /*Tablet*/
@@ -2521,10 +2530,6 @@ p.two{
   margin-left: 5rem;
 }
 
-.hero-text p{
-  width: 65%;
-}
-
 .behub-image img{
   height: auto;
 }
@@ -2534,7 +2539,6 @@ p.two{
   padding-left: 10rem;
   padding-right: 10rem;
 }
-
 
 .intro-container{
   width: 100%;
@@ -2547,11 +2551,17 @@ p.two{
   padding-right:20rem;
 }
 
-.iframe-container{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 40rem;
-  height: 50rem;
+.VisualSummary img{ /*Desktop*/
+  width: 80%;
+}
+
+.key-container{
+  padding: 4rem 0 0 0;
+}
+
+.key1{
+  padding-bottom: 4rem;
+  width: 33%;
 }
 
 .section-title{ /*container for the section title_Desktop*/
@@ -2601,8 +2611,8 @@ a:hover {
 }
 
 .content{
-  padding-left: 20rem;
-  padding-right: 20rem;
+/*  padding-left: 20rem;
+  padding-right: 20rem;*/
 }
 
 .content p{ /*desktop styling*/
@@ -2633,8 +2643,8 @@ a:hover {
 
 
 .chart{
-  padding-left: 20rem;
-  padding-right: 20rem;
+  /*padding-left: 20rem;
+  padding-right: 20rem;*/
 }
 
 .chart-container{
@@ -2642,34 +2652,33 @@ a:hover {
 }
 
 .persona-container{
-   width: 30%;
+   width: 70%;
   }
 
-.persona-img1{
+.persona-img1{ /*desktop*/
     height: 20%;
-    width: 10%;
+    width: 15%;
   }
 
   .persona-img2{
       height: 20%;
-      width: 10%;
+      width: 15%;
     }
 
   .profile__container{
       display: flex;
-      /*width: 100%;
-      margin-left: 20rem;
-      margin-right: 20rem;*/
+      width: 100%;
+      padding-left: 20rem;
+      padding-right: 20rem;
       margin: auto;
-      width: 80%;
       justify-content: center;
     }
 
   .profile{
     margin-top: 7rem;
-    margin-left: 10rem;
-    width: 60%;
-    height: 30vh;
+    margin-left: 14rem;
+    width: 75%;
+    height: 22vh;
     z-index: 2;
   }
 
@@ -2687,10 +2696,13 @@ a:hover {
 
 .profile-text h5{
   font-size: 1.6rem;
+  padding-top: 5rem;
 }
 
 .profile-text p{
   font-size: 1.8rem;
+  padding-bottom:1rem;
+  width: 75%;
 }
 
 
@@ -2880,16 +2892,20 @@ a:hover {
 
  .project p{
    font-size: 1.8rem;
+   line-height: 3rem;
  }
 
  .summary-box{
-   padding-left:20rem;
-   padding-right: 20rem;
+   padding: 0 20rem 7rem 20rem;
  }
 
  .summary-note{
    padding-left: 20rem;
    padding-right: 20rem;
+ }
+
+ .intro p{
+   width:80%;
  }
 
  .mainfeatures{
@@ -2902,19 +2918,19 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 35rem;
-  height: 65rem;
+  height: 60rem;
   margin: 0 5rem;
 }
 
-.branding-image{
+/*.branding-image{
  width: 100%;
  height: 40rem;
-}
+}*/
 
-.branding-txt{
+.branding-txt {
 width: 100%;
 justify-content: baseline;
-margin-bottom: 10rem;
+/*margin-bottom: 10rem;*/
 }
 
 .branding h5{
@@ -2928,12 +2944,12 @@ margin-bottom: 10rem;
 .branding-font{ /*typography font image*/
   height: 66vh;
   padding-top: 12rem;
-  padding-bottom: 11rem;
+  padding-bottom: 5rem;
 }
 
 .branding-font2{ /*color boxes container*/
   flex-direction: column;
-  height: 60vh;
+  height: 45vh;
 }
 
 
@@ -2983,7 +2999,7 @@ margin-bottom: 10rem;
 .impro-note p{
   padding-left: 20rem;
   padding-right: 20rem;
-  width: 75%;
+  width: 80%;
 }
 
 
@@ -2996,15 +3012,23 @@ margin-bottom: 10rem;
 }
 
 .improv{ /*improvement image and txt*/
-  width:30%;
-  margin-right: 3rem;
+  width:45%;
+  /*margin-right: 3rem;*/
+}
+
+.testing-txt p{
+  padding: 0 5rem 2rem 5rem;
+}
+
+.branding img{
+  width:100%;
 }
 
 .testing-img{ /*container for images*/
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 50vh;
+  height: 30vh;
 }
 
 .testing-img img{
@@ -3065,8 +3089,23 @@ margin-bottom: 10rem;
   width: 100%;
  }
 
+.observation-container{
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.chart{
+  padding-left: 20rem;
+  padding-right:20rem;
+}
+
+ .content{
+   padding-right: 20rem;
+   padding-left: 20rem;
+ }
+
 .content h4{
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
 }
 
