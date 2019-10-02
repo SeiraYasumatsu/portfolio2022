@@ -2751,8 +2751,8 @@ a:hover {
  .flex-container.casestudy{/*desktop*/
    flex-direction: row;
    align-items: center;
-   justify-content:center;
-   padding: 2rem 5rem;
+   justify-content:space-between;
+   padding: 2rem 10rem;
  }
 
  .browse {
@@ -2760,7 +2760,7 @@ a:hover {
  }
 
  .overlay { /*Desktop overlay*/
-    width: 50%;
+    width: 49%;
     height: auto;
     align-items: center;
     justify-content: center;
@@ -3031,8 +3031,43 @@ justify-content: baseline;
   height: 30vh;
 }
 
+.testing-img.long{
+  height: 47vh;
+}
+
+.testing-img .long img{
+  width: 70%;
+}
+
 .testing-img img{
   width: 70%;
+}
+
+.visual img{
+  width: 80%;
+}
+
+.Des{
+  text-align: center;
+}
+
+.Des h4{
+  font-size: 3rem;
+}
+
+.Des p{
+  width: 75%;
+  padding-bottom: 3rem;
+  display: inline-block;
+}
+
+.prototype-container{
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.prototype{
+  padding: 4rem 0;
 }
 
  .feature-container{
@@ -3163,7 +3198,7 @@ justify-content: baseline;
 }
 
  .content.challenge h4{
-   margin-top: 15rem;
+   margin-top: 5rem;
  }
 
  .comment{
@@ -3174,8 +3209,8 @@ justify-content: baseline;
  .summarize{ /*transparent box content__Desktop*/
    font-size: 2.5rem;
    padding: 3rem;
-   margin: 17rem 10rem 30rem 75rem;
-   width: 45%;
+   margin: 6rem 10rem 30rem 10rem;
+   width: 50%;
  }
 
 .project p{
