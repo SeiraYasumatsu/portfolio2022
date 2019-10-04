@@ -942,6 +942,18 @@ p.last{
   padding-right: 2rem;
 }
 
+.mock_main{
+  width: 100%;
+  height: 50vh;
+  padding-top:5rem;
+}
+
+.homepage_mock img{
+ width:100%;
+ height: auto;
+ object-fit: cover;
+}
+
 .officemock{
   width: 100%;
   height: 35vh;
@@ -2344,6 +2356,10 @@ p.last{
    margin-right: 2rem;
  }
 
+ .mock_main{
+   height: 60vh;
+ }
+
 .mock.two img{
   width: 100%;
   height: 100%;
@@ -3098,6 +3114,10 @@ justify-content: baseline;
  }
 
 /*---visual design styling for desktop---*/
+
+.mock_main{
+  height: 130vh;
+}
 
 /*--heromock vertical and text portion for desktop---*/
 .officemock {
