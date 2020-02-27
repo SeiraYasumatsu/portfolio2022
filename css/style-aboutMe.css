@@ -73,6 +73,32 @@ body{
     padding-right: 2rem;
 }
 
+.heroAboutContainer{
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+/*  background-color: #EFBB3F;*/
+  padding: 5rem 2rem;
+  justify-content: space-around;
+}
+
+.text-container{
+  width: 55%;
+  height: auto;
+/*  background-color: #EFBB3F;*/
+  padding:1.5rem 1rem 0 2rem;
+}
+
+.aboutme-image{
+  width: 40%;
+  height: auto;
+}
+
+.aboutme-image img{
+  width: 100%;
+  height: auto;
+}
+
 .logo{
   padding: 2rem 0.5rem 2rem 2rem;
   display: flex;
@@ -173,9 +199,9 @@ width: 60%;
   margin-left: 12rem;
 }
 
-.hero-image2{ /*hero images for About page
-  background-image: url(../images/hero2.jpg);
-  display:flex;
+.hero-image2{ /*hero images for About page*/
+/*  background-image: url(../images/hero2.jpg);
+  /*display:flex;
   flex-wrap: nowrap;
   background-position:bottom right;
   background-size: cover;
@@ -1142,7 +1168,7 @@ p.last{
   flex-direction:column;
   width:100%;
   justify-content:flex-start;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 2rem;
 }
 
 .summary-texts p{
@@ -1175,19 +1201,19 @@ p.last{
   font-weight: bold;
 }
 
-.text-container{
+.maintext-container{
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
   padding:2rem 2rem 4rem 2rem;
 }
 
-.square{
+.square.children{
   background:
-    linear-gradient(
+  /*  linear-gradient(
       rgba(229, 229, 229, 0.3),
       rgba(229, 229, 229, 0.1)
-    ),
+    ),*/
     url(../images/quality4.jpg);
   width: 60%;
   height: 30vh;
@@ -1202,10 +1228,10 @@ p.last{
 
 .square.brave{
   background:
-    linear-gradient(
+  /*  linear-gradient(
       rgba(229, 229, 229, 0.3),
       rgba(229, 229, 229, 0.1)
-    ),
+    ),*/
     url(../images/quality5.jpg);
 
   width: 60%;
@@ -1222,10 +1248,10 @@ p.last{
 
 .square.designer{
   background:
-    linear-gradient(
+    /*linear-gradient(
       rgba(229, 229, 229, 0.3),
       rgba(229, 229, 229, 0.1)
-    ),
+    ),*/
     url(../images/presen.JPG);
 
   width: 60%;
@@ -1240,10 +1266,10 @@ p.last{
 
 .square.Japanese{
   background:
-    linear-gradient(
+    /*linear-gradient(
       rgba(229, 229, 229, 0.3),
       rgba(229, 229, 229, 0.1)
-    ),
+    ),*/
     url(../images/quality3.JPG);
 
   width: 60%;
@@ -1259,17 +1285,17 @@ p.last{
 
 .square p {
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
   position: absolute;
   bottom: 8rem;
   left: 4.5rem;
-  color: white;
   margin: 0;
   z-index: 3;
-  background: rgba(0,0,0,0.8);
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 10px rgba(3, 0, 0, 0.06);
   margin-top: 3rem;
   padding:1rem;
   font-size: 1.8rem;
-
 }
 
 .paragraph h1{
@@ -1288,7 +1314,7 @@ p.last{
   font-size: 1.6rem;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.8;
-  padding-bottom: 4rem;
+  /*padding-bottom: 4rem;*/
   z-index: -1;
   position: relative;
 }
@@ -1313,11 +1339,11 @@ p.last{
 }
 
 .Japan {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .Design{
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .Experiences{
@@ -1623,6 +1649,18 @@ p.last{
     /*background-color: pink;
     text-align: left;
   }*/
+ .heroAboutContainer{
+   padding:7rem 7rem 12rem 7rem;
+ }
+
+.aboutme-image{
+  width:30%;
+  height: auto;
+}
+
+.maintext-container{
+  padding: 2rem 10rem 4rem 10rem;
+}
 
  .name{
    width: 35%;
@@ -1717,11 +1755,15 @@ p.last{
   }
 
   .summary-container{
-    padding: 0 5rem 2rem 10rem;
+    padding: 0rem 5rem 0rem 10rem;
   }
 
+ .text p{
+   font-size: 1.8rem;
+ }
+
   .summary-texts p{
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding-bottom: 1rem;
   }
 
@@ -1751,7 +1793,9 @@ p.last{
   }
 
   .text-container{
-    padding: 2rem 10rem 4rem 10rem;
+    /*padding: 2rem 10rem 4rem 10rem;*/
+    padding: 0;
+    width:45%;
   }
 
   .logo-images{
@@ -2672,56 +2716,82 @@ a:hover {
 }
 
 .heading.about /*.case h1* more about Seira_desktop*/{
-  padding: 8rem 4rem 4rem 0;
+  padding: 8rem 4rem 2rem 0;
   margin-left: 0;
 }
 
-.heading{
-  padding-top:7rem;
+.heroAboutContainer{
+  flex-direction: row;
+  max-width: 80rem;
+  margin: auto;
 }
+
+.summary-texts p{
+  font-size: 2rem;
+}
+
+.text-container{
+  width: 60%;
+}
+
+.text p{
+  font-size: 2.5rem;
+}
+
+.aboutme-image img{
+  width: 100%;
+  height: auto;
+}
+
  .summary-container{ /*desktop summary container*/
    max-width: 80rem;
    margin: auto;
  }
 
- .text-container{ /*desktop_text container*/
+ .maintext-container{ /*desktop_text container*/
    margin: auto;
    max-width: 80rem;
    width: calc(100%-2rem);
  }
 
  .square{
-   width: 50%;
-   height: 50vh;
+   width: 40%;
+   height: auto;
+   margin: 10rem auto;
+ }
+
+ .square.children{
+   width: 60%;
+   height: 40vh;
+   background-position: center;
    margin: 15rem auto;
  }
 
  .square.brave{
-   width: 50%;
-   height: 50vh;
+   width: 60%;
+   height: 40vh;
    background-position: center;
    margin: 15rem auto;
  }
 
  .square.designer{
-   width: 50%;
-   height: 50vh;
+   width: 60%;
+   height: 40vh;
    background-position: right;
    margin: 15rem auto;
  }
 
  .square.Japanese{
-   height: 50vh;
-   width: 50%;
+   height: 40vh;
+   width: 60%;
    background-position: center;
    margin: 15rem auto;
  }
 
  .square p {
-  bottom: 6rem;
+   bottom: 6rem;
    left: 20rem;
    width: 85%;
-   background: rgba(0,0,0,0.7);
  }
 
  .words-container{
