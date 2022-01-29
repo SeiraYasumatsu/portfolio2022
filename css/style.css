@@ -17,15 +17,19 @@ body{
   margin: 0;
 }
 
-.wrapper{
+/*.wrapper{
   margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  /*padding-left: 2rem;
-  padding-right: 2rem;*/
+}*/
+.section-title{ /*Phone_container for the section title*/
+  background-color: rgba(179, 207, 205, 0.6);
+  margin-top: 10rem;
+  opacity: 0.5;
+  padding-left: 2rem;
+  width: 50%;
 }
-
 
 .nav { /*container for the top nav*/
     position: sticky;
@@ -62,8 +66,7 @@ body{
   background-color:black;
 }
 
-
-.container {
+/*.container {
     display: flex;
     align-items: center;
     width: 100%;
@@ -71,7 +74,7 @@ body{
     background-color: white;
     padding-left: 2rem;
     padding-right: 2rem;
-}
+}*/
 
 .logo{
   padding: 2rem 0.5rem 2rem 2rem;
@@ -95,6 +98,7 @@ width: 60%;
 
 .page a{ /*flex item*/
   color: black;
+  font-family:'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 0.2rem;
   text-decoration: none;
@@ -106,128 +110,177 @@ width: 60%;
 
 .page a:hover{
   color: #EFBB3F;
-  font-weight:bold;
+  font-weight: 800;
 }
-
-
-.hero{ /*phone styling*/
-  display: flex;
-  flex-direction:column;
-  height: 35vh;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 4rem;
-  flex-wrap: wrap;
-  /*background-color:#F5F5F5;*/
-}
-
-.hero article{
-  position: absolute;
-  z-index:2;
-  align-self: flex-start;
-  padding-bottom: 2rem;
-  margin-left: 2rem;
-}
-
-.hero {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.name h1{
-  color: black;
-  font-family: 'Noto Serif', serif;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 3rem;
-  font-size: 2rem;
-  letter-spacing: 0.2;
-}
-
 
 .title p{
-  color: black;
+  color: #333333;
   font-family: 'Source Sans Pro', sans-serif;
   position: relative;
   font-size: 1.8rem;
   line-height: 1.5;
-  width: 85%;
+  /*width: 85%;*/
   margin-bottom: 2rem;
 }
 
-
-/*.hero-image{/*hero image for the homepage
-  display:flex;
-  flex-wrap: nowrap;
-  background-position:bottom right;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(../images/hero.png);
-  object-fit:cover;
-  height: 40vh;
-  width: 30vh;
-  opacity: 0.4;
-  z-index:1;
-  position: absolute;
-  margin-top: 20rem;
-  margin-left: 12rem;
+.title a{
+  color: #333333;
+  text-decoration-line: underline;
+  text-decoration-color: #EFBB3F;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5.5px;
 }
-
-.hero-image2{ /*hero images for About page
-  background-image: url(../images/hero2.jpg);
-  display:flex;
-  flex-wrap: nowrap;
-  background-position:bottom right;
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit:cover;
-  height: 35vh;
-  width: 30vh;
-  opacity: 0.8;
-  z-index:1;
-  margin-top: 7rem;
-  margin-left: 7rem;
-}*/
 
 /*--------case study styling in homepage*/
-
-.flex-container{/*for cases_phone*/
-  display:flex;
-  flex-direction:column;
-  width:100%;
-  align-items: flex-start;
-  justify-content:center;
-  font-size: 1.8rem;
-  padding: 2rem 2rem;
+.statements {
+  display: grid;
+  grid-template-columns: 0.1fr 4fr 0.1fr;
+  grid-template-rows: auto;
+  grid-gap: 1px;
 }
 
-.flex-container.casestudy{/*Phone_casestudyimages*/
-  padding: 2rem 1rem;
-}
+  .statement {
+    padding: 2rem;
+    padding-top:3rem;
+    display: grid;
+    grid-column-start: 2;
+    grid-template-columns: auto;
+    grid-gap: 1px;
+    align-items: center;
+    color: black;
+    font-weight: 100;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
 
-.cases__index{ /*case title for the phone*/
- margin-left: 2rem;
-}
+  .statement h1{
+      color: black;
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      position: relative;
+      /*padding-bottom: 1rem;*/
+      font-size: 2.5rem;
+      letter-spacing: 0.2;
+    }
 
-.case{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  padding: 2rem 2rem 0 0;
-}
+    .statement h2{
+      color: black;
+      font-family: 'Karla', sans-serif;
+      font-weight: 500;
+      position: relative;
+      font-size: 1.8rem;
+    }
 
-.heading /*.case h1*/{
-  color: #303030;
-  font-weight: 600;
-  /*letter-spacing: 0.2rem;*/
-  font-size: 2rem;
-  text-decoration: none;
-  padding-top: 2rem;
-  padding-bottom:2rem;
-  text-align: left;
-  font-family: 'Source Sans Pro', sans-serif;
-}
+    .statement h3{
+      color: black;
+      font-family: 'Karla', sans-serif;
+      font-weight: 400;
+      position: relative;
+      font-size: 1.8rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .statement p{
+      color: #333333;
+      font-family: 'Source Sans Pro', sans-serif;
+      position: relative;
+      font-size: 1.8rem;
+      line-height: 1.5;
+      /*width: 85%;*/
+      margin-bottom: 2rem;
+    }
+
+    .statement a{
+      color: #333333;
+      text-decoration-line: underline;
+      text-decoration-color: #EFBB3F;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 5.5px;
+      }
+
+
+ .albums{
+    display: grid;
+    grid-template-columns: 0.1fr 4fr 0.1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+   }
+
+   .view:hover button{
+     background-color:#333333;
+     color: white;
+   }
+
+  .album {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #F9F9F9;
+    padding: 20px;
+    display: grid;
+    grid-column-start: 2;
+    /*grid-template-columns: 1fr 4fr 1fr;*/
+    grid-gap: 30px;
+    align-items: center;
+    color: grey;
+    font-weight: 100;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  }
+
+  .album img{
+    width: 90%;
+    height:auto;
+  }
+
+  .caseStudy{ /*button styling_phone*/
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #EFBB3F;
+    color:white;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .album__artwork {
+    width: 100%;
+  }
+
+  .album__artist{
+    color: grey;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .ProjectTitle h2{
+    font-size: 2.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333333;
+    display:inline-block;
+    /*padding-top: 1.5rem;*/
+    padding-bottom: 1rem;
+    margin:auto;
+  }
+
+  .ProjectTitle p{
+    font-size:1.6rem;
+    font-weight: 500;
+    color: grey;
+  }
+
+  .ProjectDes h3{ /*phone*/
+    font-size: 1.8rem;
+    font-weight: lighter;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:#303030;
+    padding-bottom: 3rem;
+    /*width: 25rem;*/
+  }
 
 .underline--magical {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
@@ -236,68 +289,30 @@ width: 60%;
   background-position: 0 88%;
 }
 
-.browse {
+/*.browse {
   display:flex;
   flex-direction: row;
   text-align: center;
   margin-left: 2rem;
-}
+}*/
 
 u{
  text-decoration: underline;
  color: #EFBB3F;
 }
 
-.projectIndex{
-  width:100%;
+/*.image img{
+  /*width:100%;*/
+  /*width: 60%; /*change the width from 100%*
   height: auto;
-  position: relative;
-  transition: .3s;
-  margin-bottom: 5rem;
-  background-color: white;
-  border-style:none solid solid none;
-  border-width: 1px;
-  border-color: #E8E8E8;
-  text-align: center;
-  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.06);
-}
+}*/
 
-.image img{
-  width:100%;
-  height: auto;
-}
-
-.ProjectTitle h2{
-  font-size: 2.5rem;
-  font-family: 'Poiret One', cursive;
-  color: black;
-  display:inline-block;
-  padding-top: 1.5rem;
-}
-
-.ProjectDes h3{
-  font-size: 1.6rem;
-  font-weight: lighter;
-  font-family: 'Source Sans Pro', sans-serif;
-  color:#303030;
-  margin:auto;
-  width: 25rem;
-}
-
-.view h4{
-  font-size: 1.6rem;
-  font-weight: lighter;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #EFBB3F;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-}
 
 a {
   text-decoration: none;
 }
 
-.projectIndex:hover{
+/*.projectIndex:hover{
   background-color: black;
 }
 
@@ -315,7 +330,7 @@ a {
 
 .projectIndex:hover h4{
   color: #EFBB3F;
-}
+}*/
 
 .overlay { /*phone*/
    width: 100%;
@@ -1468,12 +1483,107 @@ p.last{
   display: none;
 }
 
+.view:hover button{
+  background-color:#333333;
+  color: white;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+#btnScrollToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #A9A9A9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+#btnScrollToTop:hover {
+  background-color:black;
+}
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.logo{
+  padding: 2rem 0.5rem 2rem 2rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex:1
+}
+
+.logo img{
+width: 60%;
+}
+
+.header .menu{/*flex container*/
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  list-style:none;
+  justify-content: center;
+}
+.page a{ /*flex item*/
+  color: black;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  padding: 2rem 2rem 1rem 1rem;
+  text-align: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.page a:hover{
+  color: #EFBB3F;
+  font-weight:bold;
+}
+
+@media (min-width: 500px) {
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-gap: 16px;
+    }
+  }
+
+  .card {
+    display: flex; /* [1] */
+    flex-direction: column; /* [2] */
+  }
+
+  .card__content {
+    flex-grow: 1; /* [3] */
+    display: flex; /* [4] */
+    flex-direction: column;
+  }
+
+  .card__link {
+    margin-top: auto; /* [5] */
+  }
 
 /*--------footer styling*/
 .footer{
   padding-top: 7rem;
-
-  /*overflow:hidden;*/
 }
 
 .footer-container{
@@ -1491,18 +1601,20 @@ p.last{
 .question h2{
   font-size: 2rem;
   align-items: center;
-  font-family: 'Noto Serif', serif;
-  margin-bottom: 3rem;
+  font-family: 'Karla', sans-serif;
+  color: #333333;
+  margin-bottom: 1.5rem;
   margin-top: 5rem;
   text-align: center;
 }
 
 .footer h4{
   font-size: 1.2rem;
-  font-weight: lighter;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-family: 'Noto Serif', serif;
+  font-family:'Karla', sans-serif;
+  color: #333333;
   text-align: center;
 }
 
@@ -1578,7 +1690,7 @@ p.last{
  }
 
  .logo img{ /*tablet logo size*/
-  width: 40%;
+  width: 30%;
  }
 
   .page a{ /*flex item*/
@@ -1592,41 +1704,46 @@ p.last{
     padding-right: 5rem;
   }
 
-  .hero{ /*Tablet styling*/
-    height: 20vh;
-    /*padding: 5rem 10rem;*/
-    /*margin-bottom: 5rem;*/
-    margin-top: 3rem;
+  .albums{ /*Tablet grid sizing for case studies*/
+     display: grid;
+     grid-template-columns: 0.3fr 5fr 0.3fr;
+     grid-template-rows: auto;
+     grid-gap: 50px;
+   }
+
+   .view:hover button{
+     background-color:#333333;
+     color: white;
+   }
+
+   .statements{/*Tablet grid sizing for top*/
+     display: grid;
+     grid-template-columns: 0.5fr 5fr 0.5fr;
+     grid-template-rows: auto;
+     grid-gap: 1px;
+   }
+
+   .statement{
+     padding-top:4rem;
+   }
+
+   .album img{
+     width: 100%;
+     height:auto;
+   }
+
+   .album__details{ /*space between text and image*/
+     padding: 1rem;
+   }
+
+   .ProjectDes h3{ /*tablet*/
+     width: 100%;
+   }
+
+  .name{
+    width: 35%;
   }
 
-/*.text{
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  flex-direction: row;
-  /*border: 3px solid black;
-  width: 100%;
-  padding-top: 5rem;
-
-}*/
-
-/*  .hero article{
-    /*position: absolute;
-    z-index:2;
-    align-self: flex-start;
-    padding-bottom: 2rem;
-    margin-top: 5rem;
-    display:inline-block;
-  }
-
-  .text{
-    /*background-color: pink;
-    text-align: left;
-  }*/
-
- .name{
-   width: 35%;
- }
   .name h1{
     /*padding-bottom: 3rem;*/
     font-size: 2.5rem;
@@ -1639,16 +1756,10 @@ p.last{
     padding-left: 3rem;
   }
 
-  .title p{
-    width: 41.5vh;
-    font-size: 1.8rem;
-  }
-
  .projectIndex { /*Tablet*/
    width:45%;
    height: auto;
  }
-
 
   .first p{
     padding-top: 10rem;
@@ -1688,7 +1799,7 @@ p.last{
 
   .cases__index{ /*case title for the tablet*/
    margin-left: 5rem;
-   margin-top:8rem;
+   /*margin-top:3rem;*/
   }
 
 .overlay{
@@ -2369,7 +2480,7 @@ p.two{
 }
 
 .logo img{ /*desktop logo size*/
- width: 50%;
+ width: 40%;
 }
 
 .page a{
@@ -2378,21 +2489,64 @@ p.two{
 
 .title p{
   font-size: 2rem;
-  width:58vh;
+  width:140vh;
 }
 
-.hero{ /*Desktop*/
-  padding:7rem 5rem;
+.album__details{ /*space between text and image*/
+  padding: 5rem;
 }
 
-.hero article{
-  margin-left: 40rem;
-  padding-bottom: 2rem;
+.albums{ /*Desktop grid sizing for case studies*/
+   display: grid;
+   grid-template-columns: 1fr 5fr 1fr;
+   grid-template-rows: auto;
+   grid-gap: 30px;
+ }
+
+ .album { /*Desktop*/
+   padding: 20px;
+   /*grid-template-columns: 1fr 4fr 1fr;*/
+   grid-gap: 30px;
+   align-items: center;
+   color: grey;
+   font-weight: 100;
+   grid-template-columns: repeat( auto-fit, minmax(40%, 1fr) );
+ }
+
+ .album img{ /*desktop*/
+   width: 80%;
+   height:auto;
+ }
+
+ .statements{/*Desktop grid sizing for top*/
+   display: grid;
+   grid-template-columns: 1fr 4fr 1fr;
+   grid-template-rows: auto;
+   grid-gap: 1px;
+ }
+
+ .statement{
+     padding-top:5rem;
+ }
+
+ .ProjectDes h3{ /*desktop*/
+   width: 100%;
+ }
+
+ .album__artist{
+   font-size: 1.5rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+ }
+/*.title{/*setting up the length of the p
+  width: 100vh;
+  padding-left: 20rem;
 }
 
-.hero article .text p{ /*desktop*/
-  width: 80vh;
-}
+.title p{
+  font-size: 2rem;
+  width:140vh;
+}*/
 
 .hero.about{ /*desktop hero container for the about page*/
   height: 120vh;
@@ -2593,7 +2747,6 @@ a:hover {
  .cases__index{ /*desktop__heading for index.html__CASES*/
    font-size: 4rem;
    margin-left: 8rem;
-   padding-top: 5rem;
  }
 
 /*.heading.case{
@@ -2616,8 +2769,10 @@ a:hover {
  }
 
  .projectIndex{
-   width:31%;
+   /*width:31%;*/
+   width:41%;
    height:auto;
+
  }
 
  .flex-container.casestudy{/*desktop*/
