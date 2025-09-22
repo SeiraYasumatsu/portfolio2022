@@ -88,21 +88,43 @@ body {
   font-size: 12px;
 }
 
-.page a{ /*flex item*/
+/* Base link styling */
+.page a {
+  text-decoration: none;
   color: black;
-  font-family:'Karla', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 0.2rem;
-  text-decoration: none;
-  padding: 2rem 2rem 1rem 1rem;
-  text-align: center;
-  align-items: center;
-  transition: all 0.5s;
+  padding: 1rem 0;
+  display: inline-block;
 }
 
-.page a:hover{
+.page a span {
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline on span */
+.page a span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;      /* right under the text */
+  left: 50%;
+  width: 100%;     /* short underline */
+  height: 2px;
+  background-color: #EFBB3F;
+  transform: translateX(-50%) scaleX(0); /* hidden initially */
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect */
+.page a:hover span::after {
+  transform: translateX(-50%) scaleX(1); /* reveal underline */
+}
+
+.page a:hover {
   color: #EFBB3F;
-  font-weight: 800;
 }
 
 
