@@ -20,6 +20,7 @@ body{
 .wrapper{
   margin: 0 auto;
   width: 100%;
+  max-width: 1600px;
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -87,13 +88,19 @@ body{
   font-size: 1.8rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .item p{
   font-size: 3rem;
   /*padding-top:3rem;*/
 }
+
+.album {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+} 
 
 .album {
   display:grid;
@@ -120,30 +127,56 @@ body{
 
 
 /*What people say about me*/
-.comment-grid{
-  display:grid;
+.comment-grid {
+  display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  grid-template-columns: 1fr; /* one column by default */
   justify-items: center;
-  margin-bottom: 15rem;
-  padding:10px;
+  margin: 0 auto 8rem auto;
+  padding: 2rem;
+  max-width: 100%;
 }
+
 
 .comment-title{
   grid-column: 1/-1;
   align-content: center;
-  padding-top:7rem;
+  padding-top:2rem;
 }
+
 .comment-title h3{
   font-size: 2rem;
   font-weight: 700;
   font-family: 'Source Sans Pro', sans-serif;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
+  margin:0;
 }
 
-.comment{
+.comment {
+  background-color: #F9F9F9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 100%; /* keeps cards from stretching too wide */
+}
+
+.comment p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.comment .reference {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+/*.comment{
   /*display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));*/
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   background-color: #F9F9F9;
@@ -153,7 +186,7 @@ body{
   font-size: 1.8rem;
   font-family: 'Source Sans Pro', sans-serif;
   padding: 10px;
-}
+}*/
 
 .text4{
   display:grid;
@@ -171,21 +204,103 @@ body{
 
 .personal p{
   font-size: 1.8rem;
+  line-height: 1.6;
 }
-.last-note p{
-  font-size: 1.8rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  margin-top:8rem;
-  margin-bottom:7rem;
+
+.last-note {
+  position: relative;
+  width: 100vw;              /* full viewport width */
+  padding: 4rem 2rem;
+  background: linear-gradient(120deg, #fefefe, #f9f5f0, #EFBB3F10);
+  overflow: hidden;
   text-align: center;
 }
+
+.last-note p {
+  position: relative;
+  z-index: 1;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.5px;
+  padding: 0 2rem;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  margin: 8rem 0 7rem 0;
+  text-align: center;
+}
+
+
  figcaption{
   font-size: 1.5rem;
   color: grey;
 }
 
-.user{ /*phone sizing of 1st image*/
+.user-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;  /* keeps layout from stretching too wide */
+  padding: 1rem;
+}
+
+.user-img-container {
+  width: 100%;
+  margin-bottom: 1.5rem; /* Space between image and text on mobile */
+}
+
+.user-img-container img {
+  width: 50%;
+  max-width: 400px; /* Limits the image size on small screens */
+  height: auto;
+  border-radius: 8px;
+  display: block; /* Removes any default spacing below the image */
+  margin: 0 auto; /* Centers the image on mobile */
+}
+
+/* Text styling */
+.text-content {
+  text-align: left;
+}
+
+.text-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text-content p {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+/*.user img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px; /* optional 
+  margin-bottom: 1.5rem;
+}
+
+/* Text styling 
+.text {
+  /*padding: 0 1rem;
+  text-align: left;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text p {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+.user{ /*phone sizing of 1st image*
   width: 50%;
   height: auto;
   grid-column: 1/-1;
@@ -195,9 +310,9 @@ body{
 .user img{
   width: 100%;
   height: auto;
-}
+}*/
 
-.award{ /*phone sizing of 1st image*/
+.award { /*phone sizing of 1st image*/
   width: 70%;
   height: auto;
   grid-column: 1/-1;
@@ -207,6 +322,7 @@ body{
 .award img{
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 .award{
@@ -330,12 +446,46 @@ a {
   font-family: 'Raleway', sans-serif;
 }
 
-.btn-resume{
+/*button Design*/
+.btn-resume {
+  margin: 2rem 0 5rem 0;
+  letter-spacing: 0.2rem;
+  text-align: left; /* important change */
+}
+
+.btn-resume a {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-resume a:hover,
+.btn-resume a:focus {
+  background-color: #EFBB3F;
+  color: #111;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-resume a:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+/*.btn-resume{
   color: #ffffff !important;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
-  padding:4rem 0;
+  padding-bottom: 3rem;
   height: 2px;
   text-transform: uppercase !important;
   margin-bottom: 5rem;
@@ -353,7 +503,7 @@ a {
 .btn-resume a:hover{
   background-color: #EFBB3F !important;
   font-weight: bold;
-}
+}*/
 
 .awards a{
   color: black;
@@ -455,34 +605,122 @@ a {
 
 
 /*--------footer styling---------*/
-.footer{
-  padding-top: 7rem;
-
-  /*overflow:hidden;*/
-}
-
-.footer-container{
-  background-color: #F5F5F5;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 2rem;
-  width:100%;
-  display:flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap:wrap;
-}
-
-.question h2{
-  font-size: 2rem;
-  align-items: center;
+/*--updated Footer Sep2025--*/
+.footer {
+  background: #F5F5F5;
+  color: #333;
+  padding: 4rem 2rem;
   font-family: 'Karla', sans-serif;
-  margin-bottom: 3rem;
-  margin-top: 5rem;
-  text-align: center;
+  width: 100%;
+  align-content: center;
 }
 
-.footer h4{
+.right{
+  padding-top: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* mobile first: stacked */
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-column h2, 
+.footer-column h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Email Button Design */
+.btn-email {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1rem 0 2rem 0;
+}
+
+/* Hover / focus state */
+.btn-email:hover,
+.btn-email:focus {
+  background-color: #EFBB3F; /* brand gold */
+  color: #111;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Active / click state */
+.btn-email:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.social-links li {
+  display: inline;
+}
+.social-links a {
+  color: #262633;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.bio {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  max-width: 400px;
+  text-align: left;
+}
+
+.copyright {
+  text-align: left;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  color: grey;
+}
+
+.copyright h4{
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-transform: none;
+  letter-spacing: 1.2;
+  font-weight: 600;
+  font-family:'Karla', sans-serif;
+}
+
+.footer h2{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family:'Karla', sans-serif;
+  color: #333333;
+  text-align: left;
+}
+
+/*.footer h4{
   font-size: 1.2rem;
   font-weight: lighter;
   text-transform: uppercase;
@@ -491,16 +729,8 @@ a {
   text-align: center;
 }
 
-.block-text-contact h4{
-  margin-bottom: 1.5rem;
-}
 
-.block-text-contact{
-  text-align: center;
-  position: relative;
-}
-
-.btn-default {
+/*.btn-default {
   padding: 12px 20px;
   background-color: #262633;
   text-transform: uppercase !important;
@@ -513,54 +743,17 @@ a {
 
 .footer a{
   display: inline-block;
-}
+}*/
 
-.social-list{/*.social-list ul*/
-  list-style:none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction:row;
-  padding: 1.5rem 0rem 4rem 0;
-}
-
-.social-list a{ /*placement of icons*/
-  text-align: center;
-  margin: 1rem;
-  padding: 1rem;
-}
-
-.text-center{
-  text-align: center;
-}
-
-.text-group{
-  over-flow: hidden;
-}
-
-.social li{
-  list-style: none;
-  text-align: center;
-  padding:1rem 1.5rem 0 1.5rem;
-}
-
-.copyright h4{
-  text-align: center;
-  margin-bottom: 3rem;
-  font-size: 1.2rem;
-  text-transform: none;
-  letter-spacing: regular;
-  font-family:'Source Sans Pro', sans-serif;
-}
 
 
 @media screen and (min-width: 768px) { /*----TABLET-----*/
 
   .wrapper{
-  padding: 3rem 5rem;
+  padding: 3rem 5rem 0 5rem;
  }
 
- .HeroContainer{
+.HeroContainer{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
    /*border: 10px solid yellow;*/
@@ -577,26 +770,79 @@ a {
     padding: 2rem 2rem;
     font-size: 1.8rem;
   }
+  
+.user-text-wrapper {
+    flex-direction: row; /* Changes to a row layout */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 2rem; /* Creates space between the image and text */
+  }
 
-  .user{
+  .user-img-container {
+    width: 50%; /* Image container takes half the width */
+    margin-bottom: 0; /* No bottom margin in row layout */
+  }
+
+  .user-img-container img {
+    max-width: 100%; /* Image can fill its container */
+    margin: 0; /* Removes centering */
+  }
+
+  .text-content {
+    width: 50%; /* Text container takes the other half */
+  }
+
+  .text-content h1 {
+    font-size: 3rem; /* Larger font size for tablets/desktops */
+  }
+  /*.user{
     width: 100%;
     grid-column: 1/2;
   }
 
+  .text{
+    /*padding-bottom: 5rem;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+
   .text h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
    }
 
-   .text2{ /*tablet*/
+   .text2{ 
      grid-column-start: 2;
      grid-column-end: -1;
      padding-left: 1rem;
-   }
+   }*/
 
    .award{
      grid-column: span 2;
      margin-top:0;
    }
+
+/* Tablet: 2 columns */
+.comment-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    grid-gap: 25px;
+  }
+  .comment {
+    max-width: 100%; /* let grid handle sizing */
+  }
+
+.comment-title h3{
+  font-size: 3rem;
+}
+
+.text3{
+  margin-top:5rem;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.award{
+  margin-top: 7rem;
+}
 
  /*gallery1*/
   .photo-grid{
@@ -612,6 +858,7 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     grid-auto-flow: dense;
     margin-bottom: 10rem;
+    padding-bottom: 10rem;
   }
 
   .background img{
@@ -621,13 +868,14 @@ a {
 
   .last-note p{ /*tablet*/
     font-size: 2rem;
+    line-height: 1.6;
   }
 
   .last-note{
     margin-left:5rem;
     margin-right: 5rem;
     margin-top:-8rem;
-    width:55%;
+    /*width:55%;*/
   }
   .item1{
     /*grid-row: span 2;*/
@@ -677,6 +925,7 @@ a {
  .text p{
    font-size: 1.8rem;
    padding-bottom: 1rem;
+   max-width: 70ch;
  }
  .personal {
    grid-column-start:1;
@@ -685,7 +934,6 @@ a {
 
  .personal p{
    font-size: 2rem;
-   padding-top:2rem;
  }
 
 
@@ -703,6 +951,12 @@ a {
 
   .btn-resume{ /*tablet*/
     font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .btn-resume a {
+    font-size: 1.8rem;
+    padding: 1.5rem 4rem;
   }
 
   .carousel{
@@ -743,7 +997,7 @@ a {
     margin-top:-3rem;
   }
   .item2{/*tablet*/
-    grid-column: span 2;
+    grid-column: span 1;
   }
 
   #color{
@@ -760,11 +1014,40 @@ a {
   height: 500px;
 }
 
+/*--UPDATED footer Sep2025---*/
+.footer h2{
+  font-size: 2.4rem;
+}
+
+.btn-email {
+  padding: 1.6rem 3.6rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer-column {
+    flex: 1;
+    text-align: left;
+  }
+
+  .footer {
+  padding: 8rem 1.5rem;
+}
+
+.right{
+  padding-top: 0;
+}
+
 }
 
 @media screen and (min-width: 991px){/*----Desktop---*/
 .wrapper{
-  padding: 3rem 20rem;
+  padding: 3rem 20rem 0 20rem;
  }
 
 .logo{
@@ -786,7 +1069,28 @@ a {
 .award{
   margin-top:5rem;
   width: 100%;
+  /*margin-left: 7rem;*/
 }
+
+/* Desktop: 3 columns */
+ .comment-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    grid-gap: 30px;
+  }
+  .comment p {
+    font-size: 1.8rem; /* slightly larger on desktop */
+  }
+  .comment .reference {
+    font-size: 1.6rem;
+  }
+
+  .text3{
+  margin-top:5rem;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
 
 .text2{ /*desktop*/
   grid-column-start: 3;
@@ -846,7 +1150,7 @@ grid-row:span 2;
 }
 
 .item2{
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
 .iframe-container{
@@ -861,6 +1165,13 @@ grid-row:span 2;
   margin-bottom: 3rem;
   width: 40%;
 }
+
+.personal p{
+  font-size: 2.5rem;
+  padding-top: 2rem;
+   max-width:75ch;
+ }
+
 
 :root {
   --mainColor: #EFBB3F;
@@ -963,6 +1274,33 @@ a:hover {
    padding-bottom: 2rem;
  }
 
+.last-note {
+  position: relative;
+  width: 100vw;              /* full viewport width */
+  padding: 8rem 2rem;
+  background: linear-gradient(120deg, #fefefe, #f9f5f0, #EFBB3F10);
+  overflow: hidden;
+  text-align: center;
+}
+
+.last-note p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+
+  .last-note p{ /*tablet*/
+    font-size: 3rem;
+    font-size: normal;
+    line-height: 1.6;
+  }
 /*---Branding styling--*/
 
 

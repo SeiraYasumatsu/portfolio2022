@@ -1,0 +1,882 @@
+/*
+ * General Styles & Typography
+ * Reset, base typography, and container for the entire page.
+ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: #333333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: 'Karla', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 2rem;
+}
+
+/*
+ * Navigation & Header
+ * Sticky header with a logo and navigation menu.
+ */
+.nav { /*container for the top nav*/
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+#btnScrollToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #A9A9A9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+#btnScrollToTop:hover {
+  background-color:black;
+}
+
+
+.logo{
+  padding: 2rem 0.5rem 2rem 2rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex:1
+}
+
+.logo img {
+  width: 50%; /* Mobile logo size */
+}
+
+.header .menu{/*flex container*/
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  list-style:none;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.page a{ /*flex item*/
+  color: black;
+  font-family:'Karla', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  padding: 2rem 2rem 1rem 1rem;
+  text-align: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.page a:hover{
+  color: #EFBB3F;
+  font-weight: 800;
+}
+
+
+
+/*
+ * Main Content Sections
+ * All sections now use Flexbox for responsive layouts.
+ */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Default to one column for mobile */
+    align-items: center; /* Center content on mobile */
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto; /* Adds margin on top/bottom and centers horizontally */
+    overflow: hidden;
+    padding: 10px; /* Reduced padding for mobile */
+    gap: 30px;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 0; /* No padding on mobile */
+  text-align: left; /* Center text on mobile */
+}
+
+/* Hide on small screens */
+.image-column {
+  display: none;
+}
+
+.story-image-column img {
+  width: 60%;
+}
+
+h1 {
+    font-size: 2.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.skill-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease; /* slower and smoother */
+}
+
+/* When visible */
+.icon-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f7c948;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-start;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Story Section Styles */
+.story-section {
+    padding: 5rem 0;
+    position: relative;
+    width: 100%;
+}
+
+/* This will now be our horizontal scrolling container */
+.story-wrapper {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Scrollbar styles for WebKit browsers */
+.story-wrapper::-webkit-scrollbar {
+  height: 8px; /* Set the height of the scrollbar */
+}
+
+.story-wrapper::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Color of the scrollbar track */
+  border-radius: 0; /* Straight edges for the track */
+}
+
+.story-wrapper::-webkit-scrollbar-thumb {
+  background: #5F7367; /* Color of the scrollbar thumb */
+  border-radius: 0; /* Straight edges for the thumb */
+}
+
+.story-container {
+    display: flex; /* Display property is necessary here */
+    flex-direction: column; /* Mobile-first: one column */
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #5F7367;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 2rem;
+    gap: 2rem;
+    /* Set min-width to snap to one story at a time */
+    min-width: 100%;
+    /* Add a transition for a smooth animation */
+    transition: opacity 0.8s ease-in-out; 
+    /* This makes the image's absolute position relative to this container */
+    position: relative;
+    
+    /* Ensure only one story is active at a time */
+    opacity: 0;
+    visibility: hidden;
+}
+
+.story-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.story-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
+.story-image-column img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.story-content-column {
+    padding: 1.5rem;
+}
+
+.story-content-column h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.story-content-column p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.abstract-image {
+    /* For mobile, the image appears in the normal document flow */
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.abstract-image img {
+    width: 100px;
+    height: auto;
+}
+
+/* Dots Navigation */
+.story-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.story-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.story-dot.active {
+  background-color: #5F7367;
+}
+
+/* New Personal Section Styles */
+.personal-section {
+  padding: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.personal-content {
+  margin-bottom: 4rem;
+  font-size: 1.8em;
+  line-height: 1.6;
+  color: #5F7367;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.photos {
+  display: flex;
+  gap: 1rem;
+  overflow-x: hidden;
+  position: relative;
+  height: 300px; /* Adjust height as needed */
+  animation: slide 60s linear infinite;
+/* The photos container needs to be twice the width of the images to accommodate the duplicates */
+  width: 300%;
+  margin-bottom: 10rem;
+}
+
+.photos:hover {
+  animation-play-state: paused;
+}
+
+.item {
+  /* Each item needs to be a fraction of the total width to show more images */
+  width: calc(100% / 9); /* 9 images in total */
+  height: 100%;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+/* Auto-scroll keyframes */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* This now moves the carousel by half its width, revealing the duplicate set */
+  }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-image: url('../images/aboutme/BG-testimonials.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.section-title h3 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial-card p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .reference {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #5F7367;
+    margin: 0;
+}
+
+/* Last Note / Call to Action Section */
+.last-note {
+    background-color: white;
+    padding: 5rem 2rem;
+}
+
+.last-note-content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left; /* This will center the items vertically */
+}
+
+.last-note .one {
+    font-size: 2em;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #5F7367;
+    text-align: left;
+}
+
+.dog-container {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.dog-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dog-photo.active {
+  opacity: 1;
+}
+
+.dog-photo.wobble {
+  animation: wobble 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes wobble {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes bounce-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes bounce-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+
+/*
+ * Footer
+ * Footer columns are stacked on mobile, then transition to a row.
+ */
+.footer {
+  background: #F5F5F5;
+  padding: 4rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-column h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family:'Karla', sans-serif;
+  color: #333333;
+  text-align: left;
+}
+
+/* Email Button Design */
+.btn-email {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1rem 0 2rem 0;
+}
+
+/* Hover / focus state */
+.btn-email:hover,
+.btn-email:focus {
+  background-color: #EFBB3F; /* brand gold */
+  color: #111;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Active / click state */
+.btn-email:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.social-links li {
+  display: inline;
+}
+.social-links a {
+  color: #262633;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: left;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  color: grey;
+}
+
+.copyright h4{
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-transform: none;
+  letter-spacing: 1.2;
+  font-weight: 600;
+  font-family:'Karla', sans-serif;
+}
+
+/*
+ * Buttons
+ */
+.btn-resume {
+  /*margin: 2rem 0 5rem 0;*/
+  letter-spacing: 0.2rem;
+  text-align: left; /* important change */
+}
+
+.btn-resume a {
+  display: inline-block;
+  padding: 1.4rem 3rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-resume a:hover,
+.btn-resume a:focus {
+  background-color: #EFBB3F;
+  color: #111;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-resume a:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/*
+ * Scroll-to-Top Button
+ */
+#btnScrollToTop {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #A9A9A9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+#btnScrollToTop:hover {
+  background-color: black;
+}
+
+/*
+ * Media Queries for Tablet & Desktop
+ */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 0 5rem;
+  }
+  
+  .logo img {
+    width: 30%;
+  }
+
+  .page a{ /*flex item*/
+    padding: 2rem 2rem;
+    font-size: 1.8rem;
+  }
+  
+ .main-container {
+       flex-direction: row; /* Changes to a row for desktop */
+       padding: 40px;
+       gap: 40px;
+       justify-content: center; /* Centers the columns within the container */
+    }
+
+.text-column {
+        flex: 2; /* Makes the text column twice as wide as the image column */
+        padding-right: 20px;
+        align-items: flex-start;
+        text-align: left; /* Aligns text to the left on desktop */
+    }
+
+.image-column {
+        display: flex;
+        flex: 1; 
+        justify-content: center; 
+    }
+
+
+.image-column img {
+    width: 60%; /* Smaller image on mobile */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.story-image-column img {
+    width: 60%;
+}
+
+.image-column img {
+    width: 100%; /* Resets image size for desktop */
+}
+
+.skill-icons {
+    justify-content: flex-start; /* Aligns icons to the left on desktop */
+}
+
+.resume-btn {
+    align-self: flex-start; /* Aligns button to the left on desktop */
+}
+
+ .btn-resume{ /*tablet*/
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .btn-resume a {
+    font-size: 1.8rem;
+    padding: 1.5rem 4rem;
+  }
+
+.text-column p{
+    width: 75%;
+}
+
+/*-----story-section--------*/
+
+    .story-container {
+        flex-direction: row; /* Two columns for desktop */
+        align-items: center;
+        padding: 3rem;
+        gap: 4rem;
+        height: auto;
+    }
+
+    .story-content-column p {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    color: #555;
+}
+
+    .story-image-column, .story-content-column {
+        flex: 1;
+    }
+
+    .abstract-image {
+        /* On desktop, the image is absolutely positioned */
+        position: absolute;
+        width: 150px;
+        height: auto;
+        right: 5%;
+        bottom: 5%;
+        z-index: 10;
+    }
+
+.abstract-image {
+        /* On desktop, the image is absolutely positioned */
+        position: absolute;
+        width: 150px;
+        height: auto;
+        right: 5%;
+        bottom: 5%;
+        z-index: 10;
+    }
+
+.personal-content p{
+      font-size: 2.5rem;
+      padding-bottom: 2rem;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+
+.personal-section {
+  padding: 15rem 0rem;
+
+}
+
+ /* Testimonials Section Tablet/Desktop */
+.testimonial-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+.testimonial-card{
+    padding: 3rem;
+    }
+
+.testimonials-section {
+    padding: 10rem 2rem;
+}
+
+.testimonial-card p{
+    font-size: 1.8rem;
+}
+
+.testimonial-card .reference{
+    font-size: 1.6rem;
+}
+
+.last-note{
+    padding: 10rem 5rem;
+}
+
+/* Last Note / Call to Action Desktop */
+.last-note-content-wrapper {
+      align-items: flex-start; /* Aligns items to the left on desktop */
+    }
+
+  .last-note p {
+    font-size: 3rem;
+  }
+
+/*--UPDATED footer Sep2025---*/
+.footer h2{
+  font-size: 2.4rem;
+}
+
+.btn-email {
+  padding: 1.6rem 3.6rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    flex: 1;
+    text-align: left;
+  }
+
+  .footer-column h2 {
+  font-size: 2.4rem;
+}
+
+  .footer {
+  padding: 8rem 1.5rem;
+}
+
+.right{
+  padding-top: 0;
+}
+}
+
+@media screen and (min-width: 991px) {
+  .wrapper {
+    padding: 0 10rem;
+  }
+
+.logo{
+  padding-left: 5rem;
+}
+  
+  .logo img {
+    width: 40%;
+  }
+  
+  .page a{
+  padding-right: 5rem;
+}
+
+
+
+ 
+}

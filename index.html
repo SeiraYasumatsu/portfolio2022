@@ -30,19 +30,20 @@
          </div>
        </nav>
 
-       <main>
-           <div class="statements">
-             <div class="statement">
-                 <h1>Hi, I'm Seira.</h1>
-                 <h2>I'm on a mission to transform the way patients interpret their blood test results using AI.</h2>
-                 <h3> (also a tinkerer and educator!).</h3>
-                  <p>With over three years of experience in product design, I specialize in crafting intuitive and elegant solutions that are grounded in the authentic experiences of users. During my tenure at TogetherWell,
-                    I spearheaded projects that optimized workshop pages, resulting in a substantial increase in sign-ups and paid memberships. By enhancing the visibility of premium offerings and enhancing user touchpoints, I contributed to the organization’s growth and success. </p>
-                  <p>Currently, I serve as the Creative Director at IPMD, where I lead the development of innovative products driven by facial emotional AI algorithms. My role involves close collaboration with developers and product managers to bring cutting-edge solutions to life.</P>
-                  <p>My passion for children and education has taken me on a remarkable journey from educator to a designer who continues to fuel my commitment to creating impactful design solutions.
-                  <a href="mailto:seiray117@gmail.com">Let’s connect!</a></p>
+       <main>  
+          <div class="intro1">
+            <div class="statement">
+                 <h1 class="typing fade-in">Hi, I'm Seira.</h1>
+                 <h2 class="fade-in">I started out as an educator, where I learned the power of listening deeply and designing with empathy. That mindset still guides me today as a designer—creating tools that feel intuitive, human, and meaningful.</h2>
+                 <h3 class="fade-in"> (also a tinkerer and dog person!)</h3>
+                  <p class="fade-in">Currently, as Head of Design at TeachMeMedical, I design patient-centered tools that make medical data clear and accessible for everyone.</p> <!--At IPMD, I helped shape innovative products powered by Emotional AI, working closely with developers, product managers, and the CEO to bring thoughtful, human-centered solutions to life.-->
+                  <p class="fade-in">I also run <a href="https://www.cozycornerdesign-ca.com/" target="_blank" rel="noopener noreferrer" class="cozy-link">Cozy Corner Design</a>, a bilingual studio that bridges English and Japanese audiences. By blending design with cultural translation, I help businesses expand their reach and build trust across markets.</P>
+                  <p class="fade-in">My goal is simple: to design experiences that don’t just look good, but move people—and move businesses forward.</p>
+                 <!--- <p>My passion for children and education has taken me on a remarkable journey from educator to a designer who continues to fuel my commitment to creating impactful design solutions.-->
+                 <p class="fade-in"><a href="mailto:seiray117@gmail.com" class="btn-email">Email Seira</a></p>
               </div>
-           </div>
+            </div>
+           
 
   <span id ="casestudy_page">&nbsp;</span>
     <br></br>
@@ -156,17 +157,46 @@
          </div>
        </div>
      </section>-->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Left Column -->
+    <div class="footer-column left">
+      <h2>Get in Touch</h2>
+      <a href="mailto:seiray117@gmail.com" class="btn-email">Email Seira</a>
+      <p class="bio">
+        Educator-turned-designer, creating products that truly help people. 
+        Let’s build something meaningful together.
+      </p>
+    </div>
 
-      <div class="footer footer-container">
+    <!-- Right Column -->
+    <div class="footer-column right">
+      <h2>Find me here</h2>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/seira-yasumatsu/" target="_blank">LinkedIn |</a></li> 
+        <li><a href="https://github.com/SeiraYasumatsu" target="_blank">GitHub |</a></li> 
+        <li><a href="https://www.cozycornerdesign-ca.com/" target="_blank">Cozy Corner Design</a></li>
+      </ul>
+      <article class="copyright">
+    <h4>&copy; 2019 | Designed and Developed by Seira Yasumatsu</h4>
+  </article>
+    </div>
+  </div>
+
+</footer>
+
+     <!-- <div class="footer footer-container">
          <div class="question">
           <h2>How can I help you?</h2>
          </div>
         <div class="contact">
           <div class="block-text-contact">
            <h4>Contact Seira to find out</h4>
-         <div>
-           <a href="mailto:seiray117@gmail.com"><button type="button" class="btn-default">Message Seira</button></a>
-          </div>
+       <div class="btn-email">
+          <a href="mailto:seiray117@gmail.com" class="btn btn-default">Email Seira</a>
+       </div>
+       </div>
         </div>
 
        <div class="links">
@@ -174,13 +204,40 @@
        </div>
 
        <div class="text-group text-center">
-         <ul class ="social-list"> <!--flex container-->
+         <ul class ="social-list"> <!--flex container-
           <li><a href="https://www.linkedin.com/in/seira-yasumatsu/"><i class="fab fa-linkedin-in fa-2x" style="color:#262633"></i></a></li>
           <li><a href="https://github.com/SeiraYasumatsu"><i class="fab fa-github fa-2x" style="color:#262633"></i></a></li>
         </ul>
        </div>
         <article class="copyright"><h4>&copy; 2019 | Designed and Developed by Seira Yasumatsu </h4></article>
-    </div>
+    </div>-->
+  
+   <script>
+// Fade-in on scroll
+const fadeElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Animate only once
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeElements.forEach(el => observer.observe(el));
+
+// Add visible class styles
+const style = document.createElement('style');
+style.innerHTML = `
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+document.head.appendChild(style);
+</script>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140417621-1"></script>
      <script>
