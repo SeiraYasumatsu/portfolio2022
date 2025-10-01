@@ -1,0 +1,660 @@
+/*
+ * General Styles & Typography
+ * Reset, base typography, and container for the entire page.
+ */
+
+ /* 1. Global Variables (Custom Properties) */
+:root {
+  /*--color-primary: white;*/
+  --color-text: #333;
+  --font-family-body: 'Source Sans Pro', sans-serif;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+  --max-width-content: 1200px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: #333333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-family: 'Karla', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+}
+
+
+/*
+ * Navigation & Header
+ * Sticky header with a logo and navigation menu.
+ */
+.nav { /*container for the top nav*/
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+#btnScrollToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #A9A9A9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+#btnScrollToTop:hover {
+  background-color:black;
+}
+
+
+.logo{
+  padding: 2rem 0.5rem 2rem 2rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex:1
+}
+
+.logo img {
+  width: 50%; /* Mobile logo size */
+}
+
+.header .menu{/*flex container*/
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  list-style:none;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Base link styling */
+.page a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  padding: 2rem 2rem 1rem 1rem;
+  display: inline-block;
+}
+
+.page a span {
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline on span */
+.page a span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;      /* right under the text */
+  left: 50%;
+  width: 100%;     /* short underline */
+  height: 2px;
+  background-color: #EFBB3F;
+  transform: translateX(-50%) scaleX(0); /* hidden initially */
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect */
+.page a:hover span::after {
+  transform: translateX(-50%) scaleX(1); /* reveal underline */
+}
+
+.page a:hover {
+  color: #EFBB3F;
+}
+
+
+/*
+ * HERO Content Sections
+ * 
+ */
+
+.hero-container {
+  /* Use Flexbox for easy vertical stacking and centering on mobile */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto; /* Center the container itself */
+  max-width: var(--max-width-content); /* Optional: keep content centered and readable */
+}
+
+/* Hero Text Styling */
+.hero-text {
+  /* Set a max-width to keep the text lines readable (not too wide on desktop) */
+  max-width: 600px; 
+  margin-bottom: var(--spacing-md);
+  text-align: left;
+}
+
+.site-title {
+  font-family: var(--font-family-header);
+  font-size: 5rem; /* Larger title for impact */
+  /* Reduce space below the title */
+  margin-bottom: 0.8rem; 
+  /* Ensure the title is bold and impactful */
+  
+  line-height: 1.1; /* Tighter line height for large text */
+}
+
+.site-description {
+  font-family: var(--font-family-body);
+  /* Slightly smaller than the tagline, using a softer color */
+  font-size: 20px; 
+  color: #666; 
+  opacity: 1; /* Remove opacity and use color for subtlety */
+  line-height: 1.5; /* Good line height for body text */
+  margin-top: 0; 
+  margin-bottom: 1.5rem; /* Space below the description */
+  /* Remove auto margins for this block when text-align: center is used */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.site-title a {
+  text-decoration: none; /* Remove underline from the title link */
+  color: var(--color-primary); 
+}
+
+.site-tagline {
+  font-family: var(--font-family-body);
+  font-size: 18px;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: #555; /* Use a slightly softer grey to deemphasize slightly */
+  font-weight: 500; /* Add a little weight to the tagline */
+}
+
+/* Hero Image Styling */
+.hero-image {
+  width: 100%; /* Take up full width on mobile */
+  max-width: 400px; /* Moderate size: max out at 400px wide for the image itself */
+  margin-top: var(--spacing-md);
+  /* Centering is achieved by aligning the parent (.hero-container) */
+}
+
+.hero-image img {
+  display: block; /* Removes any baseline spacing issues */
+  width: 100%;
+  height: auto;
+  /* Modern styling: subtle rounded corners and a slight shadow */
+  border-radius: 8px; 
+ 
+}
+
+/*
+*Specs&Details of the project
+*
+*/
+.specs-container {
+  /* Key change: Center the entire section on the page */
+  margin: 0 auto 2rem auto; /* Top/Bottom Margin, Auto side margins for centering */
+  max-width: var(--max-width-content); /* Use a global max-width (e.g., 1200px) */
+  
+  /* Internal spacing (equal padding on the sides for *all* screen sizes) */
+  padding: 20px;
+
+  /* Flex properties for mobile: vertical stacking */
+  display: flex;
+  flex-direction: column;
+  /* Use 'normal' alignment for left-aligned text */
+  align-items: normal; 
+  
+  /* Remove min-width: 100%; as it's often redundant and can cause overflow */
+}
+
+/* Style for individual items (role, deliverables, specifications) */
+.role,
+.deli,
+.dur {
+  width: 100%; /* Make each section take full width on mobile */
+  padding-bottom: 2rem; /* Add space between stacked sections */
+}
+
+/* Specs Text Styling (Applies to all h2, h3, p) */
+.specs-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #888; /* Slightly darker grey for better contrast/readability */
+  letter-spacing: 0.2rem;
+  margin-top: 1.5rem; /* Add some margin above h2s for spacing */
+}
+
+/* Remove redundant margin-top for 'deli h2' and 'dur h2' in mobile view */
+/* The general h2 margin above handles the spacing. */
+.role h2 {
+  margin-top: 0; /* Remove top margin for the first h2 (ROLE) */
+}
+
+.specs-container p {
+  font-size: 20px; /* Adjusted for better mobile hierarchy/readability */
+  font-weight: normal; /* Lighter is okay, but using 'normal' is cleaner */
+  padding-bottom: 10px;
+}
+
+.deli h3{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 1rem;
+}
+
+.deli p {
+  font-weight: normal; /* Keep it consistent */
+  padding-bottom: 1rem;
+  font-size: 18px; /* Slightly smaller detail text */
+}
+
+.deli a {
+  color: var(--color-text, black);
+  letter-spacing: 0.05rem; /* Reduced letter-spacing for better readability */
+  text-decoration: underline; /* Standard underline for links */
+  text-decoration-color: #EFBB3F;
+  text-decoration-thickness: 2px;
+  font-size: 18px;
+}
+
+.dur h3{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 1rem;
+}
+
+/*
+* SUMMARY Section
+*/
+.intro-container {
+  /* Key for consistency: Center the container and use global max-width */
+  margin: var(--spacing-lg) auto 0 auto; /* Top margin, auto side margins for centering */
+  max-width: var(--max-width-content);
+  
+  /* Use padding for internal spacing and side margins */
+  padding: 20px;
+  margin-top: 2rem;
+
+  display: flex; /* Kept flex, but mainly for centering the content */
+  flex-direction: column;
+  align-items: center; /* Center the entire article block */
+}
+
+/* Ensure the article content does not stretch too wide on larger mobiles */
+.summary {
+  width: 100%;
+  max-width: 650px; /* Optional: Constrain the content width even on mobile */
+  /* Remove min-width: 100%; and flex-wrap from the container */
+}
+
+.intro-container h2{
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  letter-spacing: 0.2rem;
+  color: grey;
+}
+
+.intro-container p{
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.intro-container h3{
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Specific styling for list items (problem points) */
+.list-p {
+  font-size: 18px;
+  padding-bottom: 0.8rem; /* Tighter space between list items */
+  line-height: 1.6;
+}
+
+.last {
+  padding-bottom: 4rem; /* Add a final margin at the end of the section */
+}
+
+
+
+/*
+ * Footer
+ * Footer columns are stacked on mobile, then transition to a row.
+ */
+.footer {
+  background: #F5F5F5;
+  padding: 4rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-column h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family:'Karla', sans-serif;
+  color: #333333;
+  text-align: left;
+}
+
+/* Email Button Design */
+.btn-email {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1rem 0 2rem 0;
+}
+
+/* Hover / focus state */
+.btn-email:hover,
+.btn-email:focus {
+  background-color: #EFBB3F; /* brand gold */
+  color: #111;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Active / click state */
+.btn-email:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.social-links li {
+  display: inline;
+}
+.social-links a {
+  color: #262633;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: left;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  color: grey;
+}
+
+.copyright h4{
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-transform: none;
+  letter-spacing: 1.2;
+  font-weight: 600;
+  font-family:'Karla', sans-serif;
+}
+
+/*
+ * Media Queries for Tablet & Desktop
+ */
+@media screen and (min-width: 768px) {
+ 
+  .logo img {
+    width: 30%;
+  }
+
+  .page a{ /*flex item*/
+    padding: 2rem 2rem;
+    font-size: 1.8rem;
+  }
+  
+/* HERO section----------*/
+  .hero-container {
+    /* Switch to row layout for side-by-side */
+    flex-direction: row; 
+    
+    /* Ensure items are vertically centered in the hero area */
+    justify-content: center; /* Center the group of items horizontally */
+    align-items: center;    /* Center the group of items vertically */
+
+    /* Increase top/bottom padding for more breathing room on desktop */
+    padding: calc(var(--spacing-lg) * 2) var(--spacing-lg); 
+    text-align: left; /* Align text to the left in this view */
+  }
+
+  /* Text on the left, Image on the right (or vice-versa) */
+  .hero-text {
+    /* Give the text space to take up a fraction of the total width */
+    flex: 1; 
+    max-width: 50%; /* Limit text to half the container width */
+    margin-right: var(--spacing-lg); /* Add space between text and image */
+    margin-bottom: 0; /* Remove mobile bottom margin */
+  }
+
+  /* Increase text size for better readability on desktop */
+  .site-title {
+    font-size: 6.5rem;
+  }
+
+  .site-tagline {
+    font-size: 20px;
+  }
+
+.site-description {
+    /* Increase size for desktop readability */
+    font-size: 22px; 
+    /* Remove auto margins to allow text-align: left to take effect */
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 550px; /* Control width for readability */
+  }
+  
+  /* Slightly larger max-width for the moderate main image on desktop */
+  .hero-image {
+    max-width: 600px; 
+  }
+
+/*
+*
+*Specs & Details
+*/
+  .specs-container {
+    /* Switch to row layout for side-by-side */
+    flex-direction: row;
+    justify-content: space-between; /* Evenly space the three columns */
+    align-items: flex-start; /* Keep content aligned to the top of the row */
+    padding: 0 var(--spacing-lg); /* Increase side padding for larger screens */
+    margin-top: 3rem;
+  }
+
+/* Reset individual item width and use flex-grow for layout */
+  .role,
+  .deli,
+  .dur {
+    width: auto; /* Allow flexbox to control width */
+    padding-bottom: 0; /* Remove stacking space */
+    
+    /* Assign flex-grow values to control column width */
+    /* role: ~25%, deli: ~50%, dur: ~25% */
+    flex: 2; /* ROLE */
+  }
+
+  .deli {
+    flex: 3; /* DELIVERABLES (The longest column, give it more space) */
+    padding: 0 4rem; /* Add generous space between DELIVERABLES and neighbors */
+  }
+  
+  .dur {
+    flex: 2; /* SPECIFICATIONS */
+  }
+
+ /* Adjust font sizes for desktop readability */
+  .specs-container h2 {
+    font-size: 2rem;
+    margin-top: 0; /* Remove margin-top as they are now side-by-side */
+  }
+
+  .specs-container p{
+    font-size: 20px;
+  }
+
+  .deli h3, 
+  .dur h3 {
+    font-size: 2rem;
+  }
+
+/*
+* SUMMARY SEction
+*/
+
+/*.intro-container{ 
+    width: 70%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .intro{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }*/
+
+  .intro-container {
+    /* Increase side padding on desktop for visual space */
+    padding: 0 var(--spacing-lg); 
+  }
+
+  /* The most critical change for desktop readability */
+  .summary {
+    max-width: 750px; /* Set a comfortable reading width (e.g., 800px) */
+    width: 100%;
+  }
+
+  .intro-container h2{
+    font-size: 2rem;
+    padding-top: 3rem;
+  }
+
+  .intro-container p{
+    font-size: 1.8rem;
+  }
+
+  .intro-container h3 {
+    font-size: 1.8rem;
+  }
+
+  .list-p {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+  }
+  
+
+/*--UPDATED footer Sep2025---*/
+.footer h2{
+  font-size: 2.4rem;
+}
+
+.btn-email {
+  padding: 1.6rem 3.6rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+}
+
+.footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    flex: 1;
+    text-align: left;
+  }
+
+  .footer-column h2 {
+  font-size: 2.4rem;
+}
+
+  .footer {
+  padding: 8rem 1.5rem;
+}
+
+.right{
+  padding-top: 0;
+}
+}
+
+@media screen and (min-width: 991px) {
+  .wrapper {
+    padding: 0 10rem;
+  }
+
+.logo{
+  padding-left: 5rem;
+}
+  
+  .logo img {
+    width: 40%;
+  }
+  
+  .page a{
+  padding-right: 5rem;
+}
+
+
+
+ 
+}
