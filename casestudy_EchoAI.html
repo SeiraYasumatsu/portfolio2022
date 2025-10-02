@@ -74,6 +74,8 @@
         </section>
        </section>
 
+       <hr class="animated-divider">
+
        <main class ="intro-container">
          <article class="summary">
            <h2>SUMMARY</h2>
@@ -97,8 +99,94 @@
            <p class="last">EchoAI is an empathetic digital companion that uses advanced emotional AI to analyze facial microexpressions, language, and tone of voice  providing 24/7 understanding and support through meaningful conversations when people need it most. </P>
 
           </article>
+          <hr class="animated-divider">
 
-      </main>
+    <section class="key-decisions-section">
+          <h2>Key decisions</h2>
+  
+             <div class="decision-grid">
+    
+         <article class="decision-card" tabindex="0">
+              <div class="card-visible-content">
+                <h3>How do we build trust and connection between the user and their AI companion?</h3>
+              <div class="card-image-wrapper">
+              <img src="images/EchoAI/key1.png" alt="Screenshot showing different AI personas to choose from">
+              </div>
+            </div>
+         <div class="card-solution">
+            <p class="solution-label">Solution:</p>
+            <p>We designed an intuitive onboarding experience where users choose from a diverse range of AI personas, each with unique communication styles and backstories. This personalization, combined with the AI's ability to recall past conversations and purposes, immediately creates a genuine sense of rapport and a secure, personal connection.</p>
+         </div>
+        </article>
+    
+    <article class="decision-card" tabindex="0">
+      <div class="card-visible-content">
+        <h3>How do we clearly signal to the user that they are in an active and personalized conversation with their chosen AI persona?</h3>
+        <div class="card-image-wrapper">
+          <img src="images/EchoAI/key2.png" alt="Screenshot showing a user interacting with an AI persona">
+        </div>
+      </div>
+      <div class="card-solution">
+        <p class="solution-label">Solution:</p>
+        <p>We created subtle yet clear visual and haptic cues. The AI Companion's avatar includes micro-animations that signal "listening" or "typing." A personalized color palette and a consistent conversational tone further reinforce the feeling of a one-on-one, continuous dialogue with their selected persona.</p>
+      </div>
+    </article>
+
+    <article class="decision-card" tabindex="0">
+      <div class="card-visible-content">
+        <h3>How do we design a meaningful post-conversation experience that provides lasting value?</h3>
+        <div class="card-image-wrapper">
+          <img src="images/EchoAI/key3.png" alt="Screenshot showing a user interacting with an AI persona">
+        </div>
+      </div>
+      <div class="card-solution">
+        <p class="solution-label">Solution:</p>
+        <p>After each session, EchoAI generates a data-rich, compassionate summary. This report includes key metrics like emotional status and mood frequency, all presented with actionable insights to help users reflect. This transforms a single conversation into a valuable tool for long-term emotional growth and self-awareness.</p>
+      </div>
+    </article>
+    
+    <article class="decision-card" tabindex="0">
+      <div class="card-visible-content">
+        <h3>What is the full scope of the user's emotional journey on the platform, and how does the product support it at every step?</h3>
+        <div class="card-image-wrapper">
+          <img src="images/EchoAI/key4.png" alt="Screenshot showing a user interacting with an AI persona">
+        </div>
+      </div>
+      <div class="card-solution">
+        <p class="solution-label">Solution:</p>
+        <p>We architected the platform to support the entire emotional lifecycle, from real-time support during moments of distress to long-term emotional tracking. The dashboard visualizes the user’s emotional trends over time, providing a clear map of their journey and empowering them to build greater self-awareness and resilience.</p>
+      </div>
+    </article>
+
+    <article class="decision-card" tabindex="0">
+      <div class="card-visible-content">
+        <h3>How do we integrate human oversight and intervention while maintaining the AI's 24/7 availability?</h3>
+        <div class="card-image-wrapper">
+          <img src="images/EchoAI/key5.png" alt="Screenshot showing a user interacting with an AI persona">
+        </div>
+      </div>
+      <div class="card-solution">
+        <p class="solution-label">Solution:</p>
+        <p>We built a multi-layered safety protocol. The AI is programmed with crisis detection algorithms that automatically flag high-risk conversations. When a user indicates severe distress, the system seamlessly transitions them to a curated list of vetted human resources and emergency services, ensuring a critical safety net without disrupting the instant availability of the AI for all other interactions.</p>
+      </div>
+    </article>
+
+    <article class="decision-card" tabindex="0">
+      <div class="card-visible-content">
+        <h3>How do we measure the effectiveness and impact of the emotional support provided by the AI companion?</h3>
+        <div class="card-image-wrapper">
+          <img src="images/EchoAI/key6.png" alt="Screenshot showing a user interacting with an AI persona">
+        </div>
+      </div>
+      <div class="card-solution">
+        <p class="solution-label">Solution:</p>
+        <p>We designed a system that balances quantitative and qualitative metrics. We track AI-driven sentiment analysis to show a shift in user mood over a session, while also offering a simple post-session rating and feedback loop. This allows us to prove impact with data while gaining rich, qualitative insights to continually refine the AI's empathetic approach.</p>
+      </div>
+    </article>
+    </div>
+</section>
+      
+        </main>
 
       <article class= "last-note">
          <p class="one">Thank you for checking out my case study. Do you have any questions?</p>
@@ -156,3 +244,46 @@
   </div>
 
 </footer>
+
+<script>
+    (function() {
+    'use strict';
+
+    const decisionCards = document.querySelectorAll('.decision-card');
+
+    if (decisionCards.length > 0) {
+        decisionCards.forEach(card => {
+            // Add a click listener to each card
+            card.addEventListener('click', function() {
+                // Check if the card is already expanded
+                const isExpanded = this.classList.contains('expanded');
+
+                // If on a desktop/hover-enabled device, we may want to only toggle on click
+                // and not on hover (the CSS handles hover for non-touch devices).
+
+                // Toggle the 'expanded' class on the clicked card
+                this.classList.toggle('expanded');
+                
+                // Accessibility: Update ARIA attributes
+                this.setAttribute('aria-expanded', !isExpanded);
+            });
+            
+            // Optional: Handle keyboard accessibility (Enter/Space to expand)
+            card.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault(); // Prevent default scroll/space behavior
+                    this.click(); // Trigger the click handler
+                }
+            });
+            
+            // Accessibility: Initial ARIA setup
+            card.setAttribute('role', 'button');
+            card.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+})();
+</script>
+
+    </body>
+  </html>

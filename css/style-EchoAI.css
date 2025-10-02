@@ -146,6 +146,7 @@ body {
   align-items: center; /* Center content horizontally */
   text-align: center;
   padding: 20px;
+  padding-top: 3rem;
   margin: 0 auto; /* Center the container itself */
   max-width: var(--max-width-content); /* Optional: keep content centered and readable */
 }
@@ -172,11 +173,11 @@ body {
   font-family: var(--font-family-body);
   /* Slightly smaller than the tagline, using a softer color */
   font-size: 20px; 
-  color: #666; 
+  color: #333333; 
   opacity: 1; /* Remove opacity and use color for subtlety */
   line-height: 1.5; /* Good line height for body text */
   margin-top: 0; 
-  margin-bottom: 1.5rem; /* Space below the description */
+  margin-bottom: 2rem; /* Space below the description */
   /* Remove auto margins for this block when text-align: center is used */
   margin-left: 0;
   margin-right: 0;
@@ -189,12 +190,33 @@ body {
 
 .site-tagline {
   font-family: var(--font-family-body);
-  font-size: 18px;
-  color: var(--color-text);
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 2rem;
-  color: #555; /* Use a slightly softer grey to deemphasize slightly */
-  font-weight: 500; /* Add a little weight to the tagline */
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(10px);
+
+  /* Gradient text */
+  background: linear-gradient(90deg, deepskyblue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  animation: fadeSlideColor 1.5s ease-out forwards;
+}
+
+@keyframes fadeSlideColor {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    background-position: left;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    background-position: right;
+  }
 }
 
 /* Hero Image Styling */
@@ -213,6 +235,29 @@ body {
   border-radius: 8px; 
  
 }
+
+.animated-divider {
+  border: none;
+  height: 1px; /* thin, subtle */
+  max-width: 1200px; /* match your content container */
+  margin: 3rem auto; /* center the line with spacing */
+  
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0),       /* transparent fade in */
+    rgba(200,200,200,0.6), /* very light grey center */
+    rgba(0,0,0,0)        /* transparent fade out */
+  );
+  background-size: 200% 100%;
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 /*
 *Specs&Details of the project
@@ -320,6 +365,7 @@ body {
 .intro-container h2{
   font-size: 2rem;
   font-weight: bold;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   letter-spacing: 0.2rem;
   color: grey;
@@ -350,6 +396,116 @@ body {
   padding-bottom: 4rem; /* Add a final margin at the end of the section */
 }
 
+/* ----------------------------------------------------
+ * Key Decisions Section
+ * ----------------------------------------------------
+ */
+
+.key-decisions-section {
+  /* Inherit consistent padding and max-width from previous sections */
+  margin: var(--spacing-lg) auto;
+  padding: 0 var(--spacing-md);
+  max-width: var(--max-width-content);
+}
+
+.key-decisions-section h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text, #333);
+}
+
+.decision-grid {
+  /* Default Mobile: Simple vertical stack (CSS Grid default is one column) */
+  display: grid;
+  gap: var(--spacing-md); /* Space between stacked cards */
+}
+
+.decision-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Critical for containing content during transition */
+  cursor: pointer;
+  
+  /* Initial padding for the visible content */
+  padding: var(--spacing-md);
+  
+  /* Initial state: The card-solution is hidden/collapsed */
+  /* We use the 'expanded' class to override this later */
+}
+
+.decision-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: var(--color-text, #333);
+}
+
+.card-image-wrapper {
+  /* Use Flexbox to center the content horizontally */
+  display: flex;
+  justify-content: center;
+  
+  margin-bottom: 1rem;
+  /* Optional: You can set a max-width for the image wrapper here
+     if you want the image to be smaller than 100% of the card on desktop. */
+}
+
+
+.card-image-wrapper img {
+  /* Keep this rule to ensure the image scales correctly */
+  width: 100%; 
+  max-width: 400px; /* Example: Limit image size for centering effect */
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #eee;
+}
+
+/* Solution Content (Initially Hidden/Collapsed) */
+.card-solution {
+  /* Start with max-height 0 and overflow hidden for the collapse effect */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 1rem; /* Match the side padding of the card */
+  
+  /* Smooth transition for height and opacity */
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in;
+}
+
+.solution-label {
+  font-weight: bold;
+  font-size: 12px;
+  color: var(--color-primary);
+  margin-top: 2rem;
+}
+
+.card-solution p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 1rem; /* Adds space at the bottom of the card when expanded */
+}
+
+
+/* --- State: Expanded/Active Card Styles --- */
+
+/* This class is added by JavaScript */
+.decision-card.expanded .card-solution {
+  /* A large enough max-height to ensure all solution content fits */
+  max-height: 500px; 
+  opacity: 1;
+}
+
+/* For hover effect on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .decision-card:hover .card-solution {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
 
 
 /*
@@ -488,10 +644,11 @@ body {
   /* Increase text size for better readability on desktop */
   .site-title {
     font-size: 6.5rem;
+    margin-bottom: 0; 
   }
 
   .site-tagline {
-    font-size: 20px;
+    font-size: 32px;
   }
 
 .site-description {
@@ -518,7 +675,7 @@ body {
     justify-content: space-between; /* Evenly space the three columns */
     align-items: flex-start; /* Keep content aligned to the top of the row */
     padding: 0 var(--spacing-lg); /* Increase side padding for larger screens */
-    margin-top: 3rem;
+    margin-top: 6rem;
   }
 
 /* Reset individual item width and use flex-grow for layout */
@@ -581,6 +738,7 @@ body {
   .summary {
     max-width: 750px; /* Set a comfortable reading width (e.g., 800px) */
     width: 100%;
+    padding-top: 3rem;
   }
 
   .intro-container h2{
@@ -600,7 +758,49 @@ body {
     font-size: 1.8rem;
     padding-bottom: 1rem;
   }
-  
+
+ /*
+ **KeyDecisions-----------
+ **
+ */ 
+
+ .key-decisions-section h2 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.card-image-wrapper img {
+  max-width: 300px;
+}
+
+.decision-grid {
+    /* Switch to a 2-column grid layout */
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem; /* Larger space between columns */
+  }
+
+.decision-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  color: var(--color-text, #333);
+}
+
+  .decision-card {
+    padding: var(--spacing-lg); /* Larger padding on desktop */
+  }
+
+  .card-solution {
+    padding: 0 2rem; /* Larger side padding on desktop */
+  }
+
+  .solution-label {
+  font-size: 14px;
+  margin-top: 3rem;
+}
+
 
 /*--UPDATED footer Sep2025---*/
 .footer h2{
