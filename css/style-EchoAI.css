@@ -21,6 +21,8 @@
 
 html {
   font-size: 10px;
+  /* Enables smooth scrolling for all anchor links */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -53,25 +55,41 @@ body {
   background-color: white;
 }
 
+
+/* ----------------------------------------------------
+ * Scroll To Top Button Styling (Reusing your design)
+ * ----------------------------------------------------
+ */
 #btnScrollToTop {
+    /* Positioning: Use your fixed position and spacing */
     position: fixed;
     right: 2rem;
     bottom: 2rem;
+    z-index: 1000; /* Ensure it's on top */
+    
+    /* Appearance: Use your size, shape, color, and shadow */
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #A9A9A9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+    background: #A9A9A9; /* Your preferred gray color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: white;
+    border: none;
     outline: none;
     cursor: pointer;
-    border: none;
+    
+    /* Functional: Initially hidden */
+    display: none; 
+    
+    /* Center the icon visually inside the button */
+    line-height: 50px; 
+    padding: 0; 
+    text-align: center;
 }
 
 #btnScrollToTop:hover {
-  background-color:black;
+  background-color: black; /* Your dark hover color */
 }
-
 
 .logo{
   padding: 2rem 0.5rem 2rem 2rem;
@@ -161,7 +179,7 @@ body {
 
 .site-title {
   font-family: var(--font-family-header);
-  font-size: 5rem; /* Larger title for impact */
+  font-size: 7rem; /* Larger title for impact */
   /* Reduce space below the title */
   margin-bottom: 0.8rem; 
   /* Ensure the title is bold and impactful */
@@ -240,7 +258,8 @@ body {
   border: none;
   height: 1px; /* thin, subtle */
   max-width: 1200px; /* match your content container */
-  margin: 3rem auto; /* center the line with spacing */
+  margin: 2rem auto; /* center the line with spacing */
+  margin-top: 6rem;
   
   background: linear-gradient(
     90deg,
@@ -290,7 +309,7 @@ body {
 
 /* Specs Text Styling (Applies to all h2, h3, p) */
 .specs-container h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #888; /* Slightly darker grey for better contrast/readability */
   letter-spacing: 0.2rem;
@@ -304,13 +323,13 @@ body {
 }
 
 .specs-container p {
-  font-size: 20px; /* Adjusted for better mobile hierarchy/readability */
+  font-size: 2rem; /* Adjusted for better mobile hierarchy/readability */
   font-weight: normal; /* Lighter is okay, but using 'normal' is cleaner */
   padding-bottom: 10px;
 }
 
 .deli h3{
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #333333;
   margin-top: 1rem;
@@ -319,7 +338,7 @@ body {
 .deli p {
   font-weight: normal; /* Keep it consistent */
   padding-bottom: 1rem;
-  font-size: 18px; /* Slightly smaller detail text */
+  font-size: 2rem; /* Slightly smaller detail text */
 }
 
 .deli a {
@@ -328,14 +347,81 @@ body {
   text-decoration: underline; /* Standard underline for links */
   text-decoration-color: #EFBB3F;
   text-decoration-thickness: 2px;
-  font-size: 18px;
+  font-size: 2rem;
+}
+
+/* ----------------------------------------------------
+ * Navigation Link Styling (Inside .deli)
+ * ----------------------------------------------------
+ */
+
+/* Target the anchor tag inside the h3 */
+.deli h3 a {
+  /* Ensure the link text is the color you want (e.g., black or dark gray) */
+  color: var(--color-text, #333); 
+  text-decoration: none; /* Remove default underline */
+  font-weight: bold;
+  position: relative; /* Essential for positioning the ::after pseudo-element */
+  display: inline-block; /* Essential for the underline to start/end correctly */
+}
+
+/* ----------------------------------------------------
+ * Navigation Link Styling (Inside .deli)
+ * ----------------------------------------------------
+ */
+
+.deli h3 a {
+  /* Keep the text color as is (it inherits from h3 or is explicitly set) */
+  color: #333; /* Assuming a dark gray text color */
+  font-weight: bold;
+
+  /* --- FIX: Add a visible underline by default --- */
+  text-decoration: underline; /* Re-enable underline */
+  text-decoration-color: #FFC000; /* Use a default gold/yellow color */
+  text-decoration-thickness: 2px; /* Keep it thin and clean */
+  text-underline-offset: 3px; /* Ensure space between text and underline */
+  
+  /* Make the link behave like a block/inline-block to accept padding and background */
+  display: inline-block; 
+  
+  /* Add padding so the highlight is visible around the text */
+  padding: 0 0.25rem; 
+  margin: 0 -0.25rem; /* Use negative margin to offset the padding and maintain horizontal flow */
+  
+  /* Initial state: Transparent background */
+  background-color: transparent;
+  
+  /* Apply the smooth transition to the background-color property */
+  transition: background-color 0.3s ease-in-out; 
+}
+
+/* On HOVER, change the background color to the desired yellow/gold */
+.deli h3 a:hover {
+  /* Use a subtle yellow/gold color (adjust hex code as needed) */
+  background-color: #FFEB8F; /* A light, soft yellow */
+  
+  /* Explicitly ensure the text color DOES NOT change on hover */
+  color: #333; 
+  text-decoration: none;
+}
+
+/* Optional: Keep the descriptive paragraph color simple */
+.deli p {
+    color: #555;
+    /* Remove any transition or hover effects applied to the paragraph */
 }
 
 .dur h3{
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #333333;
   margin-top: 1rem;
+}
+
+[id^="EchoAI_casestudy_"] {
+    /* Sets a margin when scrolling to the target, preventing content 
+       from being hidden by a sticky header or from hugging the top. */
+    scroll-margin-top: 100px; 
 }
 
 /*
@@ -347,8 +433,7 @@ body {
   max-width: var(--max-width-content);
   
   /* Use padding for internal spacing and side margins */
-  padding: 20px;
-  margin-top: 2rem;
+  padding: 0 2rem;
 
   display: flex; /* Kept flex, but mainly for centering the content */
   flex-direction: column;
@@ -363,7 +448,7 @@ body {
 }
 
 .intro-container h2{
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -372,14 +457,14 @@ body {
 }
 
 .intro-container p{
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding-bottom: 2rem;
   color: #333333;
   line-height: 1.6;
 }
 
 .intro-container h3{
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   padding-bottom: 3rem;
   line-height: 1.6;
@@ -404,9 +489,8 @@ body {
 .key-decisions-section {
   /* Inherit consistent padding and max-width from previous sections */
   margin: var(--spacing-lg) auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 2rem;
   max-width: var(--max-width-content);
-  padding-top: 5rem;
 }
 
 .key-decisions-section h2 {
@@ -419,7 +503,7 @@ body {
 .decision-grid {
   /* Default Mobile: Simple vertical stack (CSS Grid default is one column) */
   display: grid;
-  gap: var(--spacing-md); /* Space between stacked cards */
+  gap: 4rem; /* Space between stacked cards */
 }
 
 .decision-card {
@@ -516,8 +600,7 @@ body {
  .solution-section {
   margin: var(--spacing-lg) auto;
   max-width: var(--max-width-content);
-  padding: 0 var(--spacing-md);
-  padding-top: 5rem;
+  padding: 0 2rem;
 }
 
 .solution-section h2 {
@@ -557,9 +640,9 @@ body {
   background-color: transparent; /* No background needed on mobile now */
   
   width: 100%; /* Take full width */
-  padding: 2rem var(--spacing-md); 
-  font-size: 1.8rem; 
-  line-height: 1.4;
+  padding: 2rem; 
+  font-size: 2.3rem; 
+  line-height: 1.6;
   margin: 0;
   
   text-align: left; /* Center text within its block on mobile */
@@ -704,6 +787,136 @@ body {
   opacity: 1;
   padding-top: 1rem;
   padding-bottom: 2rem;
+}
+
+/* ----------------------------------------------------
+ * Outcome Section (Mobile-First: Vertical Stack)
+ * ----------------------------------------------------
+ */
+.outcome-section {
+  max-width: var(--max-width-content);
+  margin: auto 2rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+.outcome-section h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--color-text, #333);
+}
+
+.outcome-grid {
+  /* Mobile: Stack vertically using Flexbox */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Space between stacked cards */
+  align-items: center; /* Center the cards horizontally */
+}
+
+.outcome-card {
+  width: 100%;
+  max-width: 350px; 
+  padding: 3rem 1.6rem;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #EBEBEB;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  
+  /* --- FIX 1: Enable Flexbox inside the card --- */
+  display: flex;
+  flex-direction: column; /* Stack the elements (number then text) vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+}
+
+/* Big Number Styling */
+.stat-number {
+  font-size: 8rem; /* Large number on mobile */
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-text, #333);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-number .percent-symbol {
+  font-size: 2rem;
+  vertical-align: super;
+  font-weight: 600;
+}
+
+/* Engagement Card Specifics */
+.stat-engagement-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0.5rem 0;
+  font-size: 1.6rem; /* The word 'to' */
+  font-weight: 500;
+}
+
+.stat-engagement-numbers .small {
+  font-size: 8rem;
+  margin-right: 0.5rem;
+}
+
+.stat-engagement-numbers .large {
+  font-size: 8rem;
+  margin-left: 0.5rem;
+}
+
+
+/* Description Text */
+.stat-description {
+  font-size: 1.8rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ----------------------------------------------------
+ * NEW: Full-Width Summary Wrapper
+ * ----------------------------------------------------
+ */
+.outcome-summary-wrapper {
+  /* 1. Apply Full-Width Background and Vertical Padding */
+  width: 100vw; /* Extends to the full viewport width */
+  position: relative; /* Needed to handle negative margin trick below */
+  left: 50%; /* Start the element at the center of the screen */
+  right: 50%;
+  margin-left: -50vw; /* Shift the element back by half the viewport width to align the left edge to the viewport edge */
+  margin-right: -50vw;
+  
+  /* Apply Background Color */
+  background-color: #F0F5FA; /* A soft, light blue/gray for contrast */
+  padding: 3rem 2rem; /* Vertical padding inside the colored bar */
+  
+  /* Retain top margin from the outcome section */
+  margin-top: 4rem; 
+}
+
+
+/* ----------------------------------------------------
+ * Outcome Summary Text (Text centering and width)
+ * ----------------------------------------------------
+ */
+.outcome-summary-text {
+  /* 2. Re-constrain the text to the site's content width */
+  max-width: 750px; 
+  
+  /* Center the TEXT content block within the new wrapper */
+  margin: 0 auto; 
+  
+  /* Maintain text styling */
+  padding: 0 var(--spacing-md); /* Add left/right padding for small screens */
+  font-size: 2.4rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--color-text, #333);
+  text-align: left; /* Center the text for a better summary look */
 }
 
 /*-----note----
@@ -885,7 +1098,7 @@ body {
 
   /* Increase text size for better readability on desktop */
   .site-title {
-    font-size: 6.5rem;
+    font-size: 8rem;
     margin-bottom: 0; 
   }
 
@@ -984,7 +1197,7 @@ body {
   }
 
   .intro-container h2{
-    font-size: 2.6rem;
+    font-size: 3rem;
     padding-top: 4rem;
   }
 
@@ -1007,7 +1220,7 @@ body {
  **
  */ 
 .key-decisions-section{
-    padding-bottom: 5rem;
+    padding: 0 10rem 5rem 10rem;
 }
 
  .key-decisions-section h2 {
@@ -1052,7 +1265,6 @@ body {
 -------------------------*/
 .solution-section {
     padding: 0 var(--spacing-lg); /* Use larger padding */
-    padding-top: 5rem;
   }
 
 .solution-content-flex {
@@ -1141,9 +1353,59 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ----------------------------------------------------
+ * Desktop Styles (Grid Layout)
+ * ----------------------------------------------------
+ */
+@media screen and (min-width: 768px) {
+.outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 4rem; 
+  }
+  
+.outcome-card {
+    height: 100%; /* Keeps the card filling the equal-height row */
+    width: auto; 
+    max-width: none;
+    padding: 6rem;
+    /* The internal Flexbox from the base style ensures content is vertically centered */
+  }
+
+  .outcome-section {
+  max-width: var(--max-width-content);
+  margin: 0 auto 0;
+  text-align: left;
+}
+  
+  .outcome-section h2{
+  font-size: 4rem;
+  font-weight: 800;
+  }
+
+  .outcome-summary-wrapper {
+    padding: 4.5rem 0; /* Increase padding for desktop impact */
+  }
+  
+  .outcome-summary-text {
+    font-size: 2.3rem; /* Larger font on desktop */
+    text-align: left;
+  }
+
+  /* Desktop Number Scaling */
+  .stat-number {
+    font-size: 8rem; /* Bigger impact on desktop */
+  }
+
+  .stat-engagement-numbers .large {
+    font-size: 8rem;
+  }
+
 /*----NOTE-----*/
 .last-note {
-    padding: 4rem 3rem; /* Increase padding on large screens */
+    padding: 6rem 3rem; /* Increase padding on large screens */
   }
 
   .last-note .one {

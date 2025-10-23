@@ -43,23 +43,39 @@ body{
   background-color: white;
 }
 
+/* ----------------------------------------------------
+ * Scroll To Top Button Styling (Reusing your design)
+ * ----------------------------------------------------
+ */
 #btnScrollToTop {
+    /* Positioning: Use your fixed position and spacing */
     position: fixed;
     right: 2rem;
     bottom: 2rem;
+    z-index: 1000; /* Ensure it's on top */
+    
+    /* Appearance: Use your size, shape, color, and shadow */
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #A9A9A9;
+    background: #A9A9A9; /* Your preferred gray color */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: white;
+    border: none;
     outline: none;
     cursor: pointer;
-    border: none;
+    
+    /* Functional: Initially hidden */
+    display: none; 
+    
+    /* Center the icon visually inside the button */
+    line-height: 50px; 
+    padding: 0; 
+    text-align: center;
 }
 
 #btnScrollToTop:hover {
-  background-color:black;
+  background-color: black; /* Your dark hover color */
 }
 
 

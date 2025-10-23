@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/fsv5njc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
 
@@ -30,7 +31,7 @@
          </div>
        </nav>
 
-       <button id="btnScrollToTop"><i class="fas fa-caret-up fa-2x"></i></button>
+    <button id="btnScrollToTop"><i class="fas fa-caret-up fa-2x"></i></button>
 
      <header class="hero-container" role="banner">
          <div class="hero-text">
@@ -78,8 +79,7 @@
     
     <main>
 
-    <span id ="EchoAI_casestudy_Summary">&nbsp;</span>
-       <section class ="intro-container">
+    <section id="EchoAI_casestudy_Summary" class="intro-container">
          <article class="summary">
            <h2>SUMMARY</h2>
            <p>In a world where emotional support isn’t always available when it’s needed most, EchoAI offers a “digital mirror”—an AI companion that can recognize microexpressions, tone, and language patterns to reflect a user’s inner state with sensitivity and accuracy. For premium users, it seamlessly connects them with trained human coaches, creating a hybrid model that balances the scalability of AI with the irreplaceable value of human connection.</p>
@@ -106,8 +106,7 @@
         
         <hr class="animated-divider">
 
-      <span id ="EchoAI_casestudy_KeyDecisions">&nbsp;</span>
-      <section class="key-decisions-section">
+    <section id="EchoAI_casestudy_KeyDecisions" class="key-decisions-section">
           <h2>Key decisions</h2>
   
              <div class="decision-grid">
@@ -116,7 +115,7 @@
               <div class="card-visible-content">
                 <h3>How do we build trust and connection between the user and their AI companion?</h3>
               <div class="card-image-wrapper">
-              <img src="images/EchoAI/key1.png" alt="Screenshot showing different AI personas to choose from">
+              <img src="images/EchoAI/keyD1.png" alt="Screenshot showing different AI personas to choose from">
               </div>
             </div>
          <div class="card-solution">
@@ -194,8 +193,7 @@
 
 <hr class="animated-divider">
 
-<span id ="EchoAI_casestudy_solutions">&nbsp;</span>
-<section class="solution-section">
+<section id="EchoAI_casestudy_Solutions" class="solution-section">
   <h2>Solutions</h2>
   
   <div class="solution-content-flex"> 
@@ -287,6 +285,47 @@
     </div>
   </article>
 </section>
+
+<hr class="animated-divider">
+
+<section id="EchoAI_casestudy_Outcome" class="outcome-section">
+  <h2>How did we make an impact</h2>
+  
+  <div class="outcome-grid">
+    
+    <article class="outcome-card">
+      <div class="stat-number">92<span class="percent-symbol">%</span></div>
+      <p class="stat-description">users reported feeling "genuinely understood" by the companion</p>
+    </article>
+    
+    <article class="outcome-card engagement-card">
+      <p class="stat-description">Average user engagement time increased from</p>
+      <div class="stat-engagement-numbers">
+        <span class="stat-number small">5</span> to <span class="stat-number large">23</span>
+      </div>
+      <p class="stat-description">minutes per session</p>
+    </article>
+    
+    <article class="outcome-card">
+      <div class="stat-number">88<span class="percent-symbol">%</span></div>
+      <p class="stat-description">of users experienced improved emotional awareness after regular use</p>
+    </article>
+    
+    <article class="outcome-card">
+      <div class="stat-number">79<span class="percent-symbol">%</span></div>
+      <p class="stat-description">reported feeling "less alone" during difficult moments</p>
+    </article>
+
+  </div>
+  
+ <section class="outcome-section">
+  <div class="outcome-summary-wrapper">
+    <p class="outcome-summary-text">
+      This project represents a significant step forward in making emotional support accessible to everyone, while pushing the boundaries of what's possible with AI and human-centered design.
+    </p>
+  </div>
+</section>
+</section>
     
 </main>
 
@@ -324,6 +363,31 @@
   </div>
 
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollButton = document.getElementById('btnScrollToTop');
+    
+    // --- 1. Show/Hide Button Logic ---
+    window.onscroll = function() {
+        // Show the button if the user scrolls down more than 300 pixels
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollButton.style.display = "block";
+        } else {
+            scrollButton.style.display = "none";
+        }
+    };
+
+    // --- 2. Scroll Action Logic ---
+    scrollButton.addEventListener('click', function() {
+        // Smoothly scroll to the top of the page
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
 
 <script>
     (function() {
