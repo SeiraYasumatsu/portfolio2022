@@ -1832,22 +1832,27 @@ p.last{
       font-weight: 700;
       position: relative;
       padding-bottom: 1rem;
-      font-size: 5.5rem;
+      font-size: 6rem;
       letter-spacing: 0.2;
     } 
 
   .statement h2{
-    font-size: 20px;
+    font-size: 2.3rem;
     padding-bottom: 1rem;
   }
 
   .statement P{
     font-size: 20px;
+    margin-bottom: 3rem;
   }
 
   .hero-text{
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .album{
+   padding: 40px;
   }
 
   .albums{ /*Tablet grid sizing for case studies*/
@@ -1907,6 +1912,14 @@ p.last{
     font-size: 2.5rem;
     letter-spacing: 0.2;
     padding-left: 3rem;
+  }
+
+  .ProjectTitle h2{
+    font-size: 3.5rem;
+  }
+
+  .ProjectTitle p{
+    font-size:1.8rem;
   }
 
   .title{
@@ -2683,22 +2696,60 @@ p.two{
   padding: 5rem;
 }
 
-.albums{ /*Desktop grid sizing for case studies*/
+/* --- 1. Modify the .albums container --- */
+  .albums { /* Desktop grid sizing for case studies */
+    display: grid;
+    /* * FIX: Use auto for the side columns (1) and (3) so they take all 
+     * available space. Use max-width on the center column (2).
+     * * The center column's size will be: 
+     * min-content (at least 700px) and max-content (at most 1000px).
+     */
+    grid-template-columns: 1fr minmax(700px, 1000px) 1fr; 
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    /* * Ensure the grid itself stretches 100% of the viewport width. 
+     * The 1fr side columns will handle the growth.
+     */
+    width: 100%; 
+    margin: 0 auto; /* Center the overall content wrapper just in case */
+  }
+
+  /* 2. The .album grid (the content *inside* the center column) */
+  .album { /* Desktop album items */
+    /* * This .album element now sits entirely within the center column (5fr).
+     * You can safely remove the grid-template-columns definition here 
+     * as it likely clashes with the outer grid if you don't define 
+     * grid-column: 2 / 3; on it. Assuming .album is the content inside the 
+     * middle grid area, let's keep its internal grid for the image/text layout:
+     */
+    padding: 20px;
+    grid-gap: 30px;
+    align-items: center;
+    color: grey;
+    font-weight: 100;
+    
+    /* Keep your internal layout for the album items */
+    grid-template-columns: repeat( auto-fit, minmax(40%, 1fr) );
+    
+    /* Crucial: Explicitly place the album content into the middle column of .albums */
+    grid-column: 2 / 3; 
+  }
+
+/*.albums{ 
    display: grid;
    grid-template-columns: 1fr 5fr 1fr;
    grid-template-rows: auto;
    grid-gap: 30px;
  }
 
- .album { /*Desktop*/
+ .album { 
    padding: 20px;
-   /*grid-template-columns: 1fr 4fr 1fr;*/
    grid-gap: 30px;
    align-items: center;
    color: grey;
    font-weight: 100;
    grid-template-columns: repeat( auto-fit, minmax(40%, 1fr) );
- }
+ }*/
 
  .album img{ /*desktop*/
    width: 80%;
