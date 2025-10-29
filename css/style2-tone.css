@@ -98,7 +98,7 @@ body{
 }
 
 .logo img{
-width: 60%;
+width: 50%;
 }
 
 .header .menu{/*flex container*/
@@ -107,24 +107,47 @@ width: 60%;
   margin-left: 3rem;
   list-style:none;
   justify-content: center;
+  font-size: 12px;
 }
 
-.page a{ /*flex item*/
+/* Base link styling */
+.page a {
+  text-decoration: none;
   color: black;
+  font-family: 'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 0.2rem;
-  text-decoration: none;
   padding: 2rem 2rem 1rem 1rem;
-  text-align: center;
-  align-items: center;
-  transition: all 0.5s;
+  display: inline-block;
 }
 
-.page a:hover{
+.page a span {
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline on span */
+.page a span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;      /* right under the text */
+  left: 50%;
+  width: 100%;     /* short underline */
+  height: 2px;
+  background-color: #EFBB3F;
+  transform: translateX(-50%) scaleX(0); /* hidden initially */
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect */
+.page a:hover span::after {
+  transform: translateX(-50%) scaleX(1); /* reveal underline */
+}
+
+.page a:hover {
   color: #EFBB3F;
-  font-weight:bold;
 }
-
 
 .hero{ /*phone styling*/
   display: flex;
@@ -1650,7 +1673,7 @@ p.last{
  }
 
  .logo img{ /*tablet logo size*/
-  width: 40%;
+  width: 30%;
  }
 
   .page a{ /*flex item*/
@@ -1888,12 +1911,13 @@ p.last{
   }*/
 
   .hero-text h1{
-    font-size: 5rem;
+    font-size: 8rem;
   }
 
   .hero-text p{ /*tablet*/
     font-size: 2rem;
-    width: 80%;
+    letter-spacing: 0.2px;
+    line-height: 1.6;
   }
 
   .intro h4{ /*tablet*/
@@ -2602,7 +2626,8 @@ p.two{
 }
 
 .hero-text p{
-  font-size: 2rem;
+  font-size: 2.2rem;
+  width: 70%;
 }
 
 .behub-image{

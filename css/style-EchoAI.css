@@ -57,7 +57,7 @@ body {
 
 
 /* ----------------------------------------------------
- * Scroll To Top Button Styling (Reusing your design)
+ * Scroll To Top Button Styling 
  * ----------------------------------------------------
  */
 #btnScrollToTop {
@@ -216,7 +216,7 @@ body {
   transform: translateY(10px);
 
   /* Gradient text */
-  background: linear-gradient(90deg, deepskyblue, purple);
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -243,6 +243,7 @@ body {
   max-width: 400px; /* Moderate size: max out at 400px wide for the image itself */
   margin-top: var(--spacing-md);
   /* Centering is achieved by aligning the parent (.hero-container) */
+  position: relative;
 }
 
 .hero-image img {
@@ -251,7 +252,52 @@ body {
   height: auto;
   /* Modern styling: subtle rounded corners and a slight shadow */
   border-radius: 8px; 
- 
+}
+
+/* 2. Styling and Positioning the Subtle Link */
+.hero-cta-button {
+  /* --- SUBTLE GREY LINK STYLING --- */
+  color: #666666; /* Neutral grey text color */
+  text-decoration: underline;
+  text-decoration-color: #666666; /* Matching underline color */
+  font-weight: normal; 
+  font-size: 1em; 
+  
+  /* --- POSITIONING STYLES (CENTERED AND BOTTOM) --- */
+  position: absolute;
+  /* Start link 50% from the left edge of the image container */
+  left: 50%;
+  /* Move link 15px up from the bottom of the image container (adjust 
+     this value to control its distance from the bottom edge) */
+  bottom: 15px; 
+  /* Shift the link back by half of its own width for perfect centering */
+  transform: translateX(-50%); 
+  
+  /* Ensure it's on top of the image */
+  z-index: 10;
+  /* Optional: Small padding if you want it to feel like a clickable area */
+  padding: 5px 10px; 
+  /* Optional: Remove the default background if any parent style affects it */
+  background: none; 
+}
+
+/* 2. Visited State (Must come before :hover) */
+.hero-cta-button:visited {
+  color: #666666;
+  text-decoration-color: #666666;
+}
+
+/* 3. Hover State (Must come after :visited) */
+.hero-cta-button:hover {
+  /* Using 'black' will be less subtle than '#333333' but will work */
+  color: black; 
+  text-decoration-color: black;
+}
+
+/* 4. Active State (Optional, but good practice - for when the user clicks) */
+.hero-cta-button:active {
+  color: black;
+  text-decoration-color: black;
 }
 
 .animated-divider {
@@ -1467,8 +1513,6 @@ body {
   .page a{
   padding-right: 5rem;
 }
-
-
 
  
 }
