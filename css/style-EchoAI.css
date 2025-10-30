@@ -753,25 +753,45 @@ body {
 
 /* 2. Scroll Indicator Styling (Default: HIDDEN) */
 .scroll-cue {
-    /* 🟢 VISUAL STYLES & DEFAULT POSITIONING (ON SCREEN) 🟢 */
+ /* Set dimensions for the cue container (makes a square box for the circle) */
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center; /* Centers the arrow horizontally */
+    align-items: center;     /* Centers the arrow vertically */
+    
+    /* Needed for the arrow/text color, z-index, and transition */
     color: #333; 
     font-size: 2.5rem;
     opacity: 0.8;
-    pointer-events: none; 
+    pointer-events: none;
     z-index: 20;
     transition: opacity 0.5s, transform 0.5s;
     
-    /* Display the cue block by default */
-    display: block; 
-    
-    /* Position the cue FIXED for the mobile viewport */
-    position: fixed;
+    /* 🟢 POSITIONING & ANIMATION (ON for Mobile) 🟢 */
+    position: fixed; /* Sticks to the viewport */
     right: 10px; 
-    top: 50%;
+    top: 30%; /* Using 30% from your last code */
     transform: translateY(-50%);
-    
-    /* Start the animation on mobile by default */
     animation: nudgeRight 1.5s infinite;
+    
+    /* Must be relative to position the ::before circle correctly */
+    position: relative;
+}
+
+/* New: Circle Background using ::before */
+.scroll-cue::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #EFBB3F; /* White circle background */
+    border-radius: 50%;
+    z-index: -1; /* Place behind the arrow */
+    opacity: 0.5;
+    
+    /* New: Animation for the pulse effect */
+    animation: pulse 2s infinite; 
 }
 
 @keyframes nudgeRight {
@@ -780,6 +800,21 @@ body {
     }
     50% { 
         transform: translateY(-50%) translateX(8px); 
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+        transform: scale(1.1);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        transform: scale(1);
     }
 }
 
