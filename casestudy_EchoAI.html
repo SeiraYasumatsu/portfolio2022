@@ -213,6 +213,7 @@
             </p>
     </div>
 
+    <div class="scroll-wrapper">
     <div class="solution-showcase-grid">
     
     <div class="showcase-visual-item">
@@ -228,6 +229,9 @@
     </div>
     
   </div>
+  <div class="scroll-cue">
+            › </div>
+  </div>
   
   <article class="showcase-global-explanation" tabindex="0" role="button" aria-expanded="false">
     <div class="expansion-header-global">
@@ -242,6 +246,7 @@
     </div>
   </article>
 
+  <div class="scroll-wrapper">
   <div class="solution-showcase-grid">
     
     <div class="showcase-visual-item">
@@ -251,6 +256,9 @@
     <div class="showcase-visual-item">
       <img src="images/EchoAI/phone5.png" alt="EchoAI Your Analysis Screen">
     </div>
+  </div>
+  <div class="scroll-cue">
+            › </div>
   </div>
   
   <article class="showcase-global-explanation" tabindex="0" role="button" aria-expanded="false">
@@ -266,6 +274,7 @@
     </div>
   </article>
 
+  <div class="scroll-wrapper">
     <div class="solution-showcase-grid">
     
     <div class="showcase-visual-item">
@@ -275,6 +284,9 @@
     <div class="showcase-visual-item">
       <img src="images/EchoAI/phone6.png" alt="EchoAI Your History Screen">
     </div>
+  </div>
+  <div class="scroll-cue">
+            › </div>
   </div>
   
   <article class="showcase-global-explanation" tabindex="0" role="button" aria-expanded="false">
@@ -368,6 +380,40 @@
   </div>
 
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollContainers = document.querySelectorAll('.solution-showcase-grid');
+    const scrollCues = document.querySelectorAll('.scroll-cue');
+
+    // 🟢 MOBILE-FIRST CHECK 🟢
+    // isDesktop will be TRUE if the screen is 768px or wider
+    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+
+    // We only attach listeners if it is NOT desktop (i.e., it is mobile)
+    if (!isDesktop) { 
+        scrollContainers.forEach((scrollContainer, index) => {
+            const scrollCue = scrollCues[index];
+
+            if (scrollCue) {
+                const handleScroll = () => {
+                    // Your existing logic to hide the cue on scroll...
+                    if (scrollContainer.scrollLeft > 20) {
+                        scrollCue.style.opacity = '0';
+                        scrollCue.style.animation = 'none';
+
+                        setTimeout(() => {
+                            scrollCue.style.display = 'none';
+                            // Clean up listener
+                            scrollContainer.removeEventListener('scroll', handleScroll);
+                        }, 500);
+                    }
+                };
+                scrollContainer.addEventListener('scroll', handleScroll);
+            }
+        });
+    }
+});
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

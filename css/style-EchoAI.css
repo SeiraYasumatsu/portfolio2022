@@ -269,7 +269,8 @@ body {
   left: 50%;
   /* Move link 15px up from the bottom of the image container (adjust 
      this value to control its distance from the bottom edge) */
-  bottom: 15px; 
+  /*bottom: 15px; */
+  bottom: -10px;
   /* Shift the link back by half of its own width for perfect centering */
   transform: translateX(-50%); 
   
@@ -355,7 +356,7 @@ body {
 
 /* Specs Text Styling (Applies to all h2, h3, p) */
 .specs-container h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #888; /* Slightly darker grey for better contrast/readability */
   letter-spacing: 0.2rem;
@@ -687,7 +688,7 @@ body {
   
   width: 100%; /* Take full width */
   padding: 2rem; 
-  font-size: 2.3rem; 
+  font-size: 2rem; 
   line-height: 1.6;
   margin: 0;
   
@@ -734,7 +735,7 @@ body {
 /* Update the individual item sizing for the horizontal scroll */
 .showcase-visual-item {
   flex-shrink: 0; /* Prevents items from shrinking */
-  width: 75vw; /* Make each image take up 75% of the viewport width */
+  width: 90vw; /* Make each image take up 75% of the viewport width */
   max-width: 350px; /* Optional: Sets a max size for wider phones/tablets */
   text-align: center; 
 }
@@ -742,6 +743,44 @@ body {
 /* Ensure the image takes the full width of its constrained item */
 .showcase-visual-item img {
   width: 100%;
+}
+
+/* 1. Positioning Context for the Scroll Cue */
+.scroll-wrapper {
+    position: relative;
+    margin: 0 auto; 
+}
+
+/* 2. Scroll Indicator Styling (Default: HIDDEN) */
+.scroll-cue {
+    /* 🟢 VISUAL STYLES & DEFAULT POSITIONING (ON SCREEN) 🟢 */
+    color: #333; 
+    font-size: 2.5rem;
+    opacity: 0.8;
+    pointer-events: none; 
+    z-index: 20;
+    transition: opacity 0.5s, transform 0.5s;
+    
+    /* Display the cue block by default */
+    display: block; 
+    
+    /* Position the cue FIXED for the mobile viewport */
+    position: fixed;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Start the animation on mobile by default */
+    animation: nudgeRight 1.5s infinite;
+}
+
+@keyframes nudgeRight {
+    0%, 100% { 
+        transform: translateY(-50%) translateX(0); 
+    }
+    50% { 
+        transform: translateY(-50%) translateX(8px); 
+    }
 }
 
 /* Remove the justify-items: center; which is no longer needed on flex */
@@ -1166,6 +1205,9 @@ body {
     max-width: 600px; 
   }
 
+  .hero-cta-button{
+    bottom: 10px;
+  }
 /*
 *
 *Specs & Details
@@ -1203,7 +1245,6 @@ body {
 
  /* Adjust font sizes for desktop readability */
   .specs-container h2 {
-    font-size: 2rem;
     margin-top: 0; /* Remove margin-top as they are now side-by-side */
   }
 
@@ -1340,7 +1381,7 @@ body {
     
     max-width: 55%; /* Constrain width to avoid phone mockup */
     padding: 3rem 4rem 3rem var(--spacing-lg);
-    font-size: 2rem; 
+    font-size: 2.3rem; 
     font-weight: 500; 
     line-height: 1.6;
     
@@ -1369,6 +1410,10 @@ body {
   width: 100%;
 }
 
+/* ❌ HIDE THE MOBILE-ONLY FEATURE HERE ❌ */
+    .scroll-cue {
+        display: none !important; /* Override the 'display: block' and hide it on desktop */
+    }
 
   .expansion-content-global h3 {
   width: 75%;
