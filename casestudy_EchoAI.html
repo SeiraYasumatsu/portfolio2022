@@ -381,35 +381,66 @@
 
 </footer>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const scrollContainers = document.querySelectorAll('.solution-showcase-grid');
-    const scrollCues = document.querySelectorAll('.scroll-cue');
-
-    // 🟢 MOBILE-FIRST CHECK 🟢
-    // isDesktop will be TRUE if the screen is 768px or wider
+ document.addEventListener('DOMContentLoaded', () => {
     const isDesktop = window.matchMedia("(min-width: 768px)").matches;
 
-    // We only attach listeners if it is NOT desktop (i.e., it is mobile)
-    if (!isDesktop) { 
-        scrollContainers.forEach((scrollContainer, index) => {
-            const scrollCue = scrollCues[index];
+    // Only run this sophisticated logic on mobile
+    if (!isDesktop) {
+        const wrappers = document.querySelectorAll('.scroll-wrapper');
 
-            if (scrollCue) {
-                const handleScroll = () => {
-                    // Your existing logic to hide the cue on scroll...
-                    if (scrollContainer.scrollLeft > 20) {
-                        scrollCue.style.opacity = '0';
-                        scrollCue.style.animation = 'none';
+        // --- Intersection Observer (Shows the cue when wrapper is visible) ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const wrapper = entry.target;
+                const scrollCue = wrapper.querySelector('.scroll-cue');
+                const scrollContainer = wrapper.querySelector('.solution-showcase-grid');
+                
+                if (!scrollCue || !scrollContainer) return;
 
-                        setTimeout(() => {
-                            scrollCue.style.display = 'none';
-                            // Clean up listener
-                            scrollContainer.removeEventListener('scroll', handleScroll);
-                        }, 500);
+                if (entry.isIntersecting) {
+                    // When the wrapper enters the screen, show the cue
+                    if (scrollContainer.scrollLeft < 20) {
+                        scrollCue.style.opacity = '0.8';
+                        scrollCue.style.animationPlayState = 'running';
                     }
-                };
-                scrollContainer.addEventListener('scroll', handleScroll);
-            }
+                } else {
+                    // When the wrapper leaves the screen, hide the cue
+                    scrollCue.style.opacity = '0';
+                    scrollCue.style.animationPlayState = 'paused';
+                }
+            });
+        }, {
+            // Root margin adjusts the trigger zone. 
+            // -10% means trigger when wrapper is 10% off the screen (out of view)
+            rootMargin: '0px', 
+            threshold: 0.1 
+        });
+
+        // --- Scroll Listener (Hides the cue when content is scrolled) ---
+        wrappers.forEach(wrapper => {
+            observer.observe(wrapper); // Start observing each wrapper
+            
+            const scrollCue = wrapper.querySelector('.scroll-cue');
+            const scrollContainer = wrapper.querySelector('.solution-showcase-grid');
+
+            let hasScrolled = false;
+
+            scrollContainer.addEventListener('scroll', () => {
+                if (scrollContainer.scrollLeft > 20 && !hasScrolled) {
+                    // Fades out the cue once the user scrolls
+                    scrollCue.style.opacity = '0';
+                    scrollCue.style.animationPlayState = 'paused';
+                    hasScrolled = true;
+                }
+                // Optional: If you want the cue to reappear if they scroll back to the start:
+                /*
+                else if (scrollContainer.scrollLeft < 20 && hasScrolled) {
+                    scrollCue.style.opacity = '0.8';
+                    scrollCue.style.animationPlayState = 'running';
+                    hasScrolled = false;
+                }
+                */
+            });
         });
     }
 });

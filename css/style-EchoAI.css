@@ -763,20 +763,18 @@ body {
     /* Needed for the arrow/text color, z-index, and transition */
     color: #333; 
     font-size: 2.5rem;
-    opacity: 0.8;
+    opacity: 0;
     pointer-events: none;
     z-index: 20;
     transition: opacity 0.5s, transform 0.5s;
+    position: relative;
     
     /* 🟢 POSITIONING & ANIMATION (ON for Mobile) 🟢 */
-    position: fixed; /* Sticks to the viewport */
+    position: absolute; /* Sticks to the viewport */
     right: 10px; 
     top: 30%; /* Using 30% from your last code */
     transform: translateY(-50%);
     animation: nudgeRight 1.5s infinite;
-    
-    /* Must be relative to position the ::before circle correctly */
-    position: relative;
 }
 
 /* New: Circle Background using ::before */
