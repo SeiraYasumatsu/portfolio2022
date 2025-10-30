@@ -270,7 +270,7 @@ body {
   /* Move link 15px up from the bottom of the image container (adjust 
      this value to control its distance from the bottom edge) */
   /*bottom: 15px; */
-  bottom: -10px;
+  bottom: -5px;
   /* Shift the link back by half of its own width for perfect centering */
   transform: translateX(-50%); 
   
